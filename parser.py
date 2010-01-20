@@ -2,7 +2,7 @@
 
 # This function transforms the input file into an array list dictionary, removing all commas from the file.
 # returns an array list dictionary
-
+# this is a comment added for a commit
 
 def out_to_array(filename):
 	# Open file, reads the first line
