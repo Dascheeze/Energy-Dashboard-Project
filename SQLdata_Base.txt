@@ -1,0 +1,92 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 16, 2010 at 10:57 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `dashboard`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buildings`
+--
+
+CREATE TABLE IF NOT EXISTS `buildings` (
+  `Building_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Building_name` varchar(50) NOT NULL DEFAULT '',
+  `Building_abbrv` varchar(50) DEFAULT NULL,
+  `Building_type` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`Building_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `buildings`
+--
+
+INSERT INTO `buildings` (`Building_id`, `Building_name`, `Building_abbrv`, `Building_type`) VALUES
+(1, 'Bexell', 'Bex', 'Main'),
+(2, 'Wilson', 'Wils', 'Dorm');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data`
+--
+
+CREATE TABLE IF NOT EXISTS `data` (
+  `Data_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Building_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `MeterType_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `amount` text NOT NULL,
+  PRIMARY KEY (`Data_id`),
+  KEY `Building_id` (`Building_id`),
+  KEY `MeterType_id` (`MeterType_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `data`
+--
+
+INSERT INTO `data` (`Data_id`, `Building_id`, `MeterType_id`, `time`, `amount`) VALUES
+(1, 1, 1, '0000-00-00 00:00:00', ''),
+(2, 2, 1, '2010-01-16 02:48:03', '343');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `metertype`
+--
+
+CREATE TABLE IF NOT EXISTS `metertype` (
+  `MeterType_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL DEFAULT '',
+  `Unit` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`MeterType_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `metertype`
+--
+
+INSERT INTO `metertype` (`MeterType_id`, `Name`, `Unit`) VALUES
+(1, 'Electric', 'kw/h');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `data`
+--
+ALTER TABLE `data`
+  ADD CONSTRAINT `data_ibfk_1` FOREIGN KEY (`Building_id`) REFERENCES `buildings` (`Building_id`),
+  ADD CONSTRAINT `data_ibfk_2` FOREIGN KEY (`MeterType_id`) REFERENCES `metertype` (`MeterType_id`);
