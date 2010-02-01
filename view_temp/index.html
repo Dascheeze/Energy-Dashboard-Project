@@ -93,7 +93,7 @@
 				<li><a href="#bldg-1" class="tab-button">Apperson</a></li>
 				<li><a href="#bldg-2" class="tab-button">Dearborn</a></li>
 				<li><a href="#bldg-3" class="tab-button">Wilson</a></li>
-				<li><a href="#bldg-4" class="tab-button">Bexel</a></li>
+				<li><a href="#bldg-4" class="tab-button">Bexell</a></li>
 			</ul>
 			<div id="bldg-1" class="tab-div">
 				<p class="graph-header">Power Statistics for <span class="building-name">Apperson</span> hall:</p>
@@ -108,7 +108,7 @@
 				<div id="bldg-3-flot" class="flot-div"></div>
 			</div>
 			<div id="bldg-4" class="tab-div">
-				<p class="graph-header">Power Statistics for <span class="building-name">Bexel</span> hall:</p>
+				<p class="graph-header">Power Statistics for <span class="building-name">Bexell</span> hall:</p>
 				<div id="bldg-4-flot" class="flot-div"></div>
 			</div>
 		</div>
@@ -147,6 +147,7 @@ $(function() {
             }
         });
     }
+	
 	$('.tab-button').click(function() {plotWithOptions($("" + $(this).attr("href") + " ").children(".flot-div"));});
 	
 	plotWithOptions("#bldg-1-flot");
