@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :datas
+
+  map.resources :buildings
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
