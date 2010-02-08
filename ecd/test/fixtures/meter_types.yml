@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  meter_type_id: 1
+  name: MyString
+  unit: MyString
+
+two:
+  meter_type_id: 1
+  name: MyString
+  unit: MyString

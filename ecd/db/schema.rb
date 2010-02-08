@@ -9,12 +9,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100206182013) do
+ActiveRecord::Schema.define(:version => 20100208194316) do
+
+  create_table "building_types", :force => true do |t|
+    t.integer  "building_type_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "buildings", :primary_key => "building_id", :force => true do |t|
     t.string   "building_name",  :limit => 50
     t.string   "building_abbrv", :limit => 50
     t.string   "building_type",  :limit => 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "datas", :force => true do |t|
+    t.integer  "data_id"
+    t.integer  "metertype_id"
+    t.string   "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meter_types", :force => true do |t|
+    t.integer  "meter_type_id"
+    t.string   "name"
+    t.string   "unit"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,12 +2,10 @@
 
 one:
   data_id: 1
-  building_id: 1
   metertype_id: 1
   amount: MyString
 
 two:
   data_id: 1
-  building_id: 1
   metertype_id: 1
   amount: MyString
