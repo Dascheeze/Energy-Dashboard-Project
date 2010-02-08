@@ -3,7 +3,7 @@ class CreateDatas < ActiveRecord::Migration
     create_table :datas, :primary_key => :data_id do |t|
       t.integer :data_id
       t.string :amount
-      t.belongs_to :meter_types
+      t.belongs_to :buildings
       t.timestamps
     end
   end

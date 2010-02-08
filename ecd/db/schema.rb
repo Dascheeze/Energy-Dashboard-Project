@@ -11,8 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20100208194316) do
 
-  create_table "building_types", :force => true do |t|
-    t.integer  "building_type_id"
+  create_table "building_types", :primary_key => "building_type_id", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -26,16 +25,14 @@ ActiveRecord::Schema.define(:version => 20100208194316) do
     t.datetime "updated_at"
   end
 
-  create_table "datas", :force => true do |t|
-    t.integer  "data_id"
-    t.integer  "metertype_id"
+  create_table "datas", :primary_key => "data_id", :force => true do |t|
     t.string   "amount"
+    t.integer  "buildings_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "meter_types", :force => true do |t|
-    t.integer  "meter_type_id"
+  create_table "meter_types", :primary_key => "meter_type_id", :force => true do |t|
     t.string   "name"
     t.string   "unit"
     t.datetime "created_at"
