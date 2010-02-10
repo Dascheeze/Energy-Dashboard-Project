@@ -1,0 +1,16 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-09 15:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/datas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-09 15:28:55) [GET]
+
+ActionController::RoutingError (No route matches "/datas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
