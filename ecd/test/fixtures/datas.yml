@@ -1,11 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  data_id: 1
-  metertype_id: 1
-  amount: MyString
-
-two:
-  data_id: 1
-  metertype_id: 1
-  amount: MyString
+# one:
+#   column: value
+#
+# two:
+#   column: value

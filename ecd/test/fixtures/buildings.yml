@@ -1,13 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  building_id: MyString
-  building_name: MyString
-  building_abbrv: MyString
-  building_type: MyString
-
-two:
-  building_id: MyString
-  building_name: MyString
-  building_abbrv: MyString
-  building_type: MyString
+# one:
+#   column: value
+#
+# two:
+#   column: value
