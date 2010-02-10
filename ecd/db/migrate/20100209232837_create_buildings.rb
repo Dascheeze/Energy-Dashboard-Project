@@ -4,7 +4,7 @@ class CreateBuildings < ActiveRecord::Migration
       t.integer :building_id
       t.string :building_name
       t.string :building_abbrv
-      t.string :building_type
+      t.belongs_to :building_type
       t.timestamps
     end
   end
