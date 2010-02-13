@@ -1,16 +1,146 @@
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2010-02-09 15:25:16) [GET]
-
-ActionController::RoutingError (No route matches "/datas" with {:method=>:get}):
-  
-
-Rendering rescues/layout (not_found)
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2010-02-09 15:28:55) [GET]
-
-ActionController::RoutingError (No route matches "/datas" with {:method=>:get}):
-  
-
-Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (253.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (106.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `datas` (`data_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `building_id` int(11), `meter_type_id` int(11), `amount` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209232820')[0m
+Migrating to CreateMeterTypes (20100209232830)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `meter_types` (`meter_type_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `unit` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209232830')[0m
+Migrating to CreateBuildings (20100209232837)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `buildings` (`building_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `building_name` varchar(255), `building_abbrv` varchar(255), `building_type_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209232837')[0m
+Migrating to CreateBuildingTypes (20100209232848)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `building_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `building_type_id` int(11), `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209232848')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `building_types`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `building_types`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `buildings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `buildings`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `datas`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `datas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `datas`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `meter_types`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `meter_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `meter_types`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+  [4;36;1mSQL (33.2ms)[0m   [0;1mALTER TABLE `buildings` ADD `enabled` tinyint(1)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100213225531')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Duplicate column name 'building_type_id': ALTER TABLE `building_types` ADD `building_type_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Incorrect table definition; there can be only one auto column and it must be defined as a key: ALTER TABLE `building_types` CHANGE `building_type_id` `building_type_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY DEFAULT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+  [4;36;1mSQL (44.0ms)[0m   [0;1mALTER TABLE `building_types` DROP `id`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (27.2ms)[0m   [0;1mALTER TABLE `building_types` CHANGE `building_type_id` `building_type_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY DEFAULT NULL[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100213230125')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+  [4;36;1mSQL (38.6ms)[0m   [0;1mALTER TABLE `meter_types` ADD `Mod_Bus_Address` int(11)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100213230450')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m
