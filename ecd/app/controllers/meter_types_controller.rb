@@ -85,6 +85,6 @@ class MeterTypesController < ApplicationController
   
   def getdata
 	@meter_type = MeterType.find(params[:id])
-	redirect_to("http://128.193.122.20/setup/devicexml.cgi?ADDRESS=" + @meter_type.Mod_Bus_Address + "&TYPE=DATA")
+	redirect_to("http://128.193.122.20/setup/devicexml.cgi?ADDRESS=" + @meter_type.Mod_Bus_Address.to_s() + "&TYPE=DATA")
   end
 end
