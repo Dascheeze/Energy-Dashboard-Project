@@ -13,7 +13,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/1
   # GET /buildings/1.xml
   def show
-    @building = Building.find(params[:id])
+    @building = Building.find(params[:building_id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class BuildingsController < ApplicationController
 
   # GET /buildings/1/edit
   def edit
-    @building = Building.find(params[:id])
+    @building = Building.find(params[:building_id])
   end
 
   # POST /buildings
@@ -57,7 +57,7 @@ class BuildingsController < ApplicationController
   # PUT /buildings/1
   # PUT /buildings/1.xml
   def update
-    @building = Building.find(params[:id])
+    @building = Building.find(params[:building_id])
 
     respond_to do |format|
       if @building.update_attributes(params[:building])
@@ -74,7 +74,7 @@ class BuildingsController < ApplicationController
   # DELETE /buildings/1
   # DELETE /buildings/1.xml
   def destroy
-    @building = Building.find(params[:id])
+    @building = Building.find(params[:building_id])
     @building.destroy
 
     respond_to do |format|
