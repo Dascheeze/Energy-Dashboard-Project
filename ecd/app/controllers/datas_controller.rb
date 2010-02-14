@@ -1,6 +1,6 @@
 class DatasController < ApplicationController
 
-  def
+  def show
 	respond_to do |format|
       format.html
 	end
