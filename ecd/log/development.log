@@ -809,3 +809,40 @@ ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.6ms)
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW COLUMNS FROM `building_types` LIKE 'building_type_id'[0m
+  [4;36;1mSQL (25.9ms)[0m   [0;1mALTER TABLE `building_types` CHANGE `building_type_id` `id` int(11) NOT NULL[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW COLUMNS FROM `datas` LIKE 'data_id'[0m
+  [4;35;1mSQL (24.0ms)[0m   [0mALTER TABLE `datas` CHANGE `data_id` `id` int(11) NOT NULL[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW COLUMNS FROM `meter_types` LIKE 'meter_type_id'[0m
+  [4;36;1mSQL (24.3ms)[0m   [0;1mALTER TABLE `meter_types` CHANGE `meter_type_id` `id` int(11) NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100214004458')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m

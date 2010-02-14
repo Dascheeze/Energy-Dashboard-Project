@@ -1,0 +1,26 @@
+<h1>Listing meter_types</h1>
+
+<table>
+  <tr>
+    <th>Meter type</th>
+    <th>Name</th>
+    <th>Unit</th>
+    <th>Mod bus address</th>
+  </tr>
+
+<% @meter_types.each do |meter_type| %>
+  <tr>
+    <td><%=h meter_type.id %></td>
+    <td><%=h meter_type.name %></td>
+    <td><%=h meter_type.unit %></td>
+    <td><%=h meter_type.Mod_Bus_Address %></td>
+    <td><%= link_to 'Show', meter_type %></td>
+    <td><%= link_to 'Edit', edit_meter_type_path(meter_type) %></td>
+    <td><%= link_to 'Destroy', meter_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New meter_type', new_meter_type_path %>

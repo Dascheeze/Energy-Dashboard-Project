@@ -9,15 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100213230450) do
+ActiveRecord::Schema.define(:version => 20100214004458) do
 
-  create_table "building_types", :primary_key => "building_type_id", :force => true do |t|
+  create_table "building_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "buildings", :primary_key => "building_id", :force => true do |t|
+  create_table "buildings", :force => true do |t|
     t.string   "building_name"
     t.string   "building_abbrv"
     t.integer  "building_type_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20100213230450) do
     t.boolean  "enabled"
   end
 
-  create_table "datas", :primary_key => "data_id", :force => true do |t|
+  create_table "datas", :force => true do |t|
     t.integer  "building_id"
     t.integer  "meter_type_id"
     t.text     "amount"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20100213230450) do
     t.datetime "updated_at"
   end
 
-  create_table "meter_types", :primary_key => "meter_type_id", :force => true do |t|
+  create_table "meter_types", :force => true do |t|
     t.string   "name"
     t.string   "unit"
     t.datetime "created_at"
