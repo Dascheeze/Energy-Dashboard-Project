@@ -1,9 +1,13 @@
 class AddModBusAddressToMeterTypes < ActiveRecord::Migration
   def self.up
-    add_column :meter_types, :Mod_Bus_Address, :integer
+    remove_column :meter_types, :name
+    remove_column :meter_types, :Mod_Bus_Address
+    rename_column :meter_types, :unit, :type
   end
 
   def self.down
-    remove_column :meter_types, :Mod_Bus_Address
+    add_column :meter_types, :Mod_Bus_Address
+    add_column :meter_types, :name
+    rename_column :meter_types, :type, :unit
   end
 end
