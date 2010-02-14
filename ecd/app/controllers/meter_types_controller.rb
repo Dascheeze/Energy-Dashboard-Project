@@ -82,4 +82,9 @@ class MeterTypesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def getdata
+	@meter_type = MeterType.find(params[:id])
+	redirect_to(@meter_type)  
+  end
 end
