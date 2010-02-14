@@ -1,7 +1,9 @@
 class DatasController < ApplicationController
 
-  def
-	respond_to.html
+  def show
+	respond_to do |format|
+      format.html
+	end
   end
 
   def update
