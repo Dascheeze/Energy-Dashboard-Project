@@ -1,0 +1,28 @@
+<h1>Editing meter</h1>
+
+<% form_for(@meter) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :building_id %><br />
+    <%= f.text_field :building_id %>
+  </p>
+  <p>
+    <%= f.label :meter_type_id %><br />
+    <%= f.text_field :meter_type_id %>
+  </p>
+  <p>
+    <%= f.label :modbus_address %><br />
+    <%= f.text_field :modbus_address %>
+  </p>
+  <p>
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @meter %> |
+<%= link_to 'Back', meters_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  building_id: 
+  meter_type_id: 
+  modbus_address: 1
+  unit: MyString
+
+two:
+  building_id: 
+  meter_type_id: 
+  modbus_address: 1
+  unit: MyString

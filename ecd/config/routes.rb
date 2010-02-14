@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :meters
+
   map.resources :building_types
 
   map.resources :meter_types
