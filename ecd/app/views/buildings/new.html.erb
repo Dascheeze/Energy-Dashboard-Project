@@ -1,0 +1,27 @@
+<h1>New building</h1>
+
+<% form_for(@building) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :building_id %><br />
+    <%= f.text_field :building_id %>
+  </p>
+  <p>
+    <%= f.label :building_name %><br />
+    <%= f.text_field :building_name %>
+  </p>
+  <p>
+    <%= f.label :building_abbrv %><br />
+    <%= f.text_field :building_abbrv %>
+  </p>
+  <p>
+    <%= f.label :building_type %><br />
+    <%= f.text_field :building_type %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', buildings_path %>
