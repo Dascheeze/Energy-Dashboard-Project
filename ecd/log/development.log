@@ -809,3 +809,528 @@ ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.6ms)
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 128.193.244.185 at 2010-02-13 16:18:03) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show to xml (for 128.193.244.185 at 2010-02-13 16:19:54) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:21:07) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:21:09) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.7ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:22) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:27) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show to xml (for 128.193.244.185 at 2010-02-13 16:22:29) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show to xml (for 128.193.244.185 at 2010-02-13 16:22:33) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:47) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.2ms)
+Rendered rescues/_request_and_response (3.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:48) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:52) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (153.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:22:53) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show to xml (for 128.193.244.185 at 2010-02-13 16:23:09) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 128.193.244.185 at 2010-02-13 16:23:13) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (155.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to RenameBuildingIdToIdInBuildings (20100214002620)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW COLUMNS FROM `buildings` LIKE 'building_id'[0m
+  [4;36;1mSQL (102.3ms)[0m   [0;1mALTER TABLE `buildings` CHANGE `building_id` `id` int(11) NOT NULL[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100214002620')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:27:11) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:27:15) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 128.193.244.185 at 2010-02-13 16:27:23) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 128.193.244.185 at 2010-02-13 16:27:30) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 10.192.138.3 at 2010-02-13 16:27:31) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Building without an ID):
+  app/controllers/buildings_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 10.192.138.3 at 2010-02-13 16:27:35) [GET]
+  [4;36;1mBuilding Load (0.6ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/buildings
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+
+ActionView::TemplateError (undefined method `building_id' for #<Building:0xb70419d0>) on line #13 of app/views/buildings/index.html.erb:
+10: 
+11: <% @buildings.each do |building| %>
+12:   <tr>
+13:     <td><%=h building.building_id %></td>
+14:     <td><%=h building.building_name %></td>
+15:     <td><%=h building.building_abbrv %></td>
+16:     <td><%=h building.building_type_id %></td>
+
+    app/views/buildings/index.html.erb:13
+    app/views/buildings/index.html.erb:11:in `each'
+    app/views/buildings/index.html.erb:11
+    app/controllers/buildings_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (188.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
