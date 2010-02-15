@@ -8,7 +8,7 @@
 
 <% @building_types.each do |building_type| %>
   <tr>
-    <td><%=h building_type.id %></td>
+    
     <td><%=h building_type.name %></td>
     <td><%= link_to 'Show', building_type %></td>
     <td><%= link_to 'Edit', edit_building_type_path(building_type) %></td>
