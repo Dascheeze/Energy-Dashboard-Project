@@ -16,6 +16,11 @@ class DatasController < ApplicationController
 	    doc = Document.new(file)
 	    root = doc.root.DAS.devices.device.records.record
 	    puts root
+
+    end
+    redirect_to(Buildings)
+    respond_to do |format|
+	    format.html
     end
   end
 end

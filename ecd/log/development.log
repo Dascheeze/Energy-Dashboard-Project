@@ -1518,3 +1518,59 @@ Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:11:51) [GET]
   Parameters: {"id"=>"update"}
 Rendering datas/show
 Completed in 6ms (View: 1, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 128.193.63.208 at 2010-02-14 17:13:21) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 34ms (View: 4, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/rails/info/properties]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:15:14) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:15:16) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:15:20) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:16:18) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:16:19) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DatasController#show (for 10.192.138.3 at 2010-02-14 17:16:22) [GET]
+  Parameters: {"id"=>"update"}
+Rendering datas/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://access.cws.oregonstate.edu/datas/update]
