@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100214004458) do
+ActiveRecord::Schema.define(:version => 20100215010841) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -28,18 +28,25 @@ ActiveRecord::Schema.define(:version => 20100214004458) do
 
   create_table "datas", :force => true do |t|
     t.integer  "building_id"
-    t.integer  "meter_type_id"
-    t.text     "amount"
+    t.integer  "meter_id"
+    t.integer  "amount",      :limit => 10, :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "meter_types", :force => true do |t|
-    t.string   "name"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meters", :force => true do |t|
+    t.integer  "building_id_id"
+    t.integer  "meter_type_id_id"
+    t.integer  "modbus_address"
     t.string   "unit"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "Mod_Bus_Address"
   end
 
 end
