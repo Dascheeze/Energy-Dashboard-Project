@@ -21,7 +21,7 @@ module MetersHelper
   #  # # to generate a new data point.
   #  }
 
-    Series.each do |series| {
+    Series.each do |series| 
       if series.meter_id == meter_id
         if series.point_number == 0
           xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
@@ -39,7 +39,7 @@ module MetersHelper
           end
         end
       end
-    }
+    
     end
   end
 
