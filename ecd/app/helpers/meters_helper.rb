@@ -39,7 +39,7 @@ module MetersHelper
 					end
 				end
 			end
-		}
+    }
 		end
 	end
 
