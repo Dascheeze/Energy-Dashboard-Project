@@ -35,6 +35,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/1/edit
   def edit
     @building = Building.find(params[:id])
+    @buildings = Building.all
   end
 
   # POST /buildings

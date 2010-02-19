@@ -1,24 +1,29 @@
-<h1>Editing building</h1>
-
-<% form_for(@building) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :building_name %><br />
-    <%= f.text_field :building_name %>
-  </p>
-  <p>
-    <%= f.label :building_abbrv %><br />
-    <%= f.text_field :building_abbrv %>
-  </p>
-  <p>
-    <%= f.label :building_type_id %><br />
-    <%= f.text_field :building_type_id %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @building %> |
-<%= link_to 'Back', buildings_path %>
+	<h1>Editing building</h1>
+	
+	<% form_for(@building) do |f| %>
+	<%= f.error_messages %>
+	
+	<p>
+		<%= f.label :building_name %><br />
+		<%= f.text_field :building_name %>
+	</p>
+	<p>
+		<%= f.label :building_abbrv %><br />
+		<%= f.text_field :building_abbrv %>
+	</p>
+	<p>
+		<!-- Makes a dropdown and puts the building type in each select value -->
+		<% buildingTypeIDs = BuildingType.find(:all, :order => :id) %>
+		Select <%= f.label :building_type_id %><br /> 
+		<%= f.collection_select :building_type_id, buildingTypeIDs, :id, :name %>
+	</p>
+	
+	
+	</p>
+	<p>
+		<%= f.submit 'Update' %>
+	</p>
+	<% end %>
+	
+		<%= link_to 'Show', @building %> |
+		<%= link_to 'Back', buildings_path %>
