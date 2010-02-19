@@ -1,7 +1,9 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def getURL(command)
     require 'net/http'
+
+
+  def getURL(command)
     $username = 'admin'
     $password = 'admin'
     # Open an HTTP connection to 
@@ -25,12 +27,11 @@ module ApplicationHelper
     return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
   
-  def addDataPoint(buildingId, meterId, amount, unit)
+  def addDataPoint(series, value)
     newData = Data.new
-    newData.building_id = buildingId
     newData.meter_id = meterId
-    newData.amount = amount
-    newData.save
+    newData.amount = value
+	newData.save
   end
   
 end

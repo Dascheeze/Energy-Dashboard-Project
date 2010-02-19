@@ -83,8 +83,13 @@ class MetersController < ApplicationController
     end
   end
   
-  def getdata
-	@meter_type = MeterType.find(params[:id])
-	redirect_to("http://128.193.122.20/setup/devicexml.cgi?ADDRESS=" + @meter_type.Mod_Bus_Address.to_s() + "&TYPE=DATA")
+  def refresh
+    @meters = Meter.all
+	@meters do |meter|
+	  parse_xml meter.modbus_address meter.id
+	end
+	respond_to do |format|
+		format.html
+	end
   end
 end
