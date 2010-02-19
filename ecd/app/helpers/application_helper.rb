@@ -23,6 +23,6 @@ module ApplicationHelper
   end
   
   def getMeterXML(meterAddress)
-    return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress + '&TYPE=DATA')
+    return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
 end
