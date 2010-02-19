@@ -84,8 +84,8 @@ class MetersController < ApplicationController
   end
   
   def refresh
-    @meters = Meter.all
-	@meters do |meter|
+    meters = Meter.all
+	meters do |meter|
 	  parse_xml meter.modbus_address meter.id
 	end
 	respond_to do |format|
