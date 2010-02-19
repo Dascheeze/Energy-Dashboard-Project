@@ -3,17 +3,16 @@
 <table>
   <tr>
     <th>Building</th>
-    <th>Meter type</th>
     <th>Modbus address</th>
-    <th>Unit</th>
+
   </tr>
 
 <% @meters.each do |meter| %>
   <tr>
 
-    <td><%=h meter.meter_type_id %></td>
+   
     <td><%=h meter.modbus_address %></td>
-    <td><%=h meter.unit %></td>
+    
     <td><%= link_to 'Show', meter %></td>
     <td><%= link_to 'Edit', edit_meter_path(meter) %></td>
     <td><%= link_to 'Destroy', meter, :confirm => 'Are you sure?', :method => :delete %></td>
