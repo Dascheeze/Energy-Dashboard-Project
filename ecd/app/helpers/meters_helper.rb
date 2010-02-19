@@ -13,7 +13,6 @@ module MetersHelper
 					data_point_ec.amount = element.attribute["value"]
 					data_point_ec.unit = element.attribute["units"]
 					data_point_ec.save
-				
 				else if element.attribuet["name"] == "Apparent Power"
 					@data_point_ap = Data.new
 				end

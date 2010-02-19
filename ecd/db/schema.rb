@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100215010841) do
+ActiveRecord::Schema.define(:version => 20100219044830) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -27,11 +27,10 @@ ActiveRecord::Schema.define(:version => 20100215010841) do
   end
 
   create_table "datas", :force => true do |t|
-    t.integer  "building_id"
-    t.integer  "meter_id"
-    t.integer  "amount",      :limit => 10, :precision => 10, :scale => 0
+    t.integer  "amount",     :limit => 10, :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "series_id"
   end
 
   create_table "meter_types", :force => true do |t|
@@ -42,9 +41,16 @@ ActiveRecord::Schema.define(:version => 20100215010841) do
 
   create_table "meters", :force => true do |t|
     t.integer  "building_id_id"
-    t.integer  "meter_type_id_id"
     t.integer  "modbus_address"
-    t.string   "unit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "series", :force => true do |t|
+    t.integer  "meter_id_id"
+    t.integer  "point_number"
+    t.string   "name"
+    t.string   "units"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
