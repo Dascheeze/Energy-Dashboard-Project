@@ -30,7 +30,7 @@ module MetersHelper
               data_point_ec.amount = ele.attribute["value"]
               data_point_ec.series_id = series.id
               data_point.ec.save
-            else if ele.attribute["number"] == 1
+            elsif ele.attribute["number"] == 1
               @data_point_rp = Data.new
               data_point_rp.amount = ele.attribute["value"]
               data_point_rp.series_id = series.id
@@ -39,8 +39,6 @@ module MetersHelper
           end
         end
       end
-    
     end
   end
-
 end
