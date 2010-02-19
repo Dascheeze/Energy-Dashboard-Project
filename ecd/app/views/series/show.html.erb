@@ -1,0 +1,23 @@
+<p>
+  <b>Meter:</b>
+  <%=h @series.meter_id %>
+</p>
+
+<p>
+  <b>Point number:</b>
+  <%=h @series.point_number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @series.name %>
+</p>
+
+<p>
+  <b>Units:</b>
+  <%=h @series.units %>
+</p>
+
+
+<%= link_to 'Edit', edit_series_path(@series) %> |
+<%= link_to 'Back', series_path %>
