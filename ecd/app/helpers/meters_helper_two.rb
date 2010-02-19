@@ -21,26 +21,26 @@ module MetersHelper
   #  # # to generate a new data point.
   #  }
 
-    Series.each do |series| 
+    Series.each do |series| {
       if series.meter_id == meter_id
         if series.point_number == 0
           xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
             if ele.attribute["number"] == 0
-              #@data_point_ec = Data.new
-	      addDataPoint(series.id, ele.attribute["value"])
-              #data_point_ec.amount = ele.attribute["value"]
-              #data_point_ec.series_id = series.id
-              #data_point.ec.save
-            elsif ele.attribute["number"] == 1
-              #@data_point_rp = Data.new
-	      addDataPoint(series.id, ele.attribute["value"])
-              #data_point_rp.amount = ele.attribute["value"]
-              #data_point_rp.series_id = series.id
-              #data_point.rp.save
+              @data_point_ec = Data.new
+              data_point_ec.amount = ele.attribute["value"]
+              data_point_ec.series_id = series.id
+              data_point.ec.save
+            else if ele.attribute["number"] == 1
+              @data_point_rp = Data.new
+              data_point_rp.amount = ele.attribute["value"]
+              data_point_rp.series_id = series.id
+              data_point.rp.save
             end
           end
         end
       end
+    }
     end
   end
+
 end
