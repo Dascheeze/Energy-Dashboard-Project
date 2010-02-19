@@ -6,8 +6,8 @@
  	<p>
 		<!-- Makes a dropdown and puts the building type in each select value -->
 		<% buildingIDs = Building.find(:all, :order => :id) %>
-		Select <%= f.label :building_id %><br /> 
-		<%= f.collection_select :building_id, buildingIDs, :id, :building_name %>
+		Select <%= f.label :building_id_id %><br /> 
+		<%= f.collection_select :building_id_id, buildingIDs, :id, :building_name %>
 	</p>
   <p>
     <%= f.label :modbus_address %><br />
