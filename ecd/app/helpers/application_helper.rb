@@ -29,7 +29,7 @@ module ApplicationHelper
   
   def addDataPoint(series, value)
     newData = Data.new
-    newData.meter_id = meterId
+    newData.series_id = series
     newData.amount = value
 	newData.save
   end
