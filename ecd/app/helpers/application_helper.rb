@@ -1,7 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def getURL(command)
-    require 'rubygems'
     require 'net/http'
     $username = 'admin'
     $password = 'admin'
