@@ -26,7 +26,7 @@ module MetersHelper
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
           if ele.attribute["number"] == series.point_number
             #@data_point_ec = Data.new
-	    addDataPoint(series.id, ele.attribute["value"])
+            addDataPoint(series.id, ele.attribute["value"])
             #data_point_ec.amount = ele.attribute["value"]
             #data_point_ec.series_id = series.id
             #data_point.ec.save
