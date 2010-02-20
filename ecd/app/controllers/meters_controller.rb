@@ -1,6 +1,8 @@
 class MetersController < ApplicationController
   # GET /meters
   # GET /meters.xml
+  require '..\helpers\metershelper'
+  
   def index
     @meters = Meter.all
 
