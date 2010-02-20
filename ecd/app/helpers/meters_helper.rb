@@ -1,44 +1,53 @@
 module MetersHelper
-  #def parse_xml(modbus_address, meter_id)
-  #  require 'rexml/document'
-  #  include REXML
-  #  xml_dump = getMeterXML(modbus_address)
-  #  xml_doc = Document.new xml_dump
- # #  Series.each do |series| {
-#  ##    if series.meter_id == 
-#  #  xml_doc.elements.each("DAS/devices/device/records/record/point") { 
-#  ##    |element| do { 
-#  ##      if element.attribute["name"] == "Energy Consumption"
-#  #        @data_point_ec = Data.new
-#  ##        data_point_ec.amount = element.attribute["value"]
-#  #        data_point_ec.unit = element.attribute["units"]
-#  ##        data_point_ec.save
-#  #      else if element.attribuet["name"] == "Apparent Power"
-#  #        @data_point_ap = Data.new
-#  #      end
-#  #  } # Okay, so what I'm gonna wanna do now is toset up a for each loop to go through all of the series to check the
-#  #  # point numbers against the points after checking if the meter_ids match up.  Then, call data_create or whatever it was
-#  #  # # to generate a new data point.
-#  #  }
+  require 'net/http'
+  require 'rexml/document'
+  include REXML
 
-#    Series.each do |series|
-#      if series.meter_id == meter_id
- #       xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-  #        if ele.attribute["number"] == series.point_number
-   ####         #@data_point_ec = Data.new
-       #     addDataPoint(series.id, ele.attribute["value"])
-        #####    #data_point_ec.amount = ele.attribute["value"]
-          ###  #data_point_ec.series_id = series.id
-         ##   #data_point.ec.save
-        ## # elsif ele.attribute["number"] == 1
-       ##     #@data_point_rp = Data.new
-###	  #  addDataPoint(series.id, ele.attribute["value"])
-            #data_point_rp.amount = ele.attribute["value"]
-            #data_point_rp.series_id = series.id
-            #data_point.rp.save
-#          end
-#        end
-#      end
- #   end
- # end
+  def getURL(command)
+    $username = 'admin'
+    $password = 'admin'
+    # Open an HTTP connection to 
+    ret = Net::HTTP.start('128.193.122.20')
+
+    # Depending on the request type, create either
+    # an HTTP::Get or HTTP::Post object
+
+    req = Net::HTTP::Get.new(command)
+
+    # Set up the authentication and
+    # make the request
+    req.basic_auth( $username, $password )
+    res = ret.request(req)
+
+    # Return the request body
+    return res.body
+  end
+  
+  def getMeterXML(meterAddress)
+    return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
+  end
+  
+  def addDataPoint(series, value)
+    newData = Data.new
+    newData.series_id = series
+    newData.amount = value
+	newData.save
+  end
+  
+  def parse_xml(modbus_address, meter_id)
+    
+    xml_dump = getMeterXML(modbus_address)
+    xml_doc = Document.new xml_dump
+
+    Series.each do |series|
+      if series.meter_id == meter_id
+        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+          if ele.attribute["number"] == series.point_number
+            addDataPoint(series.id, ele.attribute["value"])
+          end
+          puts ele.attribute["number"]
+        end
+      end
+    end
+  end
 end
