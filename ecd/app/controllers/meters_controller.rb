@@ -11,6 +11,7 @@ class MetersController < ApplicationController
   end
 
   def refresh
+    parse_xml(52, 1)
     Meter.all do |meter|
       parse_xml(meter.modbus_address, meter.id)
     end
