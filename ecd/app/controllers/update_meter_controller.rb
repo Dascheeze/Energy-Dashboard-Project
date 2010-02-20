@@ -1,4 +1,6 @@
 class UpdateMeterController < ApplicationController
+  helper: all
+  
   def index
     addDataPoint(1, 40)
     Meter.all() do |onemeter| 
