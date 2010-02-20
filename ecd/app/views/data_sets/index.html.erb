@@ -1,0 +1,26 @@
+<h1>Listing data_sets</h1>
+
+<table>
+  <tr>
+    <th>Meter</th>
+    <th>Point number</th>
+    <th>Name</th>
+    <th>Units</th>
+  </tr>
+
+<% @data_sets.each do |data_set| %>
+  <tr>
+    <td><%=h data_set.meter %></td>
+    <td><%=h data_set.point_number %></td>
+    <td><%=h data_set.name %></td>
+    <td><%=h data_set.units %></td>
+    <td><%= link_to 'Show', data_set %></td>
+    <td><%= link_to 'Edit', edit_data_set_path(data_set) %></td>
+    <td><%= link_to 'Destroy', data_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New data_set', new_data_set_path %>

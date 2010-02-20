@@ -1,0 +1,28 @@
+<h1>Editing data_set</h1>
+
+<% form_for(@data_set) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :meter %><br />
+    <%= f.text_field :meter %>
+  </p>
+  <p>
+    <%= f.label :point_number %><br />
+    <%= f.text_field :point_number %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :units %><br />
+    <%= f.text_field :units %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @data_set %> |
+<%= link_to 'Back', data_sets_path %>

@@ -10,6 +10,17 @@ class MetersController < ApplicationController
     end
   end
 
+  def refresh
+    @meters = Meter.all
+	all_meters = @meters
+	all_meters do |meter|
+	  parse_xml meter.modbus_address meter.id
+	end
+	respond_to do |format|
+		format.html
+	end
+  end
+  
   # GET /meters/1
   # GET /meters/1.xml
   def show
@@ -83,13 +94,5 @@ class MetersController < ApplicationController
     end
   end
   
-  def refresh
-    meters = Meter.all
-	meters do |meter|
-	  parse_xml meter.modbus_address meter.id
-	end
-	respond_to do |format|
-		format.html
-	end
-  end
+  
 end

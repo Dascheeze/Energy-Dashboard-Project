@@ -1,0 +1,2 @@
+class UpdateMeterController < ApplicationController
+end
