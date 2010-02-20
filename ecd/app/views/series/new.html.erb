@@ -1,6 +1,7 @@
 <h1>New series</h1>
 
 <% form_for(@series) do |f| %>
+  <%= f.error_messages %>
 
   <p>
     <%= f.label :meter_id %><br />
