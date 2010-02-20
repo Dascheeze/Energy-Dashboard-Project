@@ -1,5 +1,11 @@
 class UpdateMeterController < ApplicationController
-  helper: all
+
+  def addDataPoint(series, value)
+    newData = Data.new
+    newData.series_id = series
+    newData.amount = value
+	newData.save
+  end
   
   def index
     addDataPoint(1, 40)
