@@ -1,6 +1,6 @@
 class UpdateMeterController < ApplicationController
   def index
-    AddDataPoint(1, 40)
+    addDataPoint(1, 40)
     Meter.all() do |onemeter| 
 	  parse_xml(onemeter.modbus_address,onemeter.id)
     end
