@@ -136,7 +136,7 @@ class MetersController < ApplicationController
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
 
-    Series.each do |series|
+    DataSet.all do |series|
       if series.meter_id == meter_id
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
           if ele.attribute["number"] == series.point_number
