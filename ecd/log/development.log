@@ -6146,3 +6146,372 @@ ActionController::RoutingError (No route matches "/series" with {:method=>:get})
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:25:41) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.3ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.244.185 at 2010-02-20 14:26:18) [GET]
+
+ActionController::RoutingError (No route matches "/meter/refresh" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:26:27) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.6ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:28:49) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:28:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (163.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:31:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.4ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:32:53) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:33:44) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:09) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.1ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:34:11) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.5ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (150.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:44) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:29:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:45) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:29:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:50) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:36:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMeter Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.3ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Rendering template within layouts/meters
+Rendering meters/show
+Completed in 83ms (View: 68, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters/1]

@@ -10,7 +10,6 @@ class MetersController < ApplicationController
     end
   end
 
-  
   def refresh
     @meters = Meter.all
 	all_meters = @meters
