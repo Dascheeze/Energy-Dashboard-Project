@@ -10,6 +10,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :buildings
   
   map.resources :datas
+  
+  map.resources :update_meter
 
   # The priority is based upon order of creation: first created -> highest priority.
 
