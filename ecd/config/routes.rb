@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :datas
+
   map.resources :data_sets
 
   map.resources :meters
