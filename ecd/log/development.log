@@ -1,0 +1,171 @@
+# Logfile created on Sat Feb 20 15:59:57 -0800 2010  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+  [4;36;1mSQL (43.5ms)[0m   [0;1mDROP TABLE `datas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Unknown table 'datas': DROP TABLE `datas`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (28.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+  [4;36;1mSQL (39.7ms)[0m   [0;1mCREATE TABLE `datas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `data_set_id` int(11), `amount` decimal) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100221000109')[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (32.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `building_types`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `building_types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `buildings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `buildings`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `data_sets`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `data_sets`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `datas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `datas`[0m
+  [4;36;1mSQL (38.6ms)[0m   [0;1mSHOW KEYS FROM `datas`[0m
+  [4;35;1mSQL (42.2ms)[0m   [0mSHOW FIELDS FROM `meter_types`[0m
+  [4;36;1mSQL (39.5ms)[0m   [0;1mdescribe `meter_types`[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mSHOW KEYS FROM `meter_types`[0m
+  [4;36;1mSQL (44.5ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mdescribe `meters`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `meters`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+Migrating to AddTimestampToData (20100221000454)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatas (20100209232820)
+Migrating to CreateMeterTypes (20100209232830)
+Migrating to CreateBuildings (20100209232837)
+Migrating to CreateBuildingTypes (20100209232848)
+Migrating to AddEnabledToBuildings (20100213225531)
+Migrating to AddPrimaryKeyToBuildingTypes (20100213230125)
+Migrating to AddModBusAddressToMeterTypes (20100213230450)
+Migrating to ChangeShitToId (20100214004458)
+Migrating to CreateMeters (20100214221440)
+Migrating to ModifyMeterTypes (20100214221640)
+Migrating to DatasMeterTypetoMeterMigration (20100215000716)
+Migrating to ChangeDataAmountColumn (20100215010841)
+Migrating to FixDatasTable (20100219031852)
+Migrating to FixTheMetersTable (20100219043303)
+Migrating to CreateDataSets (20100220220751)
+Migrating to AlterData (20100221000109)
+Migrating to AddTimestampToData (20100221000454)
+  [4;36;1mSQL (37.2ms)[0m   [0;1mALTER TABLE `datas` ADD `created_at` datetime[0m
+  [4;35;1mSQL (42.5ms)[0m   [0mALTER TABLE `datas` ADD `updated_at` datetime[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100221000454')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `building_types`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `building_types`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `buildings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `buildings`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `data_sets`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `data_sets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `datas`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `datas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `datas`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meter_types`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `meter_types`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `meters`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `meters`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `meters`[0m

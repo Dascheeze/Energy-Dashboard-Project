@@ -1,0 +1,22 @@
+<h1>Listing datas</h1>
+
+<table>
+  <tr>
+    <th>Data set</th>
+    <th>Amount</th>
+  </tr>
+
+<% @datas.each do |data| %>
+  <tr>
+    <td><%=h data.data_set %></td>
+    <td><%=h data.amount %></td>
+    <td><%= link_to 'Show', data %></td>
+    <td><%= link_to 'Edit', edit_data_path(data) %></td>
+    <td><%= link_to 'Destroy', data, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New data', new_data_path %>

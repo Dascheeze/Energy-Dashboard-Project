@@ -1,0 +1,20 @@
+<h1>Editing data</h1>
+
+<% form_for(@data) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :data_set %><br />
+    <%= f.text_field :data_set %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @data %> |
+<%= link_to 'Back', datas_path %>
