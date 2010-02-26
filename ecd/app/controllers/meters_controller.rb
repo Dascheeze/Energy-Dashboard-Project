@@ -128,11 +128,9 @@ class MetersController < ApplicationController
   end
   
   def parse_xml(modbus_address, meter_id)
-    
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-
-    DataSet.all do |series|
+    DataSet.all.each do |series|
       if series.meter_id == meter_id
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
           if ele.attribute("number").to_s.to_i == series.point_number

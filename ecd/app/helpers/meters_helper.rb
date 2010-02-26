@@ -1,7 +1,7 @@
 module MetersHelper
   
   def refresh
-    Meter.all do |meter|
+    Meter.all.each do |meter|
       parse_xml(meter.modbus_address, meter.id)
     end
   end
@@ -43,15 +43,10 @@ module MetersHelper
   def parse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-	puts "0"
     DataSet.all.each do |series|
-	  puts "1"
       if series.meter_id == meter_id
-		puts "2"
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-		  puts "3"
           if ele.attribute("number").to_s.to_i == series.point_number
-			puts "4"
             addDataPoint(series.id, ele.attribute("value").to_s.to_i)
           end
         end
