@@ -125,7 +125,7 @@ class MetersController < ApplicationController
   end
   
   def addDataPoint(series, value)
-    newData = Data.new
+    newData = DataPoint.new
     newData.series_id = series
     newData.amount = value
 	newData.save
