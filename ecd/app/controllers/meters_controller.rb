@@ -11,7 +11,7 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    Meter.all do |meter|
+    Meter.all.each do |meter|
       parse_xml(meter.modbus_address, meter.id)
     end
     respond_to do |format|
