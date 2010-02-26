@@ -14,9 +14,10 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    addDataPoint(1, 30)
-    Meter.all do |meter|
-      parse_xml(meter.modbus_address, meter.id)
+    logger.debug "Test"
+    Meter.all do |meter_num|
+      logger.debug "Test2"
+      parse_xml(meter_num.modbus_address, meter_num.id)
     end
     respond_to do |format|
       format.html
@@ -126,20 +127,24 @@ class MetersController < ApplicationController
   
   def addDataPoint(data_set_id, value)
     newData = DataPoint.new
-    newData.data_set_id = data_set_id
-    newData.amount = value
-	newData.save
+    newData.data_set_id = data_set_id.to_s.to_i
+    newData.amount = value.to_s.to_i
+    newData.save
   end
   
   def parse_xml(modbus_address, meter_id)
-    
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-
+    logger.debug "Outisde foreach"
     DataSet.all do |series|
-      if series.meter_id == meter_id
+      puts "Maybe"
+      logger.warn "In first foreach"
+      if series.meter_id.to_i.to_s == meter_id.to_s.to_i
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-          if ele.attribute("number").to_s.to_i == series.point_number
+          puts "Huh?"
+          if ele.attribute("number").to_s.to_i == series.point_number.to_i
+            puts "Fuck yeah?"
             addDataPoint(series.id, ele.attribute("value").to_s.to_i)
           end
         end
