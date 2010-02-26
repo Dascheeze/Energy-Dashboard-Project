@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :indices
-
   map.resources :data_points
 
   map.resources :data_sets
@@ -8,8 +6,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :meters
 
   map.resources :building_types
-
-  map.resources :meter_types
 
   map.resources :buildings
     
@@ -56,4 +52,6 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  
+  map.root :controller => "welcome"
 end
