@@ -9065,3 +9065,119 @@ ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8b1.c
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#index (for 128.193.244.185 at 2010-02-25 18:42:30) [GET]
+  [4;36;1mDataPoint Load (0.4ms)[0m   [0;1mSELECT * FROM `data_points` [0m
+Rendering template within layouts/data_points
+Rendering data_points/index
+Completed in 53ms (View: 37, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_points]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#new (for 128.193.244.185 at 2010-02-25 18:42:33) [GET]
+  [4;35;1mDataPoint Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `data_points`[0m
+Rendering template within layouts/data_points
+Rendering data_points/new
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_points/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#create (for 128.193.244.185 at 2010-02-25 18:42:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"uzC2rXP1zbjylm+iDuSNc/Dro9XNTnfIz7ebl96gsJA=", "data_point"=>{"data_set_id"=>"1", "amount"=>"30"}}
+  [4;36;1mDataPoint Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `data_points`[0m
+
+NameError (uninitialized constant DataPoint::DataSetId):
+  app/controllers/data_points_controller.rb:43:in `new'
+  app/controllers/data_points_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#new (for 128.193.244.101 at 2010-02-25 18:42:57) [GET]
+  [4;35;1mDataPoint Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `data_points`[0m
+Rendering template within layouts/data_points
+Rendering data_points/new
+Completed in 27ms (View: 10, DB: 5) | 200 OK [http://access.cws.oregonstate.edu/data_points/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#create (for 128.193.244.101 at 2010-02-25 18:43:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DrlkCYi4brGh6tb5cQHkL3lP/yLGvWDQfbnRtcC7/4s=", "data_point"=>{"data_set_id"=>"1", "amount"=>"37"}}
+  [4;36;1mDataPoint Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `data_points`[0m
+
+NameError (uninitialized constant DataPoint::DataSetId):
+  app/controllers/data_points_controller.rb:43:in `new'
+  app/controllers/data_points_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (100.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#index (for 128.193.244.101 at 2010-02-25 18:43:10) [GET]
+  [4;35;1mDataSet Load (1.0ms)[0m   [0mSELECT * FROM `data_sets` [0m
+Rendering data_sets/index
+  [4;36;1mDataSet Columns (7.3ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+  [4;35;1mMeter Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `meters`[0m
+  [4;36;1mMeter Load (0.5ms)[0m   [0;1mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Completed in 87ms (View: 59, DB: 10) | 200 OK [http://access.cws.oregonstate.edu/data_sets]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataPointsController#create (for 128.193.244.101 at 2010-02-25 18:43:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"DrlkCYi4brGh6tb5cQHkL3lP/yLGvWDQfbnRtcC7/4s=", "data_point"=>{"data_set_id"=>"0", "amount"=>"37"}}
+  [4;35;1mDataPoint Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `data_points`[0m
+
+NameError (uninitialized constant DataPoint::DataSetId):
+  app/controllers/data_points_controller.rb:43:in `new'
+  app/controllers/data_points_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.1ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)

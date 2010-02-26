@@ -379,3 +379,6 @@ Migrating to CreateDataPoints (20100226022522)
   [4;35;1mDataPoint Load (0.5ms)[0m   [0mSELECT * FROM `data_points` WHERE (`data_points`.`id` = 1) [0m
   [4;36;1mDataSet Load (0.6ms)[0m   [0;1mSELECT * FROM `data_sets` WHERE (`data_sets`.`id` = 1) [0m
   [4;35;1mDataSet Load (0.4ms)[0m   [0mSELECT * FROM `data_sets` WHERE (`data_sets`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: MySQL server has gone away: BEGIN[0m
+  [4;35;1mDataPoint Create (0.0ms)[0m   [0mMysql::Error: MySQL server has gone away: INSERT INTO `data_points` (`updated_at`, `data_set_id`, `amount`, `created_at`) VALUES('2010-02-26 02:39:47', NULL, 30, '2010-02-26 02:39:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: MySQL server has gone away: ROLLBACK[0m
