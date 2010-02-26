@@ -124,9 +124,9 @@ class MetersController < ApplicationController
     return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
   
-  def addDataPoint(series, value)
+  def addDataPoint(data_set_id, value)
     newData = DataPoint.new
-    newData.series_id = series
+    newData.data_set_id = data_set_id
     newData.amount = value
 	newData.save
   end
