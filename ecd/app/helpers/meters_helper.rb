@@ -43,12 +43,10 @@ module MetersHelper
   def parse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-    DataSet.all.each do |series|
-      if series.meter_id == meter_id
-        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-          if ele.attribute("number").to_s.to_i == series.point_number
-            addDataPoint(series.id, ele.attribute("value").to_s.to_i)
-          end
+    DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
+      xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+        if ele.attribute("number").to_s.to_i == series.point_number
+          addDataPoint(series.id, ele.attribute("value").to_s.to_i)
         end
       end
     end
