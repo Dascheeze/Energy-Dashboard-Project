@@ -41,10 +41,9 @@ module MetersHelper
   end
   
   def parse_xml(modbus_address, meter_id)
-    
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-
+	puts "0"
     DataSet.all do |series|
 	  puts "1"
       if series.meter_id == meter_id
