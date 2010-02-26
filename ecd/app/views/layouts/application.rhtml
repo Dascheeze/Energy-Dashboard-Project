@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Energy Consumption Dashboard</title>
+
+		
+		<%= stylesheet_link_tag 'visualize.jQuery'%>
+		<%= stylesheet_link_tag 'grid' %>
+		<%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.8b1.custom.css'%>
+		<%= stylesheet_link_tag 'custum_style'%>
+		<%= stylesheet_link_tag 'scaffold' %>
+		
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+		
+		
+		<script type="text/javascript" src="javascripts/visualize.jQuery.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src="javascripts/jquery-ui-1.8b1.custom.min.js"></script>
+	</head>
+	<body>
+
+   
+<div class="container_12">
+	<div class="grid_12 ui-corner-all" style="background-color:#7799BB; margin-bottom: 5px;">
+		<div class="grid_6 ">
+			<span class="website-header"><a href="index.html"><h1>Energy<i>Consumption</i>Dashboard</h1></a></span>
+		</div>
+		
+		<div class="grid_4 ">
+			<p>This is a website built to make available energy consumption information about buildings on Oregon State Universitie's campus</p>
+		</div>
+
+		<div class="grid_1">
+			<a href="http://www.oregonstate.edu/"> <img src="http://oregonstate.edu/u_central/top-hat/images/osu-tag.gif" class="noborder" alt="Oregon State University Logo" > </a>
+		</div>
+	</div>
+</div>
+
+<div class="container_12">
+	<div class="grid_2 ui-corner-all" style="background-color: #7799BB;">
+		<a href="#" class="navButton" >Home Screen</a><br />
+		<a href="#" class="navButton" >Power Info</a><br />
+		<a href="#" class="navButton" >Help</a><br />
+		<a href="#" class="navButton" >Dev Team</a><br />
+		<a href="admin.html" class="navButton" >Admin</a><br />
+	</div>
+	<div class="grid_10" style="background-color: #9BD;">
+	<%=yield%>
+	</div>
+</div>
+<div id="bldg-5-flot" class="flot-div"></div>
+
+<script id="source">
+
+$(function() {
+	 $(".navButton").button();
+	
+	 $("#building-tabs").tabs();
+	
+    var stack = 0, bars = true, lines = false, steps = false;
+    
+    function plotWithOptions(divToPlot) {
+		var d1 = [];
+		for (var i = 0; i <= 10; i += 1)
+			d1.push([i, parseInt(Math.random() * 30)]);
+
+		var d2 = [];
+		for (var i = 0; i <= 10; i += 1)
+			d2.push([i, parseInt(Math.random() * 30)]);
+
+		var d3 = [];
+		for (var i = 0; i <= 10; i += 1)
+			d3.push([i, parseInt(Math.random() * 30)]);
+			
+        $.plot($(divToPlot), [ d1, d2, d3 ], {
+            series: {
+                stack: stack,
+                lines: { show: lines, steps: steps },
+                bars: { show: bars, barWidth: 0.6 }
+            }
+        });
+    }
+	
+	$('.tab-button').click(function() {plotWithOptions($("" + $(this).attr("href") + " ").children(".flot-div"));});
+	
+	plotWithOptions("#bldg-1-flot");
+	
+    
+
+	
+	/*$(".ui-state-default").hover(
+		function(){
+			$(this)
+			.toggleClass("ui-state-default")
+			.toggleClass("ui-state-hover");
+		},function(){
+			$(this)
+			.toggleClass("ui-state-default")
+			.toggleClass("ui-state-hover");
+		}
+	).toggleClass("ui-corner-all");*/
+	
+});
+
+</script>
+
+
+	</body>
+</html>
+	
