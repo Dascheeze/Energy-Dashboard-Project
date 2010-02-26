@@ -1,0 +1,18 @@
+<h1>Listing welcomes</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @welcomes.each do |welcome| %>
+  <tr>
+    <td><%= link_to 'Show', welcome %></td>
+    <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
+    <td><%= link_to 'Destroy', welcome, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New welcome', new_welcome_path %>
