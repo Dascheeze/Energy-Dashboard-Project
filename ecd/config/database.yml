@@ -17,7 +17,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  reconnect: true 
+  reconnect: true
   database: cw_62354 
   pool: 5
   username: cw_62354_admin

@@ -1,6 +1,7 @@
 a { text-decoration:none; }
  
-a:visited { color: #000000; }
+a:visited { color: #000000;}
+a:hover {color: #FFFF38;}
  
 body {
 background-color: #113355;
