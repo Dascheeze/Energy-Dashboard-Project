@@ -12,7 +12,9 @@ class MetersController < ApplicationController
 
   def refresh
     logger.debug "Test"
-    Meter.all do |meter_num|
+    @meters = Meter.all
+    logger.debug Meter.all
+    Meter.all.each do |meter_num|
       logger.debug "Test2"
       parse_xml(meter_num.modbus_address, meter_num.id)
     end
@@ -130,22 +132,14 @@ class MetersController < ApplicationController
   end
   
   def parse_xml(modbus_address, meter_id)
-<<<<<<< HEAD:ecd/app/controllers/meters_controller.rb
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
-=======
->>>>>>> 5161f8b658de9e2d9fccb24ae206af74710410b2:ecd/app/controllers/meters_controller.rb
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-<<<<<<< HEAD:ecd/app/controllers/meters_controller.rb
     logger.debug "Outisde foreach"
-    DataSet.all do |series|
+    DataSet.all.each do |series|
       puts "Maybe"
       logger.warn "In first foreach"
-      if series.meter_id.to_i.to_s == meter_id.to_s.to_i
-=======
-    DataSet.all.each do |series|
-      if series.meter_id == meter_id
->>>>>>> 5161f8b658de9e2d9fccb24ae206af74710410b2:ecd/app/controllers/meters_controller.rb
+      if series.meter_id.to_s.to_i == meter_id.to_s.to_i
+        logger.warn "Inside second foreach"
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
           puts "Huh?"
           if ele.attribute("number").to_s.to_i == series.point_number.to_i

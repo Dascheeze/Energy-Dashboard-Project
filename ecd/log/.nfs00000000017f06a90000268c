@@ -6822,3 +6822,442 @@ ActionController::RoutingError (No route matches "/meters/refresh/javascripts/jq
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#refresh (for 128.193.60.22 at 2010-02-26 11:45:49) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:134: syntax error, unexpected tLSHFT
+<<<<<<< HEAD:ecd/app/controllers/meters_controller.rb
+  ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:136: syntax error, unexpected tEQQ, expecting kEND
+=======
+   ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:140: syntax error, unexpected tLSHFT, expecting kEND
+<<<<<<< HEAD:ecd/app/controllers/meters_controller.rb
+  ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:146: syntax error, unexpected tEQQ
+=======
+   ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:149: syntax error, unexpected tRSHFT
+>>>>>>> 5161f8b658de9e2d9fccb24ae206af74710410b2:ecd/app/controllers/meters_controller.rb
+  ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:161: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.1ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:46:37) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NoMethodError (undefined method `meters' for #<MetersController:0xb7168944>):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:47:16) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NoMethodError (undefined method `meters' for #<MetersController:0xb703bd78>):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#refresh (for 128.193.60.22 at 2010-02-26 11:47:43) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:16: syntax error, unexpected kDO, expecting kEND
+    @meters do |meter_num|
+              ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting kEND
+      logger.debug "Test2"
+                    ^
+/nfs/silo2/v1/oeec/chapmant-dev/ecd/app/controllers/meters_controller.rb:154: syntax error, unexpected kEND, expecting $end):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:47:58) [GET]
+  Parameters: {"id"=>"1"}
+Test
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 82ms (View: 67, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:48:25) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NoMethodError (undefined method `each' for #<Class:0xb72190c8>):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:48:36) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NoMethodError (undefined method `Meter' for #<MetersController:0xb7114858>):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:48:42) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NoMethodError (undefined method `Meters' for #<MetersController:0xb725b400>):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:48:53) [GET]
+  Parameters: {"id"=>"1"}
+Test
+
+NameError (uninitialized constant MetersController::Meters):
+  app/controllers/meters_controller.rb:16:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:48:58) [GET]
+  Parameters: {"id"=>"1"}
+Test
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:49:22) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb71faf10>#<Meter:0xb71fae70>
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 29ms (View: 7, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:49:40) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb7144314>#<Meter:0xb7144274>
+Test2
+Outisde foreach
+Test2
+Outisde foreach
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 204ms (View: 7, DB: 12) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:50:12) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb71f3760>#<Meter:0xb71f36c0>
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+In first foreach
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+In first foreach
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 183ms (View: 7, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:50:44) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb70e5030>#<Meter:0xb70e4f90>
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+In first foreach
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+In first foreach
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 248ms (View: 7, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:51:02) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb71c77a0>#<Meter:0xb71c7700>
+Test2
+Outisde foreach
+In first foreach
+Inside second foreach
+In first foreach
+Inside second foreach
+In first foreach
+In first foreach
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+Inside second foreach
+In first foreach
+Inside second foreach
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 459ms (View: 7, DB: 20) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:51:16) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb71b2a6c>#<Meter:0xb71b29cc>
+Test2
+Outisde foreach
+In first foreach
+Inside second foreach
+
+LocalJumpError (no block given):
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  /usr/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  app/controllers/meters_controller.rb:145:in `parse_xml'
+  app/controllers/meters_controller.rb:138:in `each'
+  app/controllers/meters_controller.rb:138:in `parse_xml'
+  app/controllers/meters_controller.rb:19:in `refresh'
+  app/controllers/meters_controller.rb:17:in `each'
+  app/controllers/meters_controller.rb:17:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:51:22) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb7226db8>#<Meter:0xb7226d18>
+Test2
+Outisde foreach
+In first foreach
+Inside second foreach
+
+LocalJumpError (no block given):
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  /usr/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  app/controllers/meters_controller.rb:145:in `parse_xml'
+  app/controllers/meters_controller.rb:138:in `each'
+  app/controllers/meters_controller.rb:138:in `parse_xml'
+  app/controllers/meters_controller.rb:19:in `refresh'
+  app/controllers/meters_controller.rb:17:in `each'
+  app/controllers/meters_controller.rb:17:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:51:28) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb70b0308>#<Meter:0xb70b0268>
+Test2
+Outisde foreach
+In first foreach
+Inside second foreach
+
+LocalJumpError (no block given):
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  /usr/lib/ruby/1.8/rexml/xpath.rb:53:in `each'
+  /usr/lib/ruby/1.8/rexml/element.rb:939:in `each'
+  app/controllers/meters_controller.rb:145:in `parse_xml'
+  app/controllers/meters_controller.rb:138:in `each'
+  app/controllers/meters_controller.rb:138:in `parse_xml'
+  app/controllers/meters_controller.rb:19:in `refresh'
+  app/controllers/meters_controller.rb:17:in `each'
+  app/controllers/meters_controller.rb:17:in `refresh'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (169.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MetersController#refresh (for 128.193.60.22 at 2010-02-26 11:51:33) [GET]
+  Parameters: {"id"=>"1"}
+Test
+#<Meter:0xb71be394>#<Meter:0xb71be2f4>
+Test2
+Outisde foreach
+In first foreach
+Inside second foreach
+In first foreach
+Inside second foreach
+In first foreach
+In first foreach
+Test2
+Outisde foreach
+In first foreach
+In first foreach
+In first foreach
+Inside second foreach
+In first foreach
+Inside second foreach
+Rendering template within layouts/application
+Rendering meters/refresh
+Completed in 342ms (View: 7, DB: 9) | 200 OK [http://access.cws.oregonstate.edu/meters/refresh/1]
