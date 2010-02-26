@@ -1,0 +1,22 @@
+<h1>Listing data_points</h1>
+
+<table>
+  <tr>
+    <th>Data set</th>
+    <th>Amount</th>
+  </tr>
+
+<% @data_points.each do |data_point| %>
+  <tr>
+    <td><%=h data_point.data_set_id %></td>
+    <td><%=h data_point.amount %></td>
+    <td><%= link_to 'Show', data_point %></td>
+    <td><%= link_to 'Edit', edit_data_point_path(data_point) %></td>
+    <td><%= link_to 'Destroy', data_point, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New data_point', new_data_point_path %>

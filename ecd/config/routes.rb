@@ -1,6 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :welcomes	
-  
+ActionController::Routing::Routes.draw do |map|  
   map.resources :data_points
 
   map.resources :data_sets
@@ -55,5 +53,5 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   
-  map.root :controller => "welcome"
+  map.root :controller => "home"
 end
