@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :welcomes	
+  
   map.resources :data_points
 
   map.resources :data_sets
