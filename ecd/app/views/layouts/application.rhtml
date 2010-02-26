@@ -13,10 +13,10 @@
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
 		
-		
-		<script type="text/javascript" src="javascripts/visualize.jQuery.js"></script>
-		<script type="text/javascript" src="javascripts/jquery.min.js"></script>
-		<script type="text/javascript" src="javascripts/jquery-ui-1.8b1.custom.min.js"></script>
+		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "visualize.jQuery" %>
+		<%= javascript_include_tag "jquery.min" %>
+		<%= javascript_include_tag "jquery-ui-1.8b1.custom.min" %>
 	</head>
 	<body>
 
@@ -39,7 +39,7 @@
 
 <div class="container_12">
 	<div class="grid_2 ui-corner-all" style="background-color: #7799BB;">
-		<a href="index.html" class="navButton" >Home Screen</a><br />
+		<a href="home" class="navButton" >Home Screen</a><br />
 		<a href="#" class="navButton" >Power Info</a><br />
 		<a href="#" class="navButton" >Help</a><br />
 		<a href="#" class="navButton" >Dev Team</a><br />
