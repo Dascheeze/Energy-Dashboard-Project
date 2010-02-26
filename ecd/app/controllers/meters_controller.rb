@@ -11,15 +11,10 @@ class MetersController < ApplicationController
   end
 
   def refresh
-<<<<<<< HEAD:ecd/app/controllers/meters_controller.rb
     logger.debug "Test"
     Meter.all do |meter_num|
       logger.debug "Test2"
       parse_xml(meter_num.modbus_address, meter_num.id)
-=======
-    Meter.all.each do |meter|
-      parse_xml(meter.modbus_address, meter.id)
->>>>>>> 5161f8b658de9e2d9fccb24ae206af74710410b2:ecd/app/controllers/meters_controller.rb
     end
     respond_to do |format|
       format.html
