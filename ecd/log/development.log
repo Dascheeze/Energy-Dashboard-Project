@@ -299,8 +299,1014 @@ Migrating to CreateDatas (20100221004027)
   [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meters`[0m
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `meters`[0m
+<<<<<<< HEAD:ecd/log/development.log
   [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+=======
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#index (for 10.192.137.190 at 2010-02-20 14:08:06) [GET]
+  [4;35;1mDataSet Load (0.5ms)[0m   [0mSELECT * FROM `data_sets` [0m
+Rendering template within layouts/data_sets
+Rendering data_sets/index
+Completed in 44ms (View: 25, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_sets/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#new (for 10.192.137.190 at 2010-02-20 14:08:07) [GET]
+  [4;36;1mDataSet Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+Rendering template within layouts/data_sets
+Rendering data_sets/new
+Completed in 120ms (View: 23, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_sets/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#new (for 128.193.244.185 at 2010-02-20 14:08:11) [GET]
+  [4;35;1mDataSet Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+Rendering template within layouts/data_sets
+Rendering data_sets/new
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_sets/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#new (for 10.192.137.190 at 2010-02-20 14:08:19) [GET]
+  [4;36;1mDataSet Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+Rendering template within layouts/data_sets
+Rendering data_sets/new
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/data_sets/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#create (for 128.193.244.185 at 2010-02-20 14:08:23) [POST]
+  Parameters: {"commit"=>"Create", "data_set"=>{"name"=>"Energy Consumption", "meter"=>"1", "units"=>"KWh", "point_number"=>"0"}, "authenticity_token"=>"FbIRZlYn5UwXlaaag5aZhXOsba2R7Wr2wknejws2GBM="}
+  [4;35;1mDataSet Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+
+ActiveRecord::AssociationTypeMismatch (Meter(#-612261758) expected, got String(#-605756388)):
+  app/controllers/data_sets_controller.rb:43:in `new'
+  app/controllers/data_sets_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#create (for 128.193.244.185 at 2010-02-20 14:09:16) [POST]
+  Parameters: {"commit"=>"Create", "data_set"=>{"name"=>"Energy Consumption", "meter"=>"1", "units"=>"KWh", "point_number"=>"0"}, "authenticity_token"=>"FbIRZlYn5UwXlaaag5aZhXOsba2R7Wr2wknejws2GBM="}
+  [4;36;1mDataSet Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+
+ActiveRecord::AssociationTypeMismatch (Meter(#-611335678) expected, got String(#-605756388)):
+  app/controllers/data_sets_controller.rb:43:in `new'
+  app/controllers/data_sets_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.5ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#create (for 128.193.244.185 at 2010-02-20 14:09:40) [POST]
+  Parameters: {"commit"=>"Create", "data_set"=>{"name"=>"Energy Consumption", "meter"=>"1", "units"=>"KWh", "point_number"=>"0"}, "authenticity_token"=>"FbIRZlYn5UwXlaaag5aZhXOsba2R7Wr2wknejws2GBM="}
+  [4;35;1mDataSet Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+
+ActiveRecord::AssociationTypeMismatch (Meter(#-611935328) expected, got String(#-605756388)):
+  app/controllers/data_sets_controller.rb:43:in `new'
+  app/controllers/data_sets_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#new (for 128.193.244.185 at 2010-02-20 14:09:45) [GET]
+  [4;36;1mDataSet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+Rendering template within layouts/data_sets
+Rendering data_sets/new
+
+ActionView::TemplateError (undefined method `872098' for #<DataSet:0xb6f3e290>) on line #8 of app/views/data_sets/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :meter.id %><br />
+8:     <%= f.text_field :meter.id %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :point_number %><br />
+
+    app/views/data_sets/new.html.erb:8
+    app/views/data_sets/new.html.erb:3
+    app/controllers/data_sets_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#new (for 128.193.244.185 at 2010-02-20 14:10:01) [GET]
+  [4;35;1mDataSet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+Rendering template within layouts/data_sets
+Rendering data_sets/new
+Completed in 35ms (View: 22, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/data_sets/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#create (for 128.193.244.185 at 2010-02-20 14:10:14) [POST]
+  Parameters: {"commit"=>"Create", "data_set"=>{"name"=>"Energy Consumption", "units"=>"KWh", "point_number"=>"0", "meter_id"=>"1"}, "authenticity_token"=>"FbIRZlYn5UwXlaaag5aZhXOsba2R7Wr2wknejws2GBM="}
+  [4;36;1mDataSet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDataSet Create (0.3ms)[0m   [0;1mINSERT INTO `data_sets` (`name`, `updated_at`, `units`, `point_number`, `meter_id`, `created_at`) VALUES('Energy Consumption', '2010-02-20 22:10:14', 'KWh', 0, 1, '2010-02-20 22:10:14')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://access.cws.oregonstate.edu:9001/data_sets/1
+Completed in 21ms (DB: 2) | 302 Found [http://access.cws.oregonstate.edu/data_sets]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#show (for 128.193.244.185 at 2010-02-20 14:10:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDataSet Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `data_sets`[0m
+  [4;35;1mDataSet Load (0.3ms)[0m   [0mSELECT * FROM `data_sets` WHERE (`data_sets`.`id` = 1) [0m
+Rendering template within layouts/data_sets
+Rendering data_sets/show
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.4ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Completed in 39ms (View: 24, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/data_sets/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#index (for 10.192.137.190 at 2010-02-20 14:10:19) [GET]
+  [4;36;1mDataSet Load (1.5ms)[0m   [0;1mSELECT * FROM `data_sets` [0m
+Rendering template within layouts/data_sets
+Rendering data_sets/index
+  [4;35;1mDataSet Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+  [4;36;1mMeter Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Completed in 39ms (View: 22, DB: 4) | 200 OK [http://access.cws.oregonstate.edu/data_sets/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DataSetsController#index (for 128.193.244.185 at 2010-02-20 14:10:21) [GET]
+  [4;36;1mDataSet Load (0.4ms)[0m   [0;1mSELECT * FROM `data_sets` [0m
+Rendering template within layouts/data_sets
+Rendering data_sets/index
+  [4;35;1mDataSet Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `data_sets`[0m
+  [4;36;1mMeter Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.4ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Completed in 49ms (View: 31, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/data_sets]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 14:20:21) [GET]
+
+ActionController::RoutingError (No route matches "/series" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:25:41) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.3ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.244.185 at 2010-02-20 14:26:18) [GET]
+
+ActionController::RoutingError (No route matches "/meter/refresh" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:26:27) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.6ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:28:49) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:28:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:27:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (163.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:31:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.4ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:32:53) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:33:44) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:09) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.1ms)
+Rendered rescues/_request_and_response (4.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 128.193.244.185 at 2010-02-20 14:34:11) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.5ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (150.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:44) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:29:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:45) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:29:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:50) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:34:52) [GET]
+  Parameters: {"id"=>"refresh"}
+  [4;36;1mMeter Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.2ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Meter with ID=refresh):
+  app/controllers/meters_controller.rb:28:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#show (for 10.192.137.190 at 2010-02-20 14:36:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMeter Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+  [4;35;1mMeter Load (0.3ms)[0m   [0mSELECT * FROM `meters` WHERE (`meters`.`id` = 1) [0m
+Rendering template within layouts/meters
+Rendering meters/show
+Completed in 83ms (View: 68, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 15:13:47) [GET]
+  [4;36;1mBuilding Load (0.6ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/buildings
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 146ms (View: 132, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (7.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 128.193.137.26 at 2010-02-20 15:14:42) [GET]
+  [4;36;1mBuildingType Load (0.4ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/building_types
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 53ms (View: 39, DB: 9) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 128.193.137.26 at 2010-02-20 15:18:20) [GET]
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/building_types
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#index (for 67.160.130.248 at 2010-02-20 15:33:17) [GET]
+  [4;36;1mMeter Load (0.3ms)[0m   [0;1mSELECT * FROM `meters` [0m
+Rendering template within layouts/meters
+Rendering meters/index
+  [4;35;1mMeter Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `meters`[0m
+Completed in 55ms (View: 35, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 15:33:27) [GET]
+
+ActionController::RoutingError (No route matches "/main" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 15:37:33) [GET]
+
+ActionController::RoutingError (No route matches "/main" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 67.160.130.248 at 2010-02-20 15:37:45) [GET]
+  [4;36;1mBuildingType Load (0.8ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/building_types
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 29ms (View: 16, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 15:39:37) [GET]
+  [4;36;1mBuilding Load (3.2ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/buildings
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 27ms (View: 12, DB: 5) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 15:41:40) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/buildings
+Rendering buildings/index
+  [4;35;1mBuilding Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 30ms (View: 15, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 15:41:40) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/buildings
+Rendering buildings/index
+  [4;35;1mBuilding Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 27ms (View: 12, DB: 5) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 15:42:16) [GET]
+
+ActionController::RoutingError (No route matches "/main" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#index (for 67.160.130.248 at 2010-02-20 15:46:03) [GET]
+  [4;36;1mMeter Load (0.5ms)[0m   [0;1mSELECT * FROM `meters` [0m
+Rendering template within layouts/meters
+Rendering meters/index
+  [4;35;1mMeter Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `meters`[0m
+Completed in 37ms (View: 19, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#index (for 67.160.130.248 at 2010-02-20 15:51:24) [GET]
+  [4;36;1mMeter Load (1.2ms)[0m   [0;1mSELECT * FROM `meters` [0m
+Rendering template within layouts/application
+Rendering meters/index
+  [4;35;1mMeter Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `meters`[0m
+Completed in 41ms (View: 26, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/meters]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 15:53:31) [GET]
+  [4;36;1mBuilding Load (0.7ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 128.193.137.26 at 2010-02-20 15:53:35) [GET]
+  [4;36;1mBuildingType Load (0.5ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/application
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 31ms (View: 18, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SeriesController#index (for 128.193.137.26 at 2010-02-20 15:53:37) [GET]
+  [4;36;1mSeries Load (0.0ms)[0m   [0;1mMysql::Error: Table 'cw_62354.series' doesn't exist: SELECT * FROM `series` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'cw_62354.series' doesn't exist: SELECT * FROM `series` ):
+  app/controllers/series_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MeterTypesController#index (for 128.193.137.26 at 2010-02-20 15:53:41) [GET]
+  [4;35;1mMeterType Load (0.6ms)[0m   [0mSELECT * FROM `meter_types` [0m
+  [4;36;1mMeterType Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `meter_types`[0m
+
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'KWH'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite MeterType.inheritance_column to use another column for that information.):
+  app/controllers/meter_types_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (80.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MetersController#index (for 128.193.137.26 at 2010-02-20 15:53:46) [GET]
+  [4;35;1mMeter Load (0.3ms)[0m   [0mSELECT * FROM `meters` [0m
+Rendering template within layouts/application
+Rendering meters/index
+  [4;36;1mMeter Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
+Completed in 119ms (View: 12, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/meters]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 15:59:50) [GET]
+  [4;35;1mBuilding Load (0.6ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 39ms (View: 26, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 15:59:53) [GET]
+  [4;35;1mBuilding Load (2.5ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 12, DB: 4) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 128.193.137.26 at 2010-02-20 16:00:00) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.4ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 41ms (View: 29, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:00:00) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/stylesheets/visualize.jQuery.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 128.193.137.26 at 2010-02-20 16:00:00) [GET]
+  Parameters: {"id"=>"grid"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:00:00) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/stylesheets/hot-sneaks/jquery-ui-1.8b1.custom.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 128.193.137.26 at 2010-02-20 16:00:00) [GET]
+  Parameters: {"id"=>"custum_style"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 128.193.137.26 at 2010-02-20 16:00:01) [GET]
+  Parameters: {"id"=>"scaffold"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:00:01) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+>>>>>>> 4a7f203ff3d22d621d63f699d8bea40033ac4f1b:ecd/log/development.log
   [4;35;1mSQL (1.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+<<<<<<< HEAD:ecd/log/development.log
   [4;36;1mSQL (3.7ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (9.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Migrating to CreateMeterTypes (20100209232830)
@@ -345,3 +1351,2273 @@ Migrating to RenameDataToDataPoint (20100226022128)
   [4;36;1mSQL (5.2ms)[0m   [0;1mSHOW FIELDS FROM `meters`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mdescribe `meters`[0m
   [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `meters`[0m
+=======
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:00:01) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:00:01) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:00:04) [GET]
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;35;1mBuildingType Load (0.2ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Completed in 44ms (View: 26, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/stylesheets/visualize.jQuery.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+  Parameters: {"id"=>"grid"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/stylesheets/hot-sneaks/jquery-ui-1.8b1.custom.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+  Parameters: {"id"=>"scaffold"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#stylesheets to css (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+  Parameters: {"id"=>"custum_style"}
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:05) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:06) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:06) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:00:06) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:09:11) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.7ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 49ms (View: 36, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:09:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:13:09) [GET]
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;35;1mBuildingType Load (0.3ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+
+ActionView::TemplateError (undefined method `javascript_link_tag' for #<ActionView::Base:0xb70a1470>) on line #14 of app/views/layouts/application.rhtml:
+11: 		<%= stylesheet_link_tag 'scaffold' %>
+12: 		
+13: 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+14: 		<%= javascript_link_tag 'visualize.jQuery'%>
+15: 		<%= javascript_link_tag 'jquery.min'%>
+16: 		<%= javascript_link_tag 'jquery-ui-1.8b1.custom.min'%>
+17: 		
+
+    app/views/layouts/application.rhtml:14:in `_run_rhtml_app47views47layouts47application46rhtml'
+    app/controllers/buildings_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    server:3
+
+Rendered rescues/_trace (179.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:14:04) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 50ms (View: 37, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:15:21) [GET]
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;35;1mBuildingType Load (0.3ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+
+ActionView::TemplateError (undefined method `js_tag' for #<ActionView::Base:0xb70df1d0>) on line #14 of app/views/layouts/application.rhtml:
+11: 		<%= stylesheet_link_tag 'scaffold' %>
+12: 		
+13: 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+14: 		<%= js_tag 'visualize.jQuery'%>
+15: 		<%= js_tag 'jquery.min'%>
+16: 		<%= js_tag 'jquery-ui-1.8b1.custom.min'%>
+17: 		
+
+    app/views/layouts/application.rhtml:14:in `_run_rhtml_app47views47layouts47application46rhtml'
+    app/controllers/buildings_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    server:3
+
+Rendered rescues/_trace (198.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:15:40) [GET]
+  [4;35;1mBuilding Load (0.5ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+
+ActionView::TemplateError (undefined method `js_tag' for #<ActionView::Base:0xb718d438>) on line #14 of app/views/layouts/application.rhtml:
+11: 		<%= stylesheet_link_tag 'scaffold' %>
+12: 		
+13: 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+14: 		<%= js_tag 'visualize.jQuery'%>
+15: 		<%= js_tag 'jquery.min'%>
+16: 		<%= js_tag 'jquery-ui-1.8b1.custom.min'%>
+17: 		
+
+    app/views/layouts/application.rhtml:14:in `_run_rhtml_app47views47layouts47application46rhtml'
+    app/controllers/buildings_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    server:3
+
+Rendered rescues/_trace (89.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 128.193.137.26 at 2010-02-20 16:15:44) [GET]
+  [4;35;1mBuildingType Load (0.6ms)[0m   [0mSELECT * FROM `building_types` [0m
+Rendering template within layouts/application
+Rendering building_types/index
+  [4;36;1mBuildingType Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+
+ActionView::TemplateError (undefined method `js_tag' for #<ActionView::Base:0xb722f198>) on line #14 of app/views/layouts/application.rhtml:
+11: 		<%= stylesheet_link_tag 'scaffold' %>
+12: 		
+13: 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+14: 		<%= js_tag 'visualize.jQuery'%>
+15: 		<%= js_tag 'jquery.min'%>
+16: 		<%= js_tag 'jquery-ui-1.8b1.custom.min'%>
+17: 		
+
+    app/views/layouts/application.rhtml:14:in `_run_rhtml_app47views47layouts47application46rhtml'
+    app/controllers/building_types_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    server:3
+
+Rendered rescues/_trace (86.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:15:51) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+
+ActionView::TemplateError (undefined method `js_tag' for #<ActionView::Base:0xb704470c>) on line #14 of app/views/layouts/application.rhtml:
+11: 		<%= stylesheet_link_tag 'scaffold' %>
+12: 		
+13: 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+14: 		<%= js_tag 'visualize.jQuery'%>
+15: 		<%= js_tag 'jquery.min'%>
+16: 		<%= js_tag 'jquery-ui-1.8b1.custom.min'%>
+17: 		
+
+    app/views/layouts/application.rhtml:14:in `_run_rhtml_app47views47layouts47application46rhtml'
+    app/controllers/buildings_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    server:3
+
+Rendered rescues/_trace (185.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:16:33) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 51ms (View: 36, DB: 5) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:17:25) [GET]
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;35;1mBuildingType Load (0.3ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Completed in 47ms (View: 34, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:25) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:25) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 16:18:45) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:19:03) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 44ms (View: 26, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:19:03) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:19:04) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:19:04) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 16:23:19) [GET]
+  [4;36;1mBuilding Load (0.5ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#edit (for 67.160.130.248 at 2010-02-20 16:23:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mBuilding Load (0.4ms)[0m   [0mSELECT * FROM `buildings` WHERE (`buildings`.`id` = 2) [0m
+  [4;36;1mBuilding Load (0.2ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/edit
+  [4;35;1mBuildingType Load (0.4ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Completed in 46ms (View: 32, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/2/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:22) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:22) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:23) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 67.160.130.248 at 2010-02-20 16:23:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` WHERE (`buildings`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering buildings/show
+Completed in 29ms (View: 15, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/2]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:28) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:28) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:23:28) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 16:23:33) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:26:20) [GET]
+  [4;35;1mBuilding Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 35ms (View: 22, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 16:26:25) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 67.160.130.248 at 2010-02-20 16:26:29) [GET]
+  [4;36;1mBuildingType Load (0.4ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/application
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#new (for 67.160.130.248 at 2010-02-20 16:26:31) [GET]
+  [4;36;1mBuildingType Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Rendering template within layouts/application
+Rendering building_types/new
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types/new]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:31) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:31) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#new (for 67.160.130.248 at 2010-02-20 16:27:29) [GET]
+  [4;35;1mBuildingType Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Rendering template within layouts/application
+Rendering building_types/new
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/building_types/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:29) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:29) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:29) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:30) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:30) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:27:30) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:31:46) [GET]
+  [4;36;1mBuilding Load (0.6ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 28ms (View: 15, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#show (for 128.193.137.26 at 2010-02-20 16:31:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mBuilding Load (0.4ms)[0m   [0mSELECT * FROM `buildings` WHERE (`buildings`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering buildings/show
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings/2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:52) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:52) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:52) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:52) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:31:55) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#edit (for 128.193.137.26 at 2010-02-20 16:31:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBuilding Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+  [4;35;1mBuilding Load (0.2ms)[0m   [0mSELECT * FROM `buildings` WHERE (`buildings`.`id` = 2) [0m
+  [4;36;1mBuilding Load (0.5ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/edit
+  [4;35;1mBuildingType Load (0.5ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Completed in 39ms (View: 24, DB: 4) | 200 OK [http://access.cws.oregonstate.edu/buildings/2/edit]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:57) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:57) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:31:57) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/2/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:31:59) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 24ms (View: 12, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 128.193.137.26 at 2010-02-20 16:32:02) [GET]
+  [4;35;1mBuilding Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.4ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 119ms (View: 106, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:02) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:03) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:03) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:32:05) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 128.193.137.26 at 2010-02-20 16:32:07) [GET]
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;35;1mBuildingType Load (0.9ms)[0m   [0mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;36;1mBuildingType Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Completed in 34ms (View: 21, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:07) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:07) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:32:10) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 128.193.137.26 at 2010-02-20 16:32:12) [GET]
+  [4;35;1mBuilding Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 38ms (View: 21, DB: 8) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:32:12) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 128.193.137.26 at 2010-02-20 16:32:16) [GET]
+  [4;36;1mBuilding Load (0.3ms)[0m   [0;1mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;35;1mBuilding Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#new (for 67.160.130.248 at 2010-02-20 16:33:04) [GET]
+  [4;36;1mBuildingType Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Rendering template within layouts/application
+Rendering building_types/new
+Completed in 32ms (View: 19, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:33:04) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:33:04) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:33:04) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#show to html (for 67.160.130.248 at 2010-02-20 16:33:30) [GET]
+  Parameters: {"id"=>"admin"}
+  [4;35;1mBuildingType Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` WHERE (`building_types`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find BuildingType with ID=admin):
+  app/controllers/building_types_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (156.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#show to html (for 67.160.130.248 at 2010-02-20 16:33:39) [GET]
+  Parameters: {"id"=>"admin"}
+  [4;35;1mBuildingType Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mBuildingType Load (0.2ms)[0m   [0;1mSELECT * FROM `building_types` WHERE (`building_types`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find BuildingType with ID=admin):
+  app/controllers/building_types_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (64.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#index (for 67.160.130.248 at 2010-02-20 16:34:12) [GET]
+  [4;35;1mBuilding Load (0.3ms)[0m   [0mSELECT * FROM `buildings` [0m
+Rendering template within layouts/application
+Rendering buildings/index
+  [4;36;1mBuilding Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `buildings`[0m
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/buildings]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 67.160.130.248 at 2010-02-20 16:34:14) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (1.1ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 34ms (View: 21, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:14) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:14) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:14) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#index (for 67.160.130.248 at 2010-02-20 16:34:36) [GET]
+  [4;36;1mBuildingType Load (0.5ms)[0m   [0;1mSELECT * FROM `building_types` [0m
+Rendering template within layouts/application
+Rendering building_types/index
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 43ms (View: 27, DB: 2) | 200 OK [http://access.cws.oregonstate.edu/building_types]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#new (for 67.160.130.248 at 2010-02-20 16:34:39) [GET]
+  [4;36;1mBuildingType Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `building_types`[0m
+Rendering template within layouts/application
+Rendering building_types/new
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://access.cws.oregonstate.edu/building_types/new]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:39) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:39) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:39) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 67.160.130.248 at 2010-02-20 16:34:40) [GET]
+
+ActionController::RoutingError (No route matches "/building_types/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#show to html (for 67.160.130.248 at 2010-02-20 16:35:20) [GET]
+  Parameters: {"id"=>"admin"}
+  [4;35;1mBuildingType Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` WHERE (`building_types`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find BuildingType with ID=admin):
+  app/controllers/building_types_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (65.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#show to html (for 67.160.130.248 at 2010-02-20 16:35:58) [GET]
+  Parameters: {"id"=>"admin"}
+  [4;35;1mBuildingType Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mBuildingType Load (0.2ms)[0m   [0;1mSELECT * FROM `building_types` WHERE (`building_types`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find BuildingType with ID=admin):
+  app/controllers/building_types_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (63.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#~ to html (for 67.160.130.248 at 2010-02-20 16:36:44) [GET]
+  Parameters: {"id"=>"admin"}
+
+ActionController::UnknownAction (No action responded to ~. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingTypesController#show to html (for 67.160.130.248 at 2010-02-20 16:37:03) [GET]
+  Parameters: {"id"=>"admin"}
+  [4;35;1mBuildingType Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+  [4;36;1mBuildingType Load (0.3ms)[0m   [0;1mSELECT * FROM `building_types` WHERE (`building_types`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find BuildingType with ID=admin):
+  app/controllers/building_types_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendered rescues/_trace (67.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuildingsController#new (for 128.193.137.26 at 2010-02-20 16:46:04) [GET]
+  [4;35;1mBuilding Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `buildings`[0m
+Rendering template within layouts/application
+Rendering buildings/new
+  [4;36;1mBuildingType Load (0.4ms)[0m   [0;1mSELECT * FROM `building_types` ORDER BY id[0m
+  [4;35;1mBuildingType Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `building_types`[0m
+Completed in 38ms (View: 24, DB: 3) | 200 OK [http://access.cws.oregonstate.edu/buildings/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:46:04) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/visualize.jQuery.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:46:04) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 128.193.137.26 at 2010-02-20 16:46:04) [GET]
+
+ActionController::RoutingError (No route matches "/buildings/javascripts/jquery-ui-1.8b1.custom.min.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/thread.rb:135:in `synchronize'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  server:3
+
+Rendering rescues/layout (not_found)
+>>>>>>> 4a7f203ff3d22d621d63f699d8bea40033ac4f1b:ecd/log/development.log
