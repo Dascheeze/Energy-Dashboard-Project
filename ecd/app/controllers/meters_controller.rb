@@ -1,9 +1,6 @@
 class MetersController < ApplicationController
   # GET /meters
   # GET /meters.xml
-  require 'helpers/meters_helper'
-  require 'helpers/application_helper'
-  
   def index
     @meters = Meter.all
 
@@ -14,7 +11,6 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    addDataPoint(1, 30)
     Meter.all do |meter|
       parse_xml(meter.modbus_address, meter.id)
     end
