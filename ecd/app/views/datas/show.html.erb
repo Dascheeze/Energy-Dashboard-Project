@@ -1,1 +1,13 @@
-oh hi
+<p>
+  <b>Data set:</b>
+  <%=h @data.data_set %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @data.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_data_path(@data) %> |
+<%= link_to 'Back', datas_path %>

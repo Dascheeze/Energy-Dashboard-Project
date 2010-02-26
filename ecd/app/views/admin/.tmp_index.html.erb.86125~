@@ -1,0 +1,9 @@
+<h1>Admin</h1>
+
+<div id="about">
+          	<h3><a href="buildings" >Buildings</a></h3>
+  			<h3><a href="building_types" >Building Types</a></h3>
+			<h3><a href="series" >Series</a></h3>
+			<h3><a href="meter_types" >Meter Types</a></h3>
+			<h3><a href="meters" >Meters</a></h3>
+</div>

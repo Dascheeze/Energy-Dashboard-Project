@@ -1,0 +1,36 @@
+a { text-decoration:none; }
+ 
+a:visited { color: #000000; }
+ 
+body {
+background-color: #113355;
+font-size: .9em;
+}
+.noborder { border-style: none; }
+ 
+.navButton {
+font-size: .9em;
+margin-bottom: 3px;
+width: 98%;
+}
+ 
+.flot-div {
+width: 725px;
+height: 400px;
+}
+ 
+.graph-header {
+font-weight: bold;
+}
+ 
+.building-name {
+font-size: 110%;
+font-style: italic;
+text-decoration: underline;
+}
+ 
+.website-header {
+font-variant: small-caps;
+}
+ 
+

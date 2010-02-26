@@ -34,4 +34,21 @@ module ApplicationHelper
 	newData.save
   end
   
+  def parse_xml(modbus_address, meter_id)
+    require 'rexml/document'
+    include REXML
+    xml_dump = getMeterXML(modbus_address)
+    xml_doc = Document.new xml_dump
+
+    Series.each do |series|
+      if series.meter_id == meter_id
+        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+          if ele.attribute["number"] == series.point_number
+            addDataPoint(series.id, ele.attribute["value"])
+          end
+          puts ele.attribute["number"]
+        end
+      end
+    end
+  end
 end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data_set_id: 
+  amount: 9.99
+
+two:
+  data_set_id: 
+  amount: 9.99

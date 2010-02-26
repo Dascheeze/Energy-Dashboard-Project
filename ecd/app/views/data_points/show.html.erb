@@ -1,0 +1,13 @@
+<p>
+  <b>Data set:</b>
+  <%=h @data_point.data_set_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @data_point.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_data_point_path(@data_point) %> |
+<%= link_to 'Back', data_points_path %>

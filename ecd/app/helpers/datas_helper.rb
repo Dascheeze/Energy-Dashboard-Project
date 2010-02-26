@@ -1,3 +1,2 @@
 module DatasHelper
-	
 end

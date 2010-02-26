@@ -1,6 +1,9 @@
 class MetersController < ApplicationController
   # GET /meters
   # GET /meters.xml
+  require 'helpers/meters_helper'
+  require 'helpers/application_helper'
+  
   def index
     @meters = Meter.all
 
@@ -11,14 +14,13 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    @meters = Meter.all
-	all_meters = @meters
-	all_meters do |meter|
-	  parse_xml meter.modbus_address meter.id
-	end
-	respond_to do |format|
-		format.html
-	end
+    addDataPoint(1, 30)
+    Meter.all do |meter|
+      parse_xml(meter.modbus_address, meter.id)
+    end
+    respond_to do |format|
+      format.html
+    end
   end
   
   # GET /meters/1
@@ -94,5 +96,56 @@ class MetersController < ApplicationController
     end
   end
   
+  require 'net/http'
+  require 'rexml/document'
+  include REXML
+
+  def getURL(command)
+    $username = 'admin'
+    $password = 'admin'
+    # Open an HTTP connection to 
+    ret = Net::HTTP.start('128.193.122.20')
+
+    # Depending on the request type, create either
+    # an HTTP::Get or HTTP::Post object
+
+    req = Net::HTTP::Get.new(command)
+
+    # Set up the authentication and
+    # make the request
+    req.basic_auth( $username, $password )
+    res = ret.request(req)
+
+    # Return the request body
+    return res.body
+  end
+  
+  def getMeterXML(meterAddress)
+    return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
+  end
+  
+  def addDataPoint(series, value)
+    newData = DataPoint.new
+    newData.series_id = series
+    newData.amount = value
+	newData.save
+  end
+  
+  def parse_xml(modbus_address, meter_id)
+    
+    xml_dump = getMeterXML(modbus_address)
+    xml_doc = Document.new xml_dump
+
+    DataSet.all do |series|
+      if series.meter_id == meter_id
+        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+          if ele.attribute["number"] == series.point_number
+            addDataPoint(series.id, ele.attribute["value"])
+          end
+          puts ele.attribute["number"]
+        end
+      end
+    end
+  end
   
 end
