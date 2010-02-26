@@ -139,10 +139,9 @@ class MetersController < ApplicationController
     DataSet.all do |series|
       if series.meter_id == meter_id
         xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-          if ele.attribute["number"] == series.point_number
-            addDataPoint(series.id, ele.attribute["value"])
+          if ele.attribute("number").to_s.to_i == series.point_number
+            addDataPoint(series.id, ele.attribute("value").to_s.to_i)
           end
-          puts ele.attribute["number"]
         end
       end
     end
