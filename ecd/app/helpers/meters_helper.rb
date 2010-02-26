@@ -44,7 +44,7 @@ module MetersHelper
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
 	puts "0"
-    DataSet.all do |series|
+    DataSet.all.each do |series|
 	  puts "1"
       if series.meter_id == meter_id
 		puts "2"
