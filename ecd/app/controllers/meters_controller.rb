@@ -134,17 +134,10 @@ class MetersController < ApplicationController
   def parse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-    logger.debug "Outisde foreach"
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
-      puts "Maybe"
-      logger.warn "In first foreach"
-        logger.warn "Inside second foreach"
-        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-          puts "Huh?"
-          if ele.attribute("number").to_s.to_i == series.point_number.to_i
-            puts "Fuck yeah?"
-            addDataPoint(series.id, ele.attribute("value").to_s.to_i)
-          end
+      xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+        if ele.attribute("number").to_s.to_i == series.point_number
+          addDataPoint(series.id, ele.attribute("value").to_s.to_i)
         end
       end
     end
