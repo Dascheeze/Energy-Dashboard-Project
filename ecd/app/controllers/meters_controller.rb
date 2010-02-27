@@ -11,11 +11,8 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    logger.debug "Test"
     @meters = Meter.all
-    logger.debug Meter.all
     Meter.all.each do |meter_num|
-      logger.debug "Test2"
       parse_xml(meter_num.modbus_address, meter_num.id)
     end
     respond_to do |format|
@@ -134,10 +131,13 @@ class MetersController < ApplicationController
   def parse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
+
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
-      xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-        if ele.attribute("number").to_s.to_i == series.point_number
-          addDataPoint(series.id, ele.attribute("value").to_s.to_i)
+      if xml_doc.elements["DAS/devices/device/status"].to_s == "<status>Ok</status>"
+        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+          if ele.attribute("number").to_s.to_i == series.point_number
+            addDataPoint(series.id, ele.attribute("value").to_s.to_i)
+          end
         end
       end
     end
