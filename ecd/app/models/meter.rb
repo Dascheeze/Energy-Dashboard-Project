@@ -1,3 +1,3 @@
 class Meter < ActiveRecord::Base
-  belongs_to :Building
+  belongs_to :building
 end
