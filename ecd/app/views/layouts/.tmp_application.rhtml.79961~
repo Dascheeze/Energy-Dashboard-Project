@@ -47,7 +47,7 @@
 			<a href="/" class="navButton" >Home Screen</a><br />
 			<a href="#" class="navButton" >Power Info</a><br />
 			<a href="#" class="navButton" >Help</a><br />
-			<a href="/about_us" class="navButton" >About Us</a><br />
+			<a href="#" class="navButton" >Dev Team</a><br />
 			<a href="/admin" class="navButton" >Admin</a><br />
 		</div>
 		<div class="grid_10" style="background-color: #9BD;">
