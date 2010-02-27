@@ -83,4 +83,25 @@ class BuildingsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def generate_table
+    # buildings -> meters -> data_sets -> data_points
+    return_table = "<table>"
+    building = Building.find(params[:id])
+    meters = Meter.find(:all, :conditions => { :building_id => building.id })
+    meters.all.each do |m|
+      list_sets = Data_Set.find(:all, :conditions => { :meter_id => m.id })
+      list_sets.all.each do |set|
+        list_points = Data_Point.find(:all, :conditions => { :data_set_id => set.id })
+        return_table = return_table + "<tr>"
+        return_table = return_table + "<th>" + set.name + "</th>"
+        list_points.all.each do |data_points|
+          return_table = return_table + "<td>" + data_points.amount.to_s + "</td>"
+        end
+        return_table = return_table + "</tr>"
+      end
+    end
+    return_table = "</table>"
+  end
+
 end
