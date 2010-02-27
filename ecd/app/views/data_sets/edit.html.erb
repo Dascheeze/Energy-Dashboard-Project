@@ -3,10 +3,13 @@
 <% form_for(@data_set) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :meter %><br />
-    <%= f.text_field :meter %>
-  </p>
+  
+	<p>
+		<!-- Makes a dropdown and puts the building type in each select value -->
+		<% buildingTypeIDs = Meter.find(:all, :order => :id) %>
+		Select <%= f.label :meter %><br /> 
+		<%= f.collection_select :meter_id, buildingTypeIDs, :id, :name %>
+	</p>
   <p>
     <%= f.label :point_number %><br />
     <%= f.text_field :point_number %>
