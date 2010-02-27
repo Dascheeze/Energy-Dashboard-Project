@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Energy Consumption Dashboard</title>
+
+		
+		<%= stylesheet_link_tag 'visualize.jQuery'%>
+		<%= stylesheet_link_tag 'grid' %>
+		<%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.8b1.custom'%>
+		<%= stylesheet_link_tag 'custum_style'%>
+		
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
+		
+		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "visualize.jQuery" %>
+		<%= javascript_include_tag "jquery.min" %>
+		<%= javascript_include_tag "jquery-ui-1.8b1.custom.min" %>
+		<script type="text/javascript">
+			
+			$(function() {
+				 $(".navButton").button();
+			});
+		</script>
+	</head>
+	<body>
+
+   
+	<div class="container_12">
+		<div class="grid_12 ui-corner-all" style="background-color:#7799BB; margin-bottom: 5px;">
+			<div class="grid_6 ">
+				<span class="website-header"><a href="/"><h1>Energy<i>Consumption</i>Dashboard</h1></a></span>
+			</div>
+			
+			<div class="grid_4 ">
+				<p>This is a website built to make available energy consumption information about buildings on Oregon State Universitie's campus</p>
+			</div>
+
+			<div class="grid_1">
+				<a href="http://www.oregonstate.edu/"> <img src="http://oregonstate.edu/u_central/top-hat/images/osu-tag.gif" class="noborder" alt="Oregon State University Logo" > </a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container_12">
+		<div class="grid_2 ui-corner-all" style="background-color: #7799BB;">
+			<a href="/" class="navButton" >Home Screen</a><br />
+			<a href="#" class="navButton" >Power Info</a><br />
+			<a href="#" class="navButton" >Help</a><br />
+			<a href="#" class="navButton" >Dev Team</a><br />
+			<a href="/admin" class="navButton" >Admin</a><br />
+		</div>
+		<div class="grid_10" style="background-color: #9BD;">
+		<%=yield%>
+		</div>
+	</div>
+	<div id="bldg-5-flot" class="flot-div"></div>
+	</body>
+</html>
+	
