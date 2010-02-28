@@ -18,7 +18,7 @@
     <td><%= link_to 'Show', building %></td>
     <td><%= link_to 'Edit', edit_building_path(building) %></td>
     <td><%= link_to 'Destroy', building, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><a href="generate_table/<%=h building.id %>">Table</a></td>
+    <td><a href="/buildings/generate_table/<%=h building.id %>">Table</a></td>
   </tr>
 <% end %>
 </table>
