@@ -147,7 +147,7 @@ class MetersController < ApplicationController
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
       xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
         if ele.attribute("number").to_s.to_i == series.point_number
-          addDataPoint(series.id, Float(ele.attribute("value")))
+          addDataPoint(series.id, Float(ele.attribute("value").to_s))
         end
       end
     end
