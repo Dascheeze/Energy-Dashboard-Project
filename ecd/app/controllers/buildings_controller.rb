@@ -102,9 +102,6 @@ class BuildingsController < ApplicationController
       end
     end
     return_table = return_table + "</table>"
-
     @returns = return_table
-
   end
-
 end
