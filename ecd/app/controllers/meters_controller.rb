@@ -131,16 +131,27 @@ class MetersController < ApplicationController
   def parse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
-
+	i = 0
+	while xml_doc.elements["DAS/devices/device/status"].to_s != "<status>Ok</status>"
+	  logger.debug "Bad status recieved, waiting 10 seconds and retrying."
+	  sleep 10
+	  xml_dump = getMeterXML(modbus_address)
+	  xml_doc = Document.new xml_dump
+	  if (i > 60)
+		 return
+	  else
+		 i = i + 1
+	  end
+	end
+	logger.debug "Good status recieved, adding to database"
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
-      if xml_doc.elements["DAS/devices/device/status"].to_s == "<status>Ok</status>"
-        xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
-          if ele.attribute("number").to_s.to_i == series.point_number
-            addDataPoint(series.id, ele.attribute("value").to_s.to_i)
-          end
+      xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
+        if ele.attribute("number").to_s.to_i == series.point_number
+          addDataPoint(series.id, Float(ele.attribute("value")))
         end
       end
     end
+	logger.debug "All datapoints added to database"
   end
   
 end
