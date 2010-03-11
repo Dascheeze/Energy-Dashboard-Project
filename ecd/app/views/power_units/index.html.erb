@@ -1,0 +1,20 @@
+<h1>Listing power_units</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @power_units.each do |power_unit| %>
+  <tr>
+    <td><%=h power_unit.name %></td>
+    <td><%= link_to 'Show', power_unit %></td>
+    <td><%= link_to 'Edit', edit_power_unit_path(power_unit) %></td>
+    <td><%= link_to 'Destroy', power_unit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New power_unit', new_power_unit_path %>

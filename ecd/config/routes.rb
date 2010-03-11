@@ -1,4 +1,6 @@
-ActionController::Routing::Routes.draw do |map|  
+ActionController::Routing::Routes.draw do |map|
+  map.resources :power_units
+  
   map.resources :data_points
 
   map.resources :data_sets
