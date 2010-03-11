@@ -11,10 +11,10 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    @meters = Meter.all
     Meter.all.each do |meter_num|
       parse_xml(meter_num.modbus_address, meter_num.id)
     end
+	@message = "Successfully updated all meters"
     respond_to do |format|
       format.html
     end
