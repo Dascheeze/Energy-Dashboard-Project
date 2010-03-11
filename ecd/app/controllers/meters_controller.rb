@@ -124,7 +124,7 @@ class MetersController < ApplicationController
   def addDataPoint(data_set_id, value)
     newData = DataPoint.new
     newData.data_set_id = data_set_id.to_s.to_i
-    newData.amount = Float(value)
+    newData.amount = value.to_f
     newData.save
   end
   
