@@ -12,12 +12,6 @@
 		<%= f.text_field :building_abbrv %>
 	</p>
 	<p>
-		<!-- Makes a dropdown and puts the building type in each select value -->
-		<% buildingTypeIDs = BuildingType.find(:all, :order => :id) %>
-		Select <%= f.label :building_type_id %><br /> 
-		<%= f.collection_select :building_type_id, buildingTypeIDs, :id, :name %>
-	</p>
-	<p>
 		<%= f.submit 'Create' %>
 	</p>
 <% end %>
