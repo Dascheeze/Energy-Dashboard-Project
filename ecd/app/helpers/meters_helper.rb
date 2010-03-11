@@ -1,6 +1,6 @@
 module MetersHelper
   
-  def refresh
+  def arefresh
     Meter.all.each do |meter|
       parse_xml(meter.modbus_address, meter.id)
     end
@@ -9,7 +9,7 @@ module MetersHelper
   require 'rexml/document'
   include REXML
 
-  def getURL(command)
+  def agetURL(command)
     $username = 'admin'
     $password = 'admin'
     # Open an HTTP connection to 
@@ -29,18 +29,18 @@ module MetersHelper
     return res.body
   end
   
-  def getMeterXML(meterAddress)
+  def agetMeterXML(meterAddress)
     return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
   
-  def addDataPoint(data_set_id, value)
+  def aaddDataPoint(data_set_id, value)
     newData = DataPoint.new
     newData.data_set_id = data_set_id
     newData.amount = value
 	newData.save
   end
   
-  def parse_xml(modbus_address, meter_id)
+  def aparse_xml(modbus_address, meter_id)
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
