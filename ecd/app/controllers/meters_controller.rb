@@ -124,7 +124,8 @@ class MetersController < ApplicationController
   def addDataPoint(data_set_id, value)
     newData = DataPoint.new
     newData.data_set_id = data_set_id.to_s.to_i
-    logger.debug "value in ADP: " + value.to_s
+    logger.debug "value in ADP: "
+	logger.debug value.to_s
     newData.amount = value.to_f
     newData.save
   end
