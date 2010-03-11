@@ -13,7 +13,7 @@
     <td><%=h data_set.meter %></td>
     <td><%=h data_set.point_number %></td>
     <td><%=h data_set.name %></td>
-    <td><%=h data_set.units %></td>
+    <td><%=h data_set.power_unit.name %></td>
     <td><%= link_to 'Show', data_set %></td>
     <td><%= link_to 'Edit', edit_data_set_path(data_set) %></td>
     <td><%= link_to 'Destroy', data_set, :confirm => 'Are you sure?', :method => :delete %></td>
