@@ -15,7 +15,9 @@ class DataSetsController < ApplicationController
 	  
 	  p = points_between_dates(params[:id], Time.now + 8.hours, Time.now + 8.hours + 1.day) 
 	  @item_data = data_to_array_diff(p)
+	  logger.debug p.to_yaml
 	  logger.debug @item_data.to_yaml
+	  
 	  
 	  @data_set = DataSet.find(params[:id])
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
