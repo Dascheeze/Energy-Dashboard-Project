@@ -30,7 +30,9 @@ module ApplicationHelper
         aggregate_amount = 0
       end
       puts "b"
-      aggregate_amount += point.amount.to_s.to_f
+	  puts point
+	  temp_amount = point.amount.to_s.to_f
+      aggregate_amount = aggregate_amount + temp_amount
       puts "test"
       if (i == num_to_aggregate)
 		puts "c"
