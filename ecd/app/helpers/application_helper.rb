@@ -40,7 +40,7 @@ module ApplicationHelper
 	    temp_amount = point.amount.to_s.to_f
       aggregate_amount = aggregate_amount + temp_amount
       if (i == num_to_aggregate)
-		    item = Item.new
+		item = Item.new
         item.amount = aggregate_amount
         item.date = cur_time
         data_array.push(item)
