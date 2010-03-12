@@ -3,7 +3,12 @@ module ApplicationHelper
 
   class	Item
     attr_reader :amount, :date
-	attr_writer :amount, :date
+	attr_writer :date
+	
+	def amount=(a)
+	  @amount = sprintf('%.2f', a).to_f
+	end
+	
   end
   
   class Bounds
