@@ -6,6 +6,11 @@ module ApplicationHelper
 	attr_writer :amount, :date
   end
   
+  class Bounds
+    attr_reader :min_amount, :min_time, :max_amount, :max_time
+	attr_writer :min_amount, :min_time, :max_amount, :max_time
+  end
+  
   def points_between_dates(data_set_id, start_date, end_date)
     #return_table = "<table>"
     #list_sets = DataSet.find(:all, :conditions => { :created_at => start_date..end_date, :id => data_set_id})
@@ -27,38 +32,28 @@ module ApplicationHelper
     i = 1
     aggregate_amount = 0
     num_to_aggregate = time_interval / duration_of_pull
-    puts "a"
     list_points.each do |point|
-	  puts "f"
       if (i == 1)
         time = point.created_at
         aggregate_amount = 0.to_f
       end
-      puts "b"
-	  puts point
 	  temp_amount = point.amount.to_s.to_f
-	  puts temp_amount
-	  puts aggregate_amount
       aggregate_amount = aggregate_amount + temp_amount
-	  puts aggregate_amount
-      puts "test"
       if (i == num_to_aggregate)
-		puts "c"
 		item = Item.new
         item.amount = aggregate_amount
         item.date = time
         data_array.push(item)
         i = 1
       else
-		puts "d"
         i = i + 1
       end
     end
-	puts "e"
     return data_array
   end
   
   def getBounds(data_array)
+	bounds = Bounds.new
     bounds.max_amount=0
     bounds.max_time=0
     bounds.min_amount=0
@@ -84,6 +79,7 @@ module ApplicationHelper
     end
     return bounds
   end
+  
 end
 
      
