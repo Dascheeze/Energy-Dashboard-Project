@@ -32,6 +32,8 @@ module ApplicationHelper
       puts "b"
 	  puts point
 	  temp_amount = point.amount.to_s.to_f
+	  puts temp_amount
+	  puts aggregate_amount
       aggregate_amount = aggregate_amount + temp_amount
       puts "test"
       if (i == num_to_aggregate)
