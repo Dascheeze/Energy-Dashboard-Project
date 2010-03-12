@@ -1,6 +1,16 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
+  class	Item
+    attr_reader :amount, :date
+	attr_writer :amount, :date
+  end
+  
+  class Bounds
+    attr_reader :min_amount, :min_time, :max_amount, :max_time
+	attr_writer :min_amount, :min_time, :max_amount, :max_time
+  end
+  
   def points_between_dates(data_set_id, start_date, end_date)
     #return_table = "<table>"
     #list_sets = DataSet.find(:all, :conditions => { :created_at => start_date..end_date, :id => data_set_id})
@@ -20,29 +30,28 @@ module ApplicationHelper
     duration_of_pull = 15.minutes
     data_array = Array.new
     i = 1
-    
+    aggregate_amount = 0
     num_to_aggregate = time_interval / duration_of_pull
-    
     list_points.each do |point|
       if (i == 1)
         time = point.created_at
-        aggregate_amount = 0
+        aggregate_amount = 0.to_f
       end
-      
-      aggregate_amount += point.amount
-      
+	  temp_amount = point.amount.to_s.to_f
+      aggregate_amount = aggregate_amount + temp_amount
       if (i == num_to_aggregate)
+		item = Item.new
         item.amount = aggregate_amount
         item.date = time
         data_array.push(item)
         i = 1
       else
-        i += 1
+        i = i + 1
       end
     end
     return data_array
   end
-  
+
   def data_to_diff_array(list_points, time_interval = 1.hour)
     duration_of_pull = 15.minutes
     data_array = Array.new
@@ -70,32 +79,35 @@ module ApplicationHelper
     return data_array
   end
   
-  def getBounds(data_array)
+
+  def get_bounds(data_array)
+	bounds = Bounds.new
     bounds.max_amount=0
     bounds.max_time=0
     bounds.min_amount=0
     bounds.min_time=0
     i=0
     
-    list_points.each do |point|
+    data_array.each do |point|
       if(i==0)
         bounds.min_amount = point.amount
-        bounds.min_time = point.created_at
+        bounds.min_time = point.date
       end
       
       if(bounds.max_amount < point.amount)
         bounds.max_amount = point.amount
-        bounds.max_time = point.created_at
+        bounds.max_time = point.date
       end
 	  
 	  if(bounds.min_amount > point.amount)
         bounds.min_amount = point.amount
-        bounds.min_time = point.time
+        bounds.min_time = point.date
       end
       i+=1
     end
     return bounds
   end
+  
 end
 
      

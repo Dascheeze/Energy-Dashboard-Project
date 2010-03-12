@@ -2,18 +2,21 @@
 
 <script type="text/javascript">
 	$(function() {
-		$("#dataset").hide().visualize({width:700, height:400}).style("margin-left:50px; margin-bottom:75px");
+		$("#dataset").hide().visualize({width:650, height:400}).attr("style", "margin-left:50px; margin-bottom:75px");
 	});
 </script>
-
+<div style="width:700px; height: 400px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
 <table id="dataset">
 	<caption>
 		Hourly breakdown for <%= @assoc_meter.name %>
 	</caption>
 	<tr><td></td>
-		
+<% i = 0 %>
 <% @data_points.each do |d_point| %>
-		<th><%= d_point.created_at %></td>
+	<% if i < 13 %>
+		<th><%= (d_point.created_at + 8.hours).strftime("%H:00") %></td>
+	<% end
+	   i = i + 1%>
 <% end %>
 	</tr>
 	<tr>
@@ -22,3 +25,4 @@
 	<td> <%= d_point.amount %> </td>
 <% end %>
 </table>
+</div>
