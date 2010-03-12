@@ -15,7 +15,8 @@
 <% @data_points.each do |d_point| %>
 	<% if i < 13 %>
 		<th><%= (d_point.created_at + 8.hours).strftime("%H:00") %></td>
-	<% end %>
+	<% end
+	   i = i + 1%>
 <% end %>
 	</tr>
 	<tr>
