@@ -5,7 +5,7 @@
 		$("#dataset").hide().visualize({width:700, height:400}).attr("style", "margin-left:50px; margin-bottom:75px");
 	});
 </script>
-
+<div style="width:700px; height: 400px; margin-left:auto; margin-right:auto;">
 <table id="dataset">
 	<caption>
 		Hourly breakdown for <%= @assoc_meter.name %>
@@ -22,3 +22,4 @@
 	<td> <%= d_point.amount %> </td>
 <% end %>
 </table>
+</div>
