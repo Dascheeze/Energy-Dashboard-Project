@@ -52,7 +52,7 @@ module ApplicationHelper
     return data_array
   end
   
-  def getBounds(data_array)
+  def get_bounds(data_array)
 	bounds = Bounds.new
     bounds.max_amount=0
     bounds.max_time=0
@@ -60,20 +60,20 @@ module ApplicationHelper
     bounds.min_time=0
     i=0
     
-    list_points.each do |point|
+    data_array.each do |point|
       if(i==0)
         bounds.min_amount = point.amount
-        bounds.min_time = point.created_at
+        bounds.min_time = point.date
       end
       
       if(bounds.max_amount < point.amount)
         bounds.max_amount = point.amount
-        bounds.max_time = point.created_at
+        bounds.max_time = point.date
       end
 	  
 	  if(bounds.min_amount > point.amount)
         bounds.min_amount = point.amount
-        bounds.min_time = point.time
+        bounds.min_time = point.date
       end
       i+=1
     end
