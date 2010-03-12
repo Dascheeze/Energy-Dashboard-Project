@@ -8,14 +8,14 @@
 	</caption>
 	<tr><td></td>
 		
-<% @data_points.each do |d_set| %>
-		<th><%= d_set.created_at %></td>
+<% @data_points.each do |d_point| %>
+		<th><%= d_point.created_at %></td>
 <% end %>
 	</tr>
 	<tr>
 	<th> <%= @data_set.name %> </th>
-<% @data_points.each do |d_set| %>
-	<td> <%= @data_set.value %>
+<% @data_points.each do |d_point| %>
+	<td> <%= d_point.value %> </td>
 <% end %>
 </table>
 
