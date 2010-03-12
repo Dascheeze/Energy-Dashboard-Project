@@ -3,25 +3,23 @@
 	<head>
 		<title>Energy Consumption Dashboard</title>
 
-		
-		<%= stylesheet_link_tag 'visualize.jQuery'%>
 		<%= stylesheet_link_tag 'grid' %>
 		<%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.8b1.custom'%>
 		<%= stylesheet_link_tag 'custum_style'%>
-		
+		<%= stylesheet_link_tag 'visualize.jQuery'%>
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js" ></script>
 		
 		<%= javascript_include_tag "application" %>
-		<%= javascript_include_tag "visualize.jQuery" %>
 		<%= javascript_include_tag "jquery.min" %>
 		<%= javascript_include_tag "jquery-ui-1.8b1.custom.min" %>
+		<%= javascript_include_tag "visualize.jQuery" %>
 		<script type="text/javascript">
 			$(function() {
 				 $(".navButton").button();
 				 $("." + $(".activeButton").html()).addClass("ui-state-active").bind("mouseleave", function(){$(this).addClass("ui-state-active");});
 				 $(".activeButton").hide();
-				 $('table').visualize();
+				 $('#dataset').visualize();
 			});
 		</script>
 	</head>
