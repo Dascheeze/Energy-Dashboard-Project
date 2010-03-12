@@ -20,14 +20,14 @@ module ApplicationHelper
     duration_of_pull = 15.minutes
     data_array = Array.new
     i = 1
-    
+    aggregate_amount = 0
     num_to_aggregate = time_interval / duration_of_pull
     puts "a"
     list_points.each do |point|
 	  puts "f"
       if (i == 1)
         time = point.created_at
-        aggregate_amount = 0
+        aggregate_amount = 0.to_f
       end
       puts "b"
 	  puts point
@@ -35,6 +35,7 @@ module ApplicationHelper
 	  puts temp_amount
 	  puts aggregate_amount
       aggregate_amount = aggregate_amount + temp_amount
+	  puts aggregate_amount
       puts "test"
       if (i == num_to_aggregate)
 		puts "c"
