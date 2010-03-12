@@ -20,7 +20,7 @@ module ApplicationHelper
     #return_table = "<table>"
     #list_sets = DataSet.find(:all, :conditions => { :created_at => start_date..end_date, :id => data_set_id})
     #list_sets.each do |set|
-    list_points = DataPoint.find(:all, :conditions => { :created_at => (start_date.localtime)..(end_date.localtime), :data_set_id => data_set_id })
+    list_points = DataPoint.find(:all, :conditions => { :created_at => (start_date.gmtime)..(end_date.gmtime), :data_set_id => data_set_id })
     #return_table = return_table + "<tr>"
     #list_points.each do |data_points|
     #  return_table = return_table + "<td>" + data_points.amount.to_s + "</td>"
