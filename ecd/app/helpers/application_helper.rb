@@ -34,7 +34,7 @@ module ApplicationHelper
     num_to_aggregate = time_interval / duration_of_pull
     list_points.each do |point|
       if (i == 1)
-        time = point.created_at
+        cur_time = point.created_at
         aggregate_amount = 0.to_f
       end
 	  temp_amount = point.amount.to_s.to_f
@@ -42,7 +42,7 @@ module ApplicationHelper
       if (i == num_to_aggregate)
 		item = Item.new
         item.amount = aggregate_amount
-        item.date = time
+        item.date = cur_time
         data_array.push(item)
         i = 1
       else
