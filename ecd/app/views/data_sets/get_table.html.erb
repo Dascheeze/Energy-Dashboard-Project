@@ -12,7 +12,7 @@
 	</caption>
 	<tr><td></td>
 <% @item_data.each do |item| %>
-		<th><%= (item.date + 8.hours).strftime("%H:00") %></td>
+		<th><%= item.date.localtime.strftime("%H:00") %></td>
 <% end %>
 	</tr>
 	<tr>
