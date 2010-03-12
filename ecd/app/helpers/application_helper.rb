@@ -37,10 +37,10 @@ module ApplicationHelper
         time = point.created_at
         aggregate_amount = 0.to_f
       end
-	  temp_amount = point.amount.to_s.to_f
+	    temp_amount = point.amount.to_s.to_f
       aggregate_amount = aggregate_amount + temp_amount
       if (i == num_to_aggregate)
-		item = Item.new
+		    item = Item.new
         item.amount = aggregate_amount
         item.date = time
         data_array.push(item)
@@ -52,28 +52,26 @@ module ApplicationHelper
     return data_array
   end
 
-  def data_to_diff_array(list_points, time_interval = 1.hour)
+  def data_to_array_diff(list_points, time_interval = 1.hour)
     duration_of_pull = 15.minutes
     data_array = Array.new
-    i = 1
-    
+    i = 0
+    time=0
+    value=0
     num_to_aggregate = time_interval / duration_of_pull
-    
     list_points.each do |point|
-      if (i == 1)
+      if (i == 0)
         time = point.created_at
-        aggregate_amount = 0
+        value = point.amount.to_s.to_f
       end
-      
-      aggregate_amount += point.amount
-      
-      if (i == num_to_aggregate)
-        item.amount = aggregate_amount
+      if (i == num_to_aggregate-1)
+        item = Item.new
+        item.amount = point.amount.to_s.to_f - value
         item.date = time
         data_array.push(item)
-        i = 1
+        i = 0
       else
-        i += 1
+        i = i + 1
       end
     end
     return data_array
