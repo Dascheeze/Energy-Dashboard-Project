@@ -13,7 +13,7 @@ class DataSetsController < ApplicationController
   
   def get_table
 	  
-	  p = points_between_dates(1, Time.now.midnight + 8.hours - 1.day, Time.now.midnight + 8.hours) 
+	  p = points_between_dates(1, Time.now.midnight - 1.day, Time.now.midnight) 
 	  @item_data = data_to_array_diff(p)	  
 	  
 	  @data_set = DataSet.find(params[:id])
