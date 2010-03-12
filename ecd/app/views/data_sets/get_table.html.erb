@@ -13,7 +13,7 @@
 	<tr><td></td>
 		
 <% @data_points.each do |d_point| %>
-		<th><%= d_point.created_at %></td>
+		<th><%= d_point.created_at.strftime("%H:00") %></td>
 <% end %>
 	</tr>
 	<tr>
