@@ -93,4 +93,35 @@ module ApplicationHelper
     end
     return data_array
   end
+  
+  def getBounds(data_array)
+    bounds.max_amount=0
+    bounds.max_time=0
+    bounds.min_amount=0
+    bounds.min_time=0
+    i=0
+    
+    list_points.each do |point|
+      if(i==0)
+        bounds.min_amount = point.amount
+        bounds.min_time = point.created_at
+      end
+      
+      if(bounds.max_amount < point.amount)
+        bounds.max_amount = point.amount
+        bounds.max_time = point.created_at
+      elsif(bounds.min_amount > point.amount)
+        bounds.min_amount = point.amount
+        bounds.min_time = point.time
+      end
+      i+=1
+    end
+    return bounds
+  end
 end
+
+     
+     
+  
+
+
