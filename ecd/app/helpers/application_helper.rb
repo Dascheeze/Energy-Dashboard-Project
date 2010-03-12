@@ -24,6 +24,7 @@ module ApplicationHelper
     num_to_aggregate = time_interval / duration_of_pull
     puts "a"
     list_points.each do |point|
+	  puts "f"
       if (i == 1)
         time = point.created_at
         aggregate_amount = 0
