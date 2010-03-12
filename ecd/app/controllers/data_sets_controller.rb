@@ -11,6 +11,9 @@ class DataSetsController < ApplicationController
   end
 
   def get_table
+	  include ApplicationHelper
+	  p = points_between_dates(params[:id], Time.now + 8.hours, Time.now + 8.hours + 1.day) 
+	  
 	  @data_set = DataSet.find(params[:id])
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
 	  @data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
