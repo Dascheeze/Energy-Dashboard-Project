@@ -59,7 +59,9 @@ module ApplicationHelper
       if(bounds.max_amount < point.amount)
         bounds.max_amount = point.amount
         bounds.max_time = point.created_at
-      elsif(bounds.min_amount > point.amount)
+      end
+	  
+	  if(bounds.min_amount > point.amount)
         bounds.min_amount = point.amount
         bounds.min_time = point.time
       end
