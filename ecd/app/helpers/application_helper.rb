@@ -70,7 +70,6 @@ module ApplicationHelper
         item.date = time
         data_array.push(item)
         i = 0
-        redo
       else
         i = i + 1
       end
