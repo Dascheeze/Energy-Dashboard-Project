@@ -13,7 +13,7 @@ class DataSetsController < ApplicationController
   
   def get_table
 	  
-	  p = points_between_dates(params[:id], Time.now + 8.hours, Time.now + 8.hours + 1.day) 
+	  p = points_between_dates(1, Time.now.midnight + 8.hours - 1.day, Time.now.midnight + 8.hours) 
 	  @item_data = data_to_array_diff(p)
 	  logger.debug p.to_yaml
 	  logger.debug @item_data.to_yaml
