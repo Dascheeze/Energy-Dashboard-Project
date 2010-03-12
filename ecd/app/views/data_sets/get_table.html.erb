@@ -1,6 +1,10 @@
 <div class="activeButton">power_info_button</div>
 
-<h1>Listing data_sets</h1>
+<script type="text/javascript">
+	$(function() {
+		$("#dataset").hide().visualize({width:700, height:400}).style("margin-left:50px; margin-bottom:75px");
+	});
+</script>
 
 <table id="dataset">
 	<caption>
@@ -18,7 +22,3 @@
 	<td> <%= d_point.amount %> </td>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New data_set', new_data_set_path %>
