@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100228000254) do
+ActiveRecord::Schema.define(:version => 20100311220757) do
 
   create_table "building_types", :force => true do |t|
     t.string   "name"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100228000254) do
 
   create_table "data_points", :force => true do |t|
     t.integer  "data_set_id"
-    t.integer  "amount",      :limit => 10, :precision => 10, :scale => 0
+    t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20100228000254) do
     t.integer  "meter_id"
     t.integer  "point_number"
     t.string   "name"
-    t.string   "units"
+    t.integer  "power_unit_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(:version => 20100228000254) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+  end
+
+  create_table "power_units", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

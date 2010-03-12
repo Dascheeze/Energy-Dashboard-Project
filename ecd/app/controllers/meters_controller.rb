@@ -11,10 +11,10 @@ class MetersController < ApplicationController
   end
 
   def refresh
-    @meters = Meter.all
     Meter.all.each do |meter_num|
       parse_xml(meter_num.modbus_address, meter_num.id)
     end
+	@message = "Successfully updated all meters"
     respond_to do |format|
       format.html
     end
@@ -124,7 +124,7 @@ class MetersController < ApplicationController
   def addDataPoint(data_set_id, value)
     newData = DataPoint.new
     newData.data_set_id = data_set_id.to_s.to_i
-    newData.amount = value.to_s.to_i
+    newData.amount = value.to_s.to_f
     newData.save
   end
   
@@ -147,8 +147,7 @@ class MetersController < ApplicationController
     DataSet.find(:all, :conditions => { :meter_id => meter_id }).each do |series|
       xml_doc.elements.each("DAS/devices/device/records/record/point") do |ele|
         if ele.attribute("number").to_s.to_i == series.point_number
-		  logger.debug ele.attribute("value").to_s
-          addDataPoint(series.id, Float(ele.attribute("value").to_s))
+          addDataPoint(series.id, ele.attribute("value").to_s)
         end
       end
     end

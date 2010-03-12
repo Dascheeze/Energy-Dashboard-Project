@@ -4,8 +4,10 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :meter_id %><br />
-    <%= f.text_field :meter_id %>
+	<!-- Makes a dropdown and puts the meters in each select value -->
+	<% allMeters = Meter.find(:all, :order => :id) %>
+	Select <%= f.label :meter %><br /> 
+	<%= f.collection_select :meter_id, allMeters, :id, :name %>
   </p>
   <p>
     <%= f.label :point_number %><br />
@@ -16,8 +18,10 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :units %><br />
-    <%= f.text_field :units %>
+	<!-- Makes a dropdown and puts the power units in each select value -->
+	<% allUnits = PowerUnit.find(:all, :order => :id) %>
+	Select <%= f.label :power_unit %><br /> 
+	<%= f.collection_select :meter_id, allUnits, :id, :name %>
   </p>
   <p>
     <%= f.submit 'Create' %>
