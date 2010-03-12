@@ -1,4 +1,5 @@
 class DataSetsController < ApplicationController
+  include ApplicationHelper
   # GET /data_sets
   # GET /data_sets.xml
   def index
@@ -9,9 +10,9 @@ class DataSetsController < ApplicationController
       format.xml  { render :xml => @data_sets }
     end
   end
-
+  
   def get_table
-	  include ApplicationHelper
+	  
 	  p = points_between_dates(params[:id], Time.now + 8.hours, Time.now + 8.hours + 1.day) 
 	  
 	  @data_set = DataSet.find(params[:id])
