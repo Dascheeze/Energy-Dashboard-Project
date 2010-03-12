@@ -10,6 +10,19 @@ class DataSetsController < ApplicationController
     end
   end
 
+  def get_table
+	  @data_set = DataSet.find(params[:id])
+	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
+	  @data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
+	  
+	  respond_to do |format|
+		  format.html
+	  end
+	  
+  end
+  
+  
+  
   # GET /data_sets/1
   # GET /data_sets/1.xml
   def show

@@ -1,0 +1,24 @@
+<div class="activeButton">power_info_button</div>
+
+<h1>Listing data_sets</h1>
+
+<table id="dataset">
+	<caption>
+		Hourly breakdown for <%= @assoc_meter.name %>
+	</caption>
+	<tr><td></td>
+		
+<% @data_points.each do |d_set| %>
+		<th><%= d_set.created_at %></td>
+<% end %>
+	</tr>
+	<tr>
+	<th> <%= @data_set.name %> </th>
+<% @data_points.each do |d_set| %>
+	<td> <%= @data_set.value %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New data_set', new_data_set_path %>
