@@ -51,4 +51,19 @@ module ApplicationHelper
       end
     end
   end
+
+  def points_between_dates(data_set_id, start_date, end_date)
+    #return_table = "<table>"
+    #list_sets = DataSet.find(:all, :conditions => { :created_at => start_date..end_date, :id => data_set_id})
+    #list_sets.each do |set|
+    list_points = DataPoint.find(:all, :conditions => { :created_at => (start_date+8.hours)..(end_date+8.hours), :data_set_id => data_set_id })
+    #return_table = return_table + "<tr>"
+    #list_points.each do |data_points|
+    #  return_table = return_table + "<td>" + data_points.amount.to_s + "</td>"
+    #end
+    #return_table = return_table + "</tr>"
+    #end
+    #return_table = return_table + "</table>"
+    return list_points
+  end
 end
