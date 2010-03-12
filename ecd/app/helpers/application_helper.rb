@@ -22,24 +22,27 @@ module ApplicationHelper
     i = 1
     
     num_to_aggregate = time_interval / duration_of_pull
-    
+    puts "a"
     list_points.each do |point|
       if (i == 1)
         time = point.created_at
         aggregate_amount = 0
       end
-      
+      puts "b"
       aggregate_amount += point.amount
       
       if (i == num_to_aggregate)
+		puts "c"
         item.amount = aggregate_amount
         item.date = time
         data_array.push(item)
         i = 1
       else
+		  puts "d"
         i += 1
       end
     end
+	puts "e"
     return data_array
   end
   
