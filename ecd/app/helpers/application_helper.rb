@@ -111,6 +111,33 @@ module ApplicationHelper
     return bounds
   end
   
+  def real_diff (list_points, time_interval = 1.hour)
+	  duration_of_pull = 15.minutes
+	  data_array = Array.new
+    i=0
+	  time=0
+    tmp_hour = -1
+	  value=0
+	  num_to_aggregate = time_interval / duration_of_pull
+	  list_points.each do |point|
+      if (i == num_to_aggregate)
+        item = Item.new
+        item.amount = point.amount - value
+        item.date = time
+        data_array.push(item)
+        i = 0
+      end
+      
+      if (i == 0)
+        value = point.amount.to_s.to_f
+        time = point.created_at
+      end
+      
+      i = i + 1
+    end
+    return data_array
+  end
+  
 end
 
      
