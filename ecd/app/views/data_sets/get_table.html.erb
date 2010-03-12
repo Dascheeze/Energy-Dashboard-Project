@@ -11,9 +11,11 @@
 		Hourly breakdown for <%= @assoc_meter.name %>
 	</caption>
 	<tr><td></td>
-		
+<% i = 0 %>
 <% @data_points.each do |d_point| %>
-		<th><%= d_point.created_at.strftime("%H:00") %></td>
+	<% if i < 13 %>
+		<th><%= (d_point.created_at + 8.hours).strftime("%H:00") %></td>
+	<% end %>
 <% end %>
 	</tr>
 	<tr>
