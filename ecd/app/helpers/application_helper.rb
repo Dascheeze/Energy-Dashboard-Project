@@ -30,7 +30,7 @@ module ApplicationHelper
         aggregate_amount = 0
       end
       puts "b"
-      aggregate_amount += point.amount
+      aggregate_amount += point.amount.to_s.to_f
       
       if (i == num_to_aggregate)
 		puts "c"
@@ -39,8 +39,8 @@ module ApplicationHelper
         data_array.push(item)
         i = 1
       else
-		  puts "d"
-        i += 1
+		puts "d"
+        i = i + 1
       end
     end
 	puts "e"
