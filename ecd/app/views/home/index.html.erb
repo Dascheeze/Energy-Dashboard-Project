@@ -1,32 +1,40 @@
 <div class="activeButton">home_screen_button</div>
 
-<script type="text/javascript">
-	$(function() {
-		$("#building-tabs").tabs();
-	});
-</script>
+<table id="dataset">
+	<caption>2009 Individual Sales by Category</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th>food</th>
+			<th>auto</th>
+			<th>household</th>
+			<th>furniture</th>
+			<th>kitchen</th>
+			<th>bath</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Mary</th>
+			<td>150</td>
+			<td>160</td>
+			<td>40</td>
+			<td>120</td>
+			<td>30</td>
+			<td>70</td>
+		</tr>
+		<tr>
+			<th>Tom</th>
+			<td>3</td>
+			<td>40</td>
+			<td>30</td>
+			<td>45</td>
+			<td>35</td>
+			<td>49</td>
+		</tr>
+	</tbody>
+</table>
 
-<div id="building-tabs" style="background-color:#9BD;">
-	<ul >
-		<li><a href="#bldg-1" class="tab-button">Rodgers</a></li>
-		<li><a href="#bldg-2" class="tab-button">Dearborn</a></li>
-		<li><a href="#bldg-3" class="tab-button">Wilson</a></li>
-		<li><a href="#bldg-4" class="tab-button">Bexell</a></li>
-	</ul>
-	<div id="bldg-1" class="tab-div">
-		<p class="graph-header">Power Statistics for <span class="building-name">Rodgers</span> hall:</p>
-		<div id="bldg-1-flot" class="flot-div"></div>
-	</div>
-	<div id="bldg-2" class="tab-div">
-		<p class="graph-header">Power Statistics for <span class="building-name">Dearborn</span> hall:</p>
-		<div id="bldg-2-flot" class="flot-div"></div>
-	</div>
-	<div id="bldg-3" class="tab-div">
-		<p class="graph-header">Power Statistics for <span class="building-name">Wilson</span> hall:</p>
-		<div id="bldg-3-flot" class="flot-div"></div>
-	</div>
-	<div id="bldg-4" class="tab-div">
-		<p class="graph-header">Power Statistics for <span class="building-name">Bexell</span> hall:</p>
-		<div id="bldg-4-flot" class="flot-div"></div>
-	</div>
-</div>
+<script type="text/javascript">
+	$('#dataset').visualize();
+</script>
