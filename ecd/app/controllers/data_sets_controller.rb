@@ -14,7 +14,7 @@ class DataSetsController < ApplicationController
   def get_table
 	  
 	  p = points_between_dates(params[:id], Time.now + 8.hours, Time.now + 8.hours + 1.day) 
-	  @item_data = data_to_array_difference(p)
+	  @item_data = data_to_array_diff(p)
 	  
 	  @data_set = DataSet.find(params[:id])
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
