@@ -66,4 +66,31 @@ module ApplicationHelper
     #return_table = return_table + "</table>"
     return list_points
   end
+  
+  def data_to_array(list_points, time_interval = 1.hour)
+    duration_of_pull = 15.minutes
+    data_array = Array.new
+    i = 1
+    
+    num_to_aggregate = time_interval / duration_of_pull
+    
+    list_points.each do |point|
+      if (i == 1)
+        time = point.created_at
+        aggregate_amount = 0
+      end
+      
+      aggregate_amount += point.amount
+      
+      if (i == num_to_aggregate)
+        item.amount = aggregate_amount
+        item.date = time
+        data_array.push(item)
+        i = 1
+      else
+        i += 1
+      end
+    end
+    return data_array
+  end
 end
