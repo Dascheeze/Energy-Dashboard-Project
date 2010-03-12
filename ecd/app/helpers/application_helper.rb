@@ -1,6 +1,11 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
+  class	Item
+    attr_reader :amount, :date
+	attr_writer :amount, :date
+  end
+  
   def points_between_dates(data_set_id, start_date, end_date)
     #return_table = "<table>"
     #list_sets = DataSet.find(:all, :conditions => { :created_at => start_date..end_date, :id => data_set_id})
@@ -39,6 +44,7 @@ module ApplicationHelper
       puts "test"
       if (i == num_to_aggregate)
 		puts "c"
+		item = Item.new
         item.amount = aggregate_amount
         item.date = time
         data_array.push(item)
