@@ -17,10 +17,11 @@ class DataSetsController < ApplicationController
     else
       @data_set_id = 1
     end
+    
     logger.debug params
     
-    if params[:dateform] and params[:dateform][:start_date]
-	    @startTime = Time(params[:dateform][:start_date])
+    if params[:dateform] and params[:dateform].start_date
+	    @startTime = Time(params[:dateform].start_date)
     else
       @start_time = Time.now.midnight.localtime
     end
@@ -32,13 +33,9 @@ class DataSetsController < ApplicationController
 	  p = points_between_dates(@data_set_id, startTime, endTime) 
 	  @item_data = real_diff(p)
 	  
-    if !@data_set
-	    @data_set = DataSet.find(@data_set_id)
-    end
+	  @data_set = DataSet.find(@data_set_id)
     
-    if !@assoc_meter
-	    @assoc_meter = Meter.find(:first, @data_set.meter_id)
-    end
+	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
     #@data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
 	  
 	  respond_to do |format|
