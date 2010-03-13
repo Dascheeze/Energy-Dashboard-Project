@@ -2,13 +2,14 @@
 
 <script type="text/javascript">
 	$(function() {
-		$("#dataset").hide().visualize({width:650, height:400}).attr("style", "margin-left:50px; margin-bottom:75px", "background-color:white");
+		$("#dataset").hide().visualize({width:650, height:400}).attr("style","background-color:white");
 	});
 </script>
-<div style="width:700px; height: 600px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
-<%= form_tag :action=>'get_table' %>
-Date:<%= text_field("dateform", "start_date",:size=>"20" ) %>
-<input type="submit" value="Change Date" />
+<div style="margin-left:45px; margin-top: 25px; margin-bottom:40px">
+	<%= form_tag :action=>'get_table' %>
+	Date:<%= text_field("dateform", "start_date",:size=>"20" ) %>
+	<input type="submit" value="Change Date" />
+<div style="width:700px; height: 600px; margin-left:45px;margin-top:25px;margin-bottom:80px;">
 
 <table id="dataset">
 	<caption>
