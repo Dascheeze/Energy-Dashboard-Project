@@ -21,16 +21,16 @@ class DataSetsController < ApplicationController
     logger.debug params
     
     if params[:dateform] and params[:dateform].start_date
-	    @startTime = Time(params[:dateform].start_date)
+	    @start_time = Time(params[:dateform].start_date)
     else
       @start_time = Time.now.midnight.localtime
     end
       
-    endTime = startTime + 1.day
+    endTime = @start_time + 1.day
     
     logger.debug @data_set_id
     
-	  p = points_between_dates(@data_set_id, startTime, endTime) 
+	  p = points_between_dates(@data_set_id, @start_time, endTime) 
 	  @item_data = real_diff(p)
 	  
 	  @data_set = DataSet.find(@data_set_id)
