@@ -16,13 +16,14 @@ class DataSetsController < ApplicationController
       @data_set_id = params[:id]
     else
       @data_set_id = 1
-    
+    end
     logger.debug params
     
     if params[:dateform] and params[:dateform][:start_date]
 	    @startTime = Time(params[:dateform][:start_date])
     else
       @start_time = Time.now.midnight.localtime
+    end
       
     endTime = startTime + 1.day
     
@@ -33,10 +34,11 @@ class DataSetsController < ApplicationController
 	  
     if !@data_set
 	    @data_set = DataSet.find(@data_set_id)
+    end
     
     if !@assoc_meter
 	    @assoc_meter = Meter.find(:first, @data_set.meter_id)
-	  
+    end
     #@data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
 	  
 	  respond_to do |format|
