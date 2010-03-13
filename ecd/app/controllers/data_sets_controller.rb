@@ -26,13 +26,13 @@ class DataSetsController < ApplicationController
       
     endTime = startTime + 1.day
     
-    
+    logger.debug @data_set_id
     
 	  p = points_between_dates(@data_set_id, startTime, endTime) 
 	  @item_data = real_diff(p)
 	  
     if !@data_set
-	    @data_set = DataSet.find(params[:id])
+	    @data_set = DataSet.find(@data_set_id)
     
     if !@assoc_meter
 	    @assoc_meter = Meter.find(:first, @data_set.meter_id)
