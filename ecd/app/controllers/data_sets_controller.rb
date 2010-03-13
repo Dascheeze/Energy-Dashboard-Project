@@ -12,17 +12,32 @@ class DataSetsController < ApplicationController
   end
   
   def get_table
-	  startTime = Time.now.midnight.localtime
+    if params[:id]
+      @data_set_id = params[:id]
+    else
+      @data_set_id = 1
+    
+    logger.debug params
+    
+    if params[:dateform] and params[:dateform][:start_date]
+	    @startTime = Time(params[:dateform][:start_date])
+    else
+      @start_time = Time.now.midnight.localtime
+      
     endTime = startTime + 1.day
     
     
     
-	  p = points_between_dates(1, startTime, endTime) 
+	  p = points_between_dates(@data_set_id, startTime, endTime) 
 	  @item_data = real_diff(p)
 	  
-	  @data_set = DataSet.find(params[:id])
-	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
-	  #@data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
+    if !@data_set
+	    @data_set = DataSet.find(params[:id])
+    
+    if !@assoc_meter
+	    @assoc_meter = Meter.find(:first, @data_set.meter_id)
+	  
+    #@data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
 	  
 	  respond_to do |format|
 		  format.html
