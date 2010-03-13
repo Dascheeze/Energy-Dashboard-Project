@@ -5,10 +5,11 @@
 		$("#dataset").hide().visualize({width:650, height:400}).attr("style", "margin-left:50px; margin-bottom:75px", "background-color:white");
 	});
 </script>
+<div style="width:700px; height: 600px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date",:size=>"20" ) %>
 <input type="submit" value="Change Date" />
-<div style="width:700px; height: 400px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
+
 <table id="dataset">
 	<caption>
 		Hourly breakdown for <%= @assoc_meter.name %>
