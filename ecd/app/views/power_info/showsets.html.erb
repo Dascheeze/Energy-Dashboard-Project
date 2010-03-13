@@ -1,0 +1,12 @@
+<div class="activeButton">power_info_button</div>
+
+<h1>Select Power Set to View Graph</h1>
+
+<table>
+  <% @list_sets.each do |set| %>
+    <tr>
+      <td><a href="/data_sets/get_table/<%=h set.id %>"><%= set.name %></a>
+      </td>
+    </tr>
+  <% end %>
+</table>
