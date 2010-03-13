@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :power_units
   
+  map.resources :help
+
   map.resources :power_info
 
   map.resources :data_points
