@@ -12,7 +12,7 @@
 	</caption>
 	<tr><td></td>
 <% @item_data.each do |item| %>
-		<th><%= item.date.localtime.strftime("%H:00") %></td>
+		<th><%= item.date.localtime.strftime("%H:00") %></th>
 <% end %>
 	</tr>
 	<tr>
@@ -21,4 +21,8 @@
 	<td> <%= item.amount %> </td>
 <% end %>
 </table>
+<%= form_tag :action=>'get_table' %>
+User name:<%= text_field("userform", "user_name",:size=>"20" ) %>
+Password:<%= password_field("userform", "password",:size=>"20" )%>
+<input type="submit" value=" LOGIN " />
 </div>
