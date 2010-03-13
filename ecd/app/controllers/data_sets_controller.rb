@@ -21,7 +21,7 @@ class DataSetsController < ApplicationController
     logger.debug params
     
     if params[:dateform] and params[:dateform][:start_date]
-	    @start_time = Time(params[:dateform][:start_date])
+	    @start_time = Time.parse(params[:dateform][:start_date]).midnight.localtime
     else
       @start_time = Time.now.midnight.localtime
     end
