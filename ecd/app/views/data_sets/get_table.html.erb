@@ -5,6 +5,9 @@
 		$("#dataset").hide().visualize({width:650, height:400}).attr("style", "margin-left:50px; margin-bottom:75px; background-color:fff;");
 	});
 </script>
+<%= form_tag :action=>'get_table' %>
+Date:<%= text_field("dateform", "start_date",:size=>"20" ) %>
+<input type="submit" value="Change Date" />
 <div style="width:700px; height: 400px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
 <table id="dataset">
 	<caption>
@@ -25,7 +28,5 @@
 <% end %>
 	</tbody>
 </table>
-<%= form_tag :action=>'get_table' %>
-User name:<%= text_field("userform", "user_name",:size=>"20" ) %>
-<input type="submit" value="Change Date" />
+
 </div>
