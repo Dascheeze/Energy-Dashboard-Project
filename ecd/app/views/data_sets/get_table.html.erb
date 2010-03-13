@@ -10,16 +10,20 @@
 	<caption>
 		Hourly breakdown for <%= @assoc_meter.name %>
 	</caption>
+	<thead>
 	<tr><td></td>
 <% @item_data.each do |item| %>
 		<th><%= item.date.localtime.strftime("%H:00") %></th>
 <% end %>
 	</tr>
+	</thead>
+	<tbody>
 	<tr>
 	<th> <%= @data_set.name %> </th>
 <% @item_data.each do |item| %>
 	<td> <%= item.amount %> </td>
 <% end %>
+	</tbody>
 </table>
 <%= form_tag :action=>'get_table' %>
 User name:<%= text_field("userform", "user_name",:size=>"20" ) %>
