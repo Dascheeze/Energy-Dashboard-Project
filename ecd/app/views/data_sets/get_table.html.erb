@@ -13,7 +13,7 @@
 	<thead>
 	<tr><td></td>
 <% @item_data.each do |item| %>
-		<th><%= item.date.localtime.strftime("%H:00") %></td>
+		<th><%= item.date.localtime.strftime("%H:00") %></th>
 <% end %>
 	</tr>
 	</thead>
@@ -25,4 +25,7 @@
 <% end %>
 	</tbody>
 </table>
+<%= form_tag :action=>'get_table' %>
+User name:<%= text_field("userform", "user_name",:size=>"20" ) %>
+<input type="submit" value="Change Date" />
 </div>
