@@ -1,0 +1,2 @@
+module PowerInfoHelper
+end
