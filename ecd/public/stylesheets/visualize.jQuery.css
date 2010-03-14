@@ -23,7 +23,7 @@
 .visualize-labels-x li span.label, .visualize-labels-y li span.label { position: absolute; color: #555;  }
 .visualize-labels-x li span.line, .visualize-labels-y li span.line {  position: absolute; border: 0 solid #ccc; }
 .visualize-labels-x li { height: 100%; }
-.visualize-labels-x li span.label { top: 100%; margin-top: 5px; }
+.visualize-labels-x li span.label { top: 100%; margin-top: 5px; width:1px }
 .visualize-labels-x li span.line { border-left-width: 1px; height: 100%; display: block; }
 .visualize-labels-x li span.line { border: 0;} /*hide vertical lines on area, line, bar*/
 .visualize-labels-y li { width: 100%;  }
