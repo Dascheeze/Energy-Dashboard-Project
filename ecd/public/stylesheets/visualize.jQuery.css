@@ -20,7 +20,7 @@
 /*line,bar, area labels*/
 .visualize-labels-x,.visualize-labels-y { position: absolute; left: 0; top: 0; list-style: none; }
 .visualize-labels-x li, .visualize-labels-y li { position: absolute; bottom: 0; }
-.visualize-labels-x li span.label, .visualize-labels-y li span.label { position: absolute; color: #555; display:inline-block; width:1px;  }
+.visualize-labels-x li span.label, .visualize-labels-y li span.label { position: absolute; color: #555; display:inline-block; width:2px;  }
 .visualize-labels-x li span.line, .visualize-labels-y li span.line {  position: absolute; border: 0 solid #ccc; }
 .visualize-labels-x li { height: 100%; }
 .visualize-labels-x li span.label { top: 100%; margin-top: 5px; display:inline-block; width:1px; }
@@ -29,4 +29,4 @@
 .visualize-labels-y li { width: 100%;  }
 .visualize-labels-y li span.label { right: 100%; margin-right: 5px; display: block; width: 100px; text-align: right; }
 .visualize-labels-y li span.line { border-top-width: 1px; width: 100%; }
-.visualize-bar .visualize-labels-x li span.label { width: 100%; text-align: center; }
+.visualize-bar .visualize-labels-x li span.label { width: 100%; text-align: center; display:inline-block; width:1px; }
