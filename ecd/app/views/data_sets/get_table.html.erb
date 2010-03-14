@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
 	$(function() {
-		var t = $("#dataset").hide().visualize({width:650, height:400, type:"line"});
+		var t = $("#dataset").hide().visualize({width:650, height:400, type:"line" , title:<%= form_tag :action=>'get_table' %>});
 		var curStyle = t.attr("style");
 		t.attr("style", curStyle + ";margin-left:50px;margin-bottom:75px");
 		$("#dateform_start_date").datepicker();
