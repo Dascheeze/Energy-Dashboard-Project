@@ -57,32 +57,7 @@ module ApplicationHelper
     return data_array
   end
 
-  def data_to_array_diff(list_points, time_interval = 1.hour)
-    duration_of_pull = 15.minutes
-    data_array = Array.new
-    i = 0
-    time=0
-    value=0
-    num_to_aggregate = time_interval / duration_of_pull
-    list_points.each do |point|
-      if (i == 0)
-        time = point.created_at
-        value = point.amount.to_s.to_f
-      end
-      if (i == num_to_aggregate-1)
-        item = Item.new
-        item.amount = point.amount.to_s.to_f - value
-        item.date = time
-        data_array.push(item)
-        i = 0
-      else
-        i = i + 1
-      end
-    end
-    return data_array
-  end
   
-
   def get_bounds(data_array)
 	bounds = Bounds.new
     bounds.max_amount=0
