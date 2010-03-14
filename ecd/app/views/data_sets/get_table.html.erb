@@ -8,7 +8,7 @@
 		$("#dateform_start_date").datepicker();
 	});
 </script>
-<div style="width:700px; height: 400px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
+<div style="width:700px; height: 600px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date",:size=>"20" ) %> 
 <input type="submit" value="Change Date" />
@@ -33,12 +33,12 @@ Date:<%= text_field("dateform", "start_date",:size=>"20" ) %>
 	</tbody>
 </table>
 
-<div>
+
 	<%= @item_bounds.max_amount%>
 	<%= @item_bounds.max_time%>
 	<%= @item_bounds.min_amount%>
 	<%= @item_bounds.min_time%>
 
-</div>
+
 
 </div>
