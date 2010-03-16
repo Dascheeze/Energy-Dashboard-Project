@@ -9,6 +9,7 @@ class PowerInfoController < ApplicationController
   end
 
   def showsets
+    @building = Building.find(params[:id])
     meters = Meter.find(:all, :conditions => { :building_id => params[:id] })
     meters.each do |m|
       @list_sets = DataSet.find(:all, :conditions => { :meter_id => m.id})

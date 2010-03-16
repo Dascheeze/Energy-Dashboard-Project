@@ -1,21 +1,7 @@
 <div class="activeButton">power_info_button</div>
 
-<h1>Select Building to View Power Sets</h1>
-
-<table>
-  <tr>
-    <th>Building</th>
-    <th>Building name</th>
-    <th>Building abbrv</th>
-  </tr>
+<h1>Select a building to view sets of data.</h1>
 
 <% @buildings.each do |building| %>
-  <tr>
-
-    <td><%=h building.id %></td>
-    <td><%=h building.building_name %></td>
-    <td><%=h building.building_abbrv %></td>
-    <td><a href="/power_info/showsets/<%=h building.id %>">Show Sets</a></td>
-  </tr>
+<a href="/power_info/showsets/<%=h building.id %>"><%=h building.building_name %></a><br>
 <% end %>
-</table>

@@ -1,12 +1,8 @@
 <div class="activeButton">power_info_button</div>
 
-<h1>Select Power Set to View Graph</h1>
+<h1>Building: <%h @building.building_name %></h1>
 
-<table>
+<h2> Please choose a dataset: </h2>
   <% @list_sets.each do |set| %>
-    <tr>
-      <td><a href="/data_sets/get_table/<%=h set.id %>"><%= set.name %></a>
-      </td>
-    </tr>
+  <%=h set.name %>: <a href="/data_sets/get_table/<%=h set.id %>">Graph</a><br>
   <% end %>
-</table>
