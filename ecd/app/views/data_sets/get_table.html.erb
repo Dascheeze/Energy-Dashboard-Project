@@ -10,7 +10,7 @@
 </script>
 <div style="width:700px; height: 600px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
 <%= form_tag :action=>'get_table' %>
-Date:<%= text_field("dateform", "start_date", :value=>@start_time ) %> 
+Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Date" />
 
 <table id="dataset">
