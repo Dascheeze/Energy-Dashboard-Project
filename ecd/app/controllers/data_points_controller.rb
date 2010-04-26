@@ -1,4 +1,8 @@
 class DataPointsController < ApplicationController
+  USER_NAME, PASSWORD = "admin", "admin"
+  
+  before_filter :authenticate
+  
   # GET /data_points
   # GET /data_points.xml
   def index
@@ -82,4 +86,10 @@ class DataPointsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  private
+    def authenticate
+      authenticate_or_request_with_http_basic do |user_name, password|
+        user_name == USER_NAME && password == PASSWORD
+      end
+    end
 end

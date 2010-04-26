@@ -1,4 +1,8 @@
 class MetersController < ApplicationController
+  USER_NAME, PASSWORD = "admin", "admin"
+  
+  before_filter :authenticate, :except => [ :refresh ]
+  
   # GET /meters
   # GET /meters.xml
   def index
@@ -153,5 +157,10 @@ class MetersController < ApplicationController
     end
 	logger.debug "All datapoints added to database"
   end
-  
+  private
+    def authenticate
+      authenticate_or_request_with_http_basic do |user_name, password|
+        user_name == USER_NAME && password == PASSWORD
+      end
+    end
 end
