@@ -40,9 +40,9 @@
 	  [new Date(2010, 4, 24, 23), 69873],
 	  [new Date(2010, 4, 25, 0), 34600],
           [new Date(2010, 4, 26, 0), 23579]*/
-          <%= @item_data.each do |item| %>
-            [new Date(<%= item.date.localtime.strftime("%Y, %m, %d, %H, %M") %>), <%= item.amount %>],
-          <%= end %>
+          <% @item_data.each do |item| %>
+            [new Date(<%= item.date.localtime.strftime("%Y, %m, %d, %H, %M") %>), <%= item.amount %> ],
+          <% end %>
         ]);
         // Instantiate our table object.
         var vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
@@ -52,7 +52,12 @@
    </script>
  <!-- <title>MyTable example page</title></head>
   <body> -->
-    <div id="mydiv" style='width:700px; height:240px;'></div>
+    <div id="mydiv" style='width:750px; height:240px;'></div>
+
+	Max Amount: <%= @item_bounds.max_amount%> <br/>
+	Max Time:<%= @item_bounds.max_time.localtime%> <br/>
+	Min Amount:<%= @item_bounds.min_amount%> <br/>
+	Min Time:<%= @item_bounds.min_time.localtime%> <br/>
     <!--</body>
 </html> -->
 
