@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tests
+
   map.resources :power_units
   
   map.resources :help
@@ -16,6 +18,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :update_meter
   
   map.resources :about_us
+  
+  map.resources :test
 
   # The priority is based upon order of creation: first created -> highest priority.
 
