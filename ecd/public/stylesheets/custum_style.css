@@ -10,6 +10,7 @@ font-size: .9em;
 .noborder { border-style: none; }
  
 .navButton {
+color: #9D601E;
 font-size: .9em;
 margin-bottom: 3px;
 width: 98%;
@@ -31,7 +32,7 @@ text-decoration: underline;
 }
  
 .website-header {
-color: #ABADA4;
+color: #9D601E;
 font-variant: small-caps;
 }
  
