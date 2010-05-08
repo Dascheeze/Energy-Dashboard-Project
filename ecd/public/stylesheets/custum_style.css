@@ -2,22 +2,13 @@ a { text-decoration:none; }
  
 a:visited { color: #000000;}
 a:hover {color: #D85A1A;}
- 
-body {
-background-color: #6B859E;
-font-size: .9em;
-}
+
 .noborder { border-style: none; }
  
 .navButton {
 font-size: .9em;
 margin-bottom: 3px;
 width: 98%;
-}
- 
-.flot-div {
-width: 725px;
-height: 400px;
 }
  
 .graph-header {
