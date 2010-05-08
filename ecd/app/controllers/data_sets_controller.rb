@@ -25,6 +25,40 @@ class DataSetsController < ApplicationController
     logger.debug params
     
     if params[:dateform] and params[:dateform][:start_date]
+	    @start_time = Time.parse(params[:dateform][:start_date]).localtime.midnight
+    else
+      @start_time = Time.now.localtime.midnight
+    end
+    
+    @endTime = @start_time + 1.day
+    @start_time = @start_time
+    
+    logger.debug @data_set_id
+    
+	  p = points_between_dates(@data_set_id, @start_time - 30.day, @endTime)
+	  @item_data = real_diff(p)
+    @item_bounds =  get_bounds(@item_data)
+    
+	  @data_set = DataSet.find(@data_set_id)
+    
+	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
+    
+    
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def get_table_old
+    if params[:id]
+      @data_set_id = params[:id]
+    else
+      @data_set_id = 1
+    end
+    
+    logger.debug params
+    
+    if params[:dateform] and params[:dateform][:start_date]
 	    @start_time = Time.parse(params[:dateform][:start_date]).midnight.localtime
     else
       @start_time = Time.now.midnight.localtime
@@ -121,40 +155,6 @@ class DataSetsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(data_sets_url) }
       format.xml  { head :ok }
-    end
-  end
-
-  def new_table
-    if params[:id]
-      @data_set_id = params[:id]
-    else
-      @data_set_id = 1
-    end
-
-    logger.debug params
-
-    if params[:dateform] and params[:dateform][:start_date]
-	    @start_time = Time.parse(params[:dateform][:start_date]).localtime.midnight
-    else
-      @start_time = Time.now.localtime.midnight
-    end
-
-    @endTime = @start_time + 1.day
-    @start_time = @start_time
-
-    logger.debug @data_set_id
-
-	  p = points_between_dates(@data_set_id, @start_time - 30.day, @endTime)
-	  @item_data = real_diff(p)
-    @item_bounds =  get_bounds( @item_data)
-
-	  @data_set = DataSet.find(@data_set_id)
-
-	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
-
-
-    respond_to do |format|
-      format.html
     end
   end
 
