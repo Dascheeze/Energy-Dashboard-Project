@@ -47,7 +47,7 @@
         // Instantiate our table object.
         var vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
-	vis.draw(data, {displayAnnotations: true, zoomEndTime: <%= @endTime %>, zoomStartTime: <%= (@endTime - 1.day) %>});
+	vis.draw(data, {displayAnnotations: true, zoomEndTime: new Date(<%= @endTime.date.strftime("%Y, (%m-1), %d, %H, %M") %>), zoomStartTime:new Date(<%= (@endTime - 1.day).date.strftime("%Y, (%m-1), %d, %H, %M") %>)});
        }
    </script>
  <!-- <title>MyTable example page</title></head>
