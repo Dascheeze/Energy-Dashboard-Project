@@ -140,11 +140,11 @@ class DataSetsController < ApplicationController
     end
 
     @endTime = @start_time + 1.day
-    @start_time = @start_time - 30.day
+    @start_time = @start_time
 
     logger.debug @data_set_id
 
-	  p = points_between_dates(@data_set_id, @start_time, @endTime)
+	  p = points_between_dates(@data_set_id, @start_time - 30.day, @endTime)
 	  @item_data = real_diff(p)
     @item_bounds =  get_bounds( @item_data)
 
