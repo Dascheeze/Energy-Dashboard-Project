@@ -24,10 +24,16 @@
        }
    </script>
    <div id="mydiv" style='width:750px; height:360px;'></div>
-        <br/>
-        Meter: <%= @assoc_meter.building.name%><br/>
-	Max Amount: <%= @item_bounds.max_amount%> <br/>
-	Max Time:<%= @item_bounds.max_time.localtime%> <br/>
-	Min Amount:<%= @item_bounds.min_amount%> <br/>
-	Min Time:<%= @item_bounds.min_time.localtime%> <br/>
+   <br/><p>
+        <b>Meter: <%= @assoc_meter.building.building_name%><br/></b>
+        <b>Max Amount:</b> <%= @item_bounds.max_amount%> <br/>
+        <b>Max Time:</b><%= @item_bounds.max_time.localtime%> <br/>
+        <b>Min Amount:</b><%= @item_bounds.min_amount%> <br/>
+        <b>Min Time:</b><%= @item_bounds.min_time.localtime%> <br/>
+        </p>
+        <p>
+        To modify the displayed graph, you can move the borders on the bottom
+        timeline, and drag the viewed window to show a different section of the
+        graph.
+        </p>
 
