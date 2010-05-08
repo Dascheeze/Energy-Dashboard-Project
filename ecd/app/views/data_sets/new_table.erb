@@ -20,16 +20,15 @@
         // Instantiate our table object.
         var vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
-	vis.draw(data, {displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
+	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        }
-   </script>
+     </script>
+<h1>Building: <%= @assoc_meter.building.building_name%></h1>
    <div id="mydiv" style='width:750px; height:360px;'></div>
    <br/><p>
-        <b>Meter: <%= @assoc_meter.building.building_name%><br/></b>
-        <b>Max Amount:</b> <%= @item_bounds.max_amount%> <br/>
-        <b>Max Time:</b><%= @item_bounds.max_time.localtime%> <br/>
-        <b>Min Amount:</b><%= @item_bounds.min_amount%> <br/>
-        <b>Min Time:</b><%= @item_bounds.min_time.localtime%> <br/>
+   <h3>Highest Amount Registered :</h3> 
+   <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
+   <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
         </p>
         <p>
         To modify the displayed graph, you can move the borders on the bottom
