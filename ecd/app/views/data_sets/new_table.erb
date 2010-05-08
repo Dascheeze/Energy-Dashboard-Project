@@ -24,7 +24,7 @@
        }
      </script>
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
-<%= form_tag :action=>'get_table' %>
+<%= form_tag :action=>'new_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Date" />
    <div id="mydiv" style='width:750px; height:360px;'></div>
