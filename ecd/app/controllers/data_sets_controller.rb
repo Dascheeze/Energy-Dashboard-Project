@@ -136,10 +136,10 @@ class DataSetsController < ApplicationController
     if params[:dateform] and params[:dateform][:start_date]
 	    @start_time = Time.parse(params[:dateform][:start_date]).localtime.midnight
     else
-      @start_time = Time.now.localtime.midnight - 29.day
+      @start_time = Time.now.localtime.midnight - 30.day
     end
       
-    @endTime = @start_time + 30.day
+    @endTime = @start_time + 31.day
     
     logger.debug @data_set_id
     
