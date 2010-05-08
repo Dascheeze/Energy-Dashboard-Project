@@ -8,7 +8,7 @@
       function drawVisualization() {
         
         // Create and populate a data table.
-        var data = new google.visualization.DataTable();
+        data = new google.visualization.DataTable();
         data.addColumn('datetime', 'Date');
         data.addColumn('number', 'KWh');
 	// Add more data rows and cells here
@@ -18,7 +18,7 @@
           <% end %>
         ]);
         // Instantiate our table object.
-        var vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
+        vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
 	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        }
