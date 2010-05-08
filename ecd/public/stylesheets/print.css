@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+#top-hat-interior ul {
+	display: none;
+}
+
+#hd {
+	margin-bottom: 1em;	
+}
+
+#hd div {
+	height: 2.8em;	
+}
+
+#roatating-image, div.slide {
+    display: none;
+}
+
+#header-bottom {
+	display: none;	
+}
+
+img.icon-image {
+	display: none;
+}
+
+#site-name {
+	font-size: 2em;
+	float: left;
+}
+
+#osu-search {
+	display: none;
+}

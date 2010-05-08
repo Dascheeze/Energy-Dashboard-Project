@@ -1,0 +1,441 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* OSU Grey Theme for HTML Templates */
+
+
+body, html{
+	background-color:#cecece; background-image: url(images/bkgrnd_stripe_gray.jpg)!important; background-repeat: repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.yui-ge .yui-u{
+	width:170px;
+}
+.yui-ge div.first{
+	width:76%;
+}
+.yui-b{
+	width:180px;
+}
+#bd{
+	margin-right:15px;
+	margin-top:15px;
+}
+
+h1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #D03C20;
+	line-height: 16px;
+}
+
+
+h2 {
+	font-size: 14px;
+	color: #D03C20;
+	font-weight: bold;
+}
+h3, h4 {
+	color: #D03C20;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 14px;
+}
+blockquote {
+	color: #6C6C6C;
+	font-size: 11px;
+	font-style: italic;
+}
+
+li {
+	font-size: 12px;
+	color: #6C6C6C;
+	list-style-type: square;
+	list-style-position: inside;
+}
+a {
+	text-decoration: underline;
+	color: #D03C20;
+}
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+ #sidebar-left .block, #sidebar-right .block{
+    border-top:solid 2px #000;
+    background-color:#e6e6e6;
+	margin-bottom:15px;
+	padding-bottom:10px;
+
+}
+#sidebar-left .block .block-inner h2, #sidebar-right .block .block-inner h2{
+	padding-left:10px;
+}
+#sidebar-left .block-inner .content, #sidebar-right .block-inner .content{
+	margin-top:15px;
+}
+#sidebar-left .block .block-inner .content, #sidebar-right .block .block-inner .content{
+	margin-top:0;
+}
+#navbar-region .block-inner .content{
+	margin-top:0;
+	padding-bottom:0;
+}
+.breadcrumb{
+	color:grey;
+}
+#osu-top-hat { 
+	border-bottom: 3px solid #ce3d21;
+}
+#top-hat-interior {
+    width:950px;
+}
+#logo-title {
+	background-image:url(images/header_gray.jpg);
+    background-repeat: repeat-x;
+    float:left;
+    height:160px;
+    width:322px;
+}
+#site-name{
+	color:#fff;
+	font-size:16px;
+	float:left;
+	font-weight:bold;
+	margin-top:130px;
+	margin-left:20px;
+}
+#site-name a{
+	color:#fff;
+	text-decoration:none;
+}
+
+/*secondary page header adjusment...........................*/
+#small_header_banner #site-name{
+	margin-top:20px;
+}
+#rotating-image {
+    float:right;
+    height:160px;
+    width:640px;
+}
+
+/* navbar region styling ................................ */
+#navbar-region{
+	clear:both;
+    font-size:85%;
+	background-color:#e6e6e6;
+	padding-top:7px;
+}
+#navbar-region .block{
+	border-top: none;
+}
+#navbar-region .content .menu{
+	float:left;
+}
+#navbar-region .block{
+	margin-bottom: 3px;
+}
+#navbar-region .content .menu li{
+	border-right:dotted 1px #4d4d4d;
+	padding:0 2em;
+	height:23px;
+}
+#navbar-region .content .menu li.leaf{
+	list-style:none;
+}
+#navbar-region .content .menu li.first{
+	padding: 0 2em 0 0.75em;
+}
+#navbar-region .content .menu li a{
+	float:left;
+	margin-top:4px;
+	color:#4d4d4d;
+	text-decoration:none;
+	display:inline;
+}
+#navbar-region .block .content .menu li a:hover{
+	background-color:transparent;
+	color:#D03C20;
+	text-decoration:none;
+}
+#navbar-region .block h2{
+	display:none;
+}
+#navbar-region .block{
+	width: 750px;
+	float:left;
+}
+#navbar-region .block .content .menu li.last{
+	border:none;
+}
+#navbar-region .block .content .menu li{
+	float:left;
+}
+/* end navbar region styling */
+
+/* search box styling ..................................*/
+
+.search{
+	float:right;
+	width:210px;
+	margin-top:2px;
+}
+#osu-search-query-wrapper, #osu-search-query, #osu-search-submit{
+	display:inline;
+	margin:0;
+	float:left;
+}
+#osu-search-scope-wrapper{
+	display:none;
+}
+#osu-search-query-wrapper .form-item{
+	margin-bottom:0;
+	margin-top:0;
+}
+
+/* end search box styling */
+
+/* breadcrumbs ...............................*/
+.breadcrumb a, .breadcrumb{
+	font-size:93%;
+	color:#898989;
+}
+.breadcrumb{
+	padding:0;
+	margin-bottom:15px;
+}
+/* end breadcrumbs */
+
+/* main content ..............................*/
+#content{
+	border-top:solid 2px #000;
+}
+/* endmain content */
+
+/* sidebars ....................................*/
+#sidebar-right .view-content ul, #sidebar-left .view-content ul{
+	padding:0;
+}
+#sidebar-right .view-content .item-list ul li, #sidebar-left .view-content .item-list ul li {
+	list-style:none;
+	margin: 0.25em 0.25em 0.6em 0.25em;
+}
+/* end sidebars */
+
+/* sidebar left ........................................*/
+#sidebar-left ul.menu li.expanded, #sidebar-right ul.menu li.expanded{
+	background-color:#cccccc;
+}
+
+#sidebar-left ul.menu a.active {
+	color: #D03C20;
+	font-weight:bold;
+}
+#sidebar-left {
+	padding:0px;
+	margin:0px 0px 0px 16px;
+	}
+#sidebar-left h3 {
+	display:none;
+	}
+#sidebar-left .menu, #sidebar-right .menu  {
+	background-color:#e0e0e0;
+	padding:0px;
+	margin:0;
+	}
+#sidebar-left .menu ul, #sidebar-right .menu ul {
+	margin:0px;
+	padding:0px;
+	}
+#sidebar-left .menu li, #sidebar-right .menu li {
+	list-style:none;
+	list-style-image:none;
+	margin:0px;
+	padding:0px;
+	}
+#sidebar-left .menu li a, #sidebar-right .menu li a {
+	display:block;
+	height:25px;
+	margin:none;
+	text-decoration:none;
+	padding:10px 0px 0px 10px;
+	color:black;
+	font-size:85%;
+	border-bottom:1px solid #ebeaea;
+	font-weight:normal;
+	}
+#sidebar-left .menu li a:hover, #sidebar-right .menu li a:hover {
+	background-color:#cccccc;
+	border-bottom:1px dotted black;
+	}
+/* end sidebar left */
+
+/* sidebar right ..................... */
+#sidebar-right{
+	width:170px;
+}
+#sidebar-right .block .content, #sidebar-left .block .content{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#sidebar-right-inner .block{
+	/*width:170px;*/
+}
+#sidebar-right h2 {
+	padding-top:5px;
+	padding-right:15px;
+	margin:0;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #FFFFFF;
+	background-image: url(images/sidebar_tab.png);
+	background-repeat: no-repeat;
+	text-align: right;
+	background-position:left;
+}
+#sidebar-right a, #sidebar-left a {
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #353535;
+	font-style: normal;
+}
+#sidebar-right h2 a{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+#sidebar-left h2 a{
+	color: #d03c20;
+	font-weight:bold;
+	font-style: normal;
+	text-decoration:none;
+	font-size: 14px;
+}
+#sidebar-right h2 a:hover{
+	color:#fff;
+	background-color:transparent;
+}
+#sidebar-right  a:hover {
+	color: #000;
+	background-color: #ccc;
+}
+#sidebar-right .links ul.links, #sidebar-left .links ul.links{
+	padding:0 0 0.25em 0;
+}
+
+/* sidebar right */
+
+
+/* footer */
+#ft{
+    border-top: 3px solid #ce3d21;
+	background: #313131 url(images/new_footer_flip.jpg) left bottom no-repeat;
+	padding-top: 1em;
+}
+#footer-default {
+	margin-bottom: 1em;	
+}
+#footer-inner, #footer-default {
+	padding: 0 0 0 200px;
+	font-size:85%;
+	color:#fff;
+	clear: both;
+}
+#footer .block, #footer-default .block{
+	background-color:transparent;
+	border:none;
+	margin:0;
+	line-height:1;
+}
+#footer .block p{
+	margin: 4px 0;
+	padding:0;
+}
+
+#footer a{
+	font-weight:normal;
+	text-decoration:underline;
+}
+#footer p{
+	color:#fff;
+}
+/* footer */
+
+
+#small_header_banner{
+	background:#fff url(images/Solution_header_short.jpg) no-repeat;
+	height:63px;
+	width:974px;
+	float:left;
+}
+#header-inner{
+	margin-bottom:4px;
+}
+
+#content img{
+	padding:5px;
+}
+#page {
+	background-color:#fff;
+}
+
+#footer .block-inner .content p{
+	color: #fff;
+}
+
+/* Drupal Styles for Theme Templates */
+
+/* STYLES SHARED BY BOTH THEMES */
+
+/*
+** For anything you want to hide on page load when JS is enabled, so
+** that you can use the JS to control visibility and avoid flicker.
+*/
+html.js .js-hide {
+  display: none;
+}
+/* Prevent header text from creating a margin */
+#hd h1, #hd h2, #hd h3 {
+	margin-top: 0;	
+}
+/* rotating-image */
+#rotating-image {
+	position: relative;
+}
+#rotating-image div.slide {
+	position: absolute;
+}
+/* Skip to nav for accessablility */
+#skip-to-nav {
+	position: absolute;
+	left: 0px;
+	top: -500px;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+/* We don't want to show these */
+#logo, #logo-image {
+	display: none;
+}
+#osu-rotating-header-image-preview, #osu-second-rotating-header-image-preview {
+	width: 50%;
+}
+#footer-message p{
+	margin-bottom:0px;
+}
+#osu-search-query-wrapper, #osu-search-query{
+	display:inline;
+	margin:0;
+	float:left;
+}
+#osu-search-scope-wrapper{
+	display:none;
+}
