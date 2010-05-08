@@ -130,25 +130,25 @@ class DataSetsController < ApplicationController
     else
       @data_set_id = 1
     end
-    
+
     logger.debug params
-    
+
     if params[:dateform] and params[:dateform][:start_date]
 	    @start_time = Time.parse(params[:dateform][:start_date]).localtime.midnight
     else
       @start_time = Time.now.localtime.midnight - 30.day
     end
-      
+
     @endTime = @start_time + 31.day
-    
+
     logger.debug @data_set_id
-    
-	  p = points_between_dates(@data_set_id, @start_time, @endTime) 
+
+	  p = points_between_dates(@data_set_id, @start_time, @endTime)
 	  @item_data = real_diff(p)
     @item_bounds =  get_bounds( @item_data)
-	  
+
 	  @data_set = DataSet.find(@data_set_id)
-    
+
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
 
 
