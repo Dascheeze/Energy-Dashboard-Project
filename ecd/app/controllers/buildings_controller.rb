@@ -1,4 +1,9 @@
 class BuildingsController < ApplicationController
+  USER_NAME, PASSWORD = "admin", "admin"
+  
+  before_filter :authenticate
+  
+  
   # GET /buildings
   # GET /buildings.xml
   def index
@@ -104,4 +109,11 @@ class BuildingsController < ApplicationController
     return_table = return_table + "</table>"
     @returns = return_table
   end
+  private
+    def authenticate
+      authenticate_or_request_with_http_basic do |user_name, password|
+        user_name == USER_NAME && password == PASSWORD
+      end
+    end
+  
 end

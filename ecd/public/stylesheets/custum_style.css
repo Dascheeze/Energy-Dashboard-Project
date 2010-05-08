@@ -1,10 +1,10 @@
 a { text-decoration:none; }
  
 a:visited { color: #000000;}
-a:hover {color: #FFFF38;}
+a:hover {color: #D85A1A;}
  
 body {
-background-color: #113355;
+background-color: #6B859E;
 font-size: .9em;
 }
 .noborder { border-style: none; }
