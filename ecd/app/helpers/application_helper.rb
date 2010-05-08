@@ -93,30 +93,23 @@ module ApplicationHelper
 	  time=0
     tmp_hour = -1
 	  value=0
-	  num_to_aggregate = time_interval / duration_of_pull
-	  list_points.each do |point|
-      if (i == num_to_aggregate)
-        item = Item.new
-        item.amount = point.amount - value
-        item.date = time
-        data_array.push(item)
-        i = 0
-      end
-      
-      if (i == 0)
-        value = point.amount.to_s.to_f
-        time = point.created_at
-      end
-      
-      i = i + 1
-    end
-    return data_array
+
+          first = list_points.first
+          current = first
+          next_val = list_points[1]
+          list_points.each do |point|
+            next_val = point
+            if next_val.created_at >= current.created_at + time_interval then
+              item = Item.new
+              item.amount = next_val.amount - current.amount
+              item.date = current.created_at
+              current = next_val
+              data_array.push(item)
+            end
+          end
+
+          return data_array
   end
-  
+
 end
-
-     
-     
-  
-
 
