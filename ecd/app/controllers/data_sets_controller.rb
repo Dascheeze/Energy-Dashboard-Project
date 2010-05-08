@@ -1,7 +1,7 @@
 class DataSetsController < ApplicationController
   USER_NAME, PASSWORD = "admin", "admin"
   
-  before_filter :authenticate, :except => [ :get_table ]
+  before_filter :authenticate, :except => [ :get_table, :new_table ]
   
   include ApplicationHelper
   # GET /data_sets
