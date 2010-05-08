@@ -12,7 +12,7 @@
         // Create and populate a data table.
         var data = new google.visualization.DataTable();
         data.addColumn('datetime', 'Date');
-        data.addColumn('number', 'KW');
+        data.addColumn('number', 'KWh');
 	// Add more data rows and cells here
         data.addRows([
           /*[new Date(2010, 4 ,24, 1), 30000],
@@ -39,9 +39,9 @@
 	  [new Date(2010, 4, 24, 22), 23460],
 	  [new Date(2010, 4, 24, 23), 69873],
 	  [new Date(2010, 4, 25, 0), 34600],
-          [new Date(2010, 4, 26, 0), 23579]*/
+      [new Date(2010, 4, 26, 0), 23579]*/
           <% @item_data.each do |item| %>
-            [new Date(<%= item.date.localtime.strftime("%Y, %m, %d, %H, %M") %>), <%= item.amount %> ],
+            [new Date(<%= item.date.localtime.strftime("%Y, (%m-1), %d, %H, %M") %>), <%= item.amount %> ],
           <% end %>
         ]);
         // Instantiate our table object.
