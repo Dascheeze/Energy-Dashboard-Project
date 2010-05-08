@@ -139,7 +139,7 @@ class DataSetsController < ApplicationController
       @start_time = Time.now.midnight.localtime - 30.day
     end
       
-    endTime = @start_time + 31.day
+    @endTime = @start_time + 31.day
     
     logger.debug @data_set_id
     
