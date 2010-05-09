@@ -23,15 +23,20 @@
         // Instantiate our table object.
         vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
-	vis.rangechange = function(start, end) {alert('hi');};
 	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
-       
+    //trying to get events to work
+	GEvent.addListener(annotatedtimeline,"click", function(start, end) {      
+   	if (start) { 
+     alert('Event');
+   	}
+ 	});  
 	   }
      </script>
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /><input type="text" value="<%= @start_time.strftime("%m/%d/%Y") %>">
+<input type="submit" value="Change Dataset Date" />
+
 
    <div id="mydiv" style='width:750px; height:360px;'></div>
    <br/><p>
