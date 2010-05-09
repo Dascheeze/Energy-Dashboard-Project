@@ -24,7 +24,8 @@
         vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
 	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
-       }
+       vis.rangechange = function() {alert('hi');};
+	   }
      </script>
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
