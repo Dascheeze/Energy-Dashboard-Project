@@ -1,0 +1,44 @@
+<div class="activeButton">power_info_button</div>
+
+<script type="text/javascript">
+	$(function() {
+		var t = $("#dataset").hide().visualize({width:650, height:400});
+		var curStyle = t.attr("style");
+		t.attr("style", curStyle + ";margin-left:50px;margin-bottom:75px");
+		$("#dateform_start_date").datepicker();
+	});
+</script>
+<div style="width:700px; height: 600px; margin-left:10px;margin-top:25px;margin-bottom:80px;">
+<%= form_tag :action=>'get_table' %>
+Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
+<input type="submit" value="Change Date" />
+
+<table id="dataset">
+	<caption>
+		Hourly breakdown for <%= @assoc_meter.name %>
+	</caption>
+	<thead>
+	<tr><td></td>
+<% @item_data.each do |item| %>
+		<th><%= item.date.localtime.strftime("%H:00") %></th>
+<% end %>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<th> <%= @data_set.name %> </th>
+<% @item_data.each do |item| %>
+	<td> <%= item.amount %> </td>
+<% end %>
+	</tbody>
+</table>
+
+
+	Max Amount: <%= @item_bounds.max_amount%> <br/>
+	Max Time:<%= @item_bounds.max_time.localtime%> <br/>
+	Min Amount:<%= @item_bounds.min_amount%> <br/>
+	Min Time:<%= @item_bounds.min_time.localtime%> <br/>
+
+
+
+</div>
