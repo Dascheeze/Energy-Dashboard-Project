@@ -370,7 +370,7 @@ a:hover {
 
 
 #small_header_banner{
-	background:#fff url(images/Solution_header_short.jpg) no-repeat;
+	background:#fff url(/images/Solution_header_short.jpg) no-repeat;
 	height:63px;
 	width:974px;
 	float:left;
