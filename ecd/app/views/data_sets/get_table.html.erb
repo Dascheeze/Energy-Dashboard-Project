@@ -53,7 +53,8 @@
     }
   }
   alert('total ' + total + 'KWs');
-  KWsUsed.innerText = total.toString();
+  document.getElementById('KWsUsed').innerHTML=total.toString();
+   
   //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 
@@ -77,7 +78,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         graph.
         </p>
 		<p>
-			<h3>KiloWatts Used within Graph Range</h3>
+			<h3>KiloWatts Used within Graph Range</h3> 
+			<br/>
 			<span id="KWsUsed"></span>
 		</p>
 
