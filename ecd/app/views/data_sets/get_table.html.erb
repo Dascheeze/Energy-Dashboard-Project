@@ -44,9 +44,11 @@
   
    for (x in disCol)
   {
-    
-    if(startDate<=thisDate[x] && endDate>=thisDate[x]){   
-    total=total+disCol[x];
+   var j =parseInt(x)
+   var i= data.getValue(j, 1);
+   var date= data.getValue(j,0);
+    if(startDate<=date && endDate>=date){   
+    total=total+i;
     }
   }
   alert('total ' + total + 'KWs');
