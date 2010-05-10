@@ -41,19 +41,20 @@
    alert('startDate '+ startDate);
    alert('date? '+data.getValue(0,0));
    var total=0;
-  
-   for (x in disCol)
-  {
-   var j =parseInt(x)
-   var i= data.getValue(j, 1);
-   var date= data.getValue(j,0);
-    if(startDate<=date && endDate>=date){   
-    total=total+i;
+  var numRow = data.getNumberOfRows();
+   var x=0;
+	for (x=0;x<numRow;x++)
+  	{
+	   var j =parseInt(x)
+	   var i= data.getValue(j, 1);
+	   var date= data.getValue(j,0);
+	    if(startDate<=date && endDate>=date){   
+	    total=total+i;
     }
   }
   alert('total ' + total + 'KWs');
-  vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
-       google.visualization.events.addListener(vis, 'rangechange', selectHandler);
+  //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
+       //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 
 	   }
 	   }
