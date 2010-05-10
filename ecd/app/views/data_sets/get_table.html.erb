@@ -25,11 +25,31 @@
         // Draw our table with the data we created locally.
 	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
     //trying to get events to work
-	GEvent.addListener(annotatedtimeline,"click", function(start, end) {      
-   	if (start) { 
-     alert('Event');
-   	}
- 	});  
+	google.visualization.events.addListener(vis, 'rangechange', selectHandler);
+ 
+ //this function will add up anything between the dates displayed
+ function selectHandler() {
+
+   var disCol = data.getDistinctValues(1);
+   var thisDate = data.getDistinctValues(0);
+   var disColRowlen= disCol.length;
+ 
+   var theDates = annotatedtimeline.getVisibleChartRange();
+   var startDate = theDates.start;
+   var endDate = theDates.end;
+   var total=0;
+  
+   for (x in disCol)
+  {
+    
+    if(startDate<=thisDate[x] && endDate>=thisDate[x]){   
+    total=total+disCol[x];
+    }
+  }
+  alert('total ' + total + 'KWs');
+
+     }
+  
 	   }
      </script>
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
