@@ -30,14 +30,17 @@
  function selectHandler() {
  var disCol = data.getDistinctValues(1);
    alert('something');
+   alert('disCol'+disCol);
    var thisDate = data.getDistinctValues(0);
-   var disColRowlen= disCol.length;
+   alert('thisDate '+thisDate);
+
  
    var theDates = annotatedtimeline.getVisibleChartRange();
+   alert('theDates '+ theDates);
    var startDate = theDates.start;
    var endDate = theDates.end;
    var total=0;
-  alert(disCol);
+  
    for (x in disCol)
   {
     
