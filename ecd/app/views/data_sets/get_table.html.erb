@@ -52,6 +52,7 @@
 	    total=total+i;
     }
   }
+  total=total.toFixed(2);
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=startDate.toString();
   document.getElementById('endRange').innerHTML=endDate.toString();
@@ -73,11 +74,11 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
    <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
    <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
         </p>
-        <p>
+
         To modify the displayed graph, you can move the borders on the bottom
         timeline, and drag the viewed window to show a different section of the
         graph.
-        </p>
+
 		<p>
 			<h3>KiloWatts Used within the Selected Range</h3> 
 			<br/>
