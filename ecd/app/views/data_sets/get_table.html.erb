@@ -38,8 +38,8 @@
    
    var startDate = theDates.start;
    var endDate = theDates.end;
-   alert('startDate '+ startDate);
-   alert('date? '+data.getValue(0,0));
+   //alert('startDate '+ startDate);
+   //alert('date? '+data.getValue(0,0));
    var total=0;
   var numRow = data.getNumberOfRows();
    var x=0;
@@ -53,6 +53,7 @@
     }
   }
   alert('total ' + total + 'KWs');
+  KWsUsed.innerText = total.toString();
   //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 
@@ -75,4 +76,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         timeline, and drag the viewed window to show a different section of the
         graph.
         </p>
+		<p>
+			<h3>KiloWatts Used within Graph Range</h3>
+			<span id="KWsUsed"></span>
+		</p>
 
