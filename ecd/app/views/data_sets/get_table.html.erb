@@ -52,8 +52,9 @@
 	    total=total+i;
     }
   }
-  alert('total ' + total + 'KWs');
   document.getElementById('KWsUsed').innerHTML=total.toString();
+  document.getElementById('startRange').innerHTML=startDate.toString();
+  document.getElementById('endRange').innerHTML=endDate.toString();
    
   //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
@@ -80,6 +81,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 		<p>
 			<h3>KiloWatts Used within Graph Range</h3> 
 			<br/>
-			<span id="KWsUsed"></span>
+			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></spand> - <span id="endRange"></span>
+			
 		</p>
 
