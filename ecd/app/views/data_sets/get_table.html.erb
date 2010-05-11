@@ -43,7 +43,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         data = new google.visualization.DataTable();
         data.addColumn('datetime', 'Date');
         data.addColumn('number', 'KWh');
-	// Add more data rows and cells here
+	    // Add more data rows and cells here
         data.addRows([
           <% @item_data.each do |item| %>
             [new Date(<%= item.date.localtime.strftime("%Y, (%m-1), %d, %H, %M") %>), <%= item.amount %> ],
@@ -52,12 +52,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         // Instantiate our table object.
         vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
-	vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
+	   vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        google.visualization.events.addListener(vis, 'rangechange', selectHandler);
  
  function getDate(date)
   {
-       alert('blah');
+
        var day = date.getDate();
        var month = date.getMonth()+1;
        var yy = date.getYear();
@@ -69,26 +69,18 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
        minutes = "0" + minutes
        }
      var value= day+"/"+month+"/"+year + " " + hours + ":" + minutes;
-     alert('the date func '+value);
      return value.toString();
   }
  
  //this function will add up anything between the dates displayed
  function selectHandler() {
  var disCol = data.getDistinctValues(1);
-  // alert('disCol'+disCol);working
    var thisDate = data.getDistinctValues(0);
-   //alert('thisDate '+thisDate);working
-
- 
-   var theDates = vis.getVisibleChartRange();
-   
+   var theDates = vis.getVisibleChartRange(); 
    var startDate = theDates.start;
    var endDate = theDates.end;
-   //alert('startDate '+ startDate);
-   //alert('date? '+data.getValue(0,0));
    var total=0;
-  var numRow = data.getNumberOfRows();
+   var numRow = data.getNumberOfRows();
    var x=0;
 	for (x=0;x<numRow;x++)
   	{
@@ -101,14 +93,9 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   }
   total=total.toFixed(2);
   document.getElementById('KWsUsed').innerHTML=total.toString();
-  // Date Format Example: Saturday, June 9th, 2007, 5:46:21 PM
   document.getElementById('startRange').innerHTML=getDate(startDate);
   document.getElementById('endRange').innerHTML=getDate(endDate);
   document.getElementById('displaySubData').style.visibility="visible";
-  
-   //comment
-  //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
-       //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 
 	   }
 	   }
