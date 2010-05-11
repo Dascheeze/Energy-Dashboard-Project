@@ -1,4 +1,8 @@
-    <script type="text/javascript">
+    <style type="text/css">
+    	
+    </style>
+	
+	<script type="text/javascript">
 		$(function() {
 			$("#dateform_start_date").datepicker();
 		});
@@ -82,7 +86,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         timeline, and drag the viewed window to show a different section of the
         graph.
 		</p>
-		<div id="displaySubData">
+		<div id="displaySubData" name="displaySubData">
 			<h3>KiloWatts Used within the Selected Range</h3> 
 			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></span> -- <span id="endRange"></span>
 		
