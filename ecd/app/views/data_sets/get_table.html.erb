@@ -84,12 +84,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   total=total.toFixed(2);
   document.getElementById('KWsUsed').innerHTML=total.toString();
   // Date Format Example: Saturday, June 9th, 2007, 5:46:21 PM
-  startDate=startDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-  alert(startDate+ 'change date');
-  document.getElementById('startRange').innerHTML=startDate.toString();
-  alert(startDate+ 'change date to string');
-  endDate = endDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-  document.getElementById('endRange').innerHTML=endDate.toString();
+  var startDate2=startDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+  alert(startDate2 + 'change date');
+  document.getElementById('startRange').innerHTML=startDate2.toString();
+  alert(startDate2 + 'change date to string');
+  var endDate2 = endDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+  document.getElementById('endRange').innerHTML=endDate2.toString();
 
 
   document.getElementById('displaySubData').style.visibility="visible";
