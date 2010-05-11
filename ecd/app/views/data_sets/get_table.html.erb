@@ -6,7 +6,8 @@
       
       // Set callback to run when API is loaded
       google.setOnLoadCallback(drawVisualization); 
-
+	  document.getElementById('displaySubData').style.visibility="hidden";
+  
       // Called when the Visualization API is loaded.
       function drawVisualization() {
         
@@ -57,6 +58,7 @@
   document.getElementById('startRange').innerHTML=startDate.toString();
   document.getElementById('endRange').innerHTML=endDate.toString();
   document.getElementById('displaySubData').style.visibility="visible";
+  
    //comment
   //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        //google.visualization.events.addListener(vis, 'rangechange', selectHandler);
@@ -76,13 +78,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
    <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
         </p>
 
-        To modify the displayed graph, you can move the borders on the bottom
+       <p> To modify the displayed graph, you can move the borders on the bottom
         timeline, and drag the viewed window to show a different section of the
         graph.
-
-		<div id="displaySubData" style="visibility:hidden;">
+		</p>
+		<div id="displaySubData">
 			<h3>KiloWatts Used within the Selected Range</h3> 
-			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></spand> -- <span id="endRange"></span>
+			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></span> -- <span id="endRange"></span>
 		
 		</div>
 
