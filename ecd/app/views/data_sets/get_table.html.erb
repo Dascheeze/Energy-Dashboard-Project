@@ -68,7 +68,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
        if (minutes < 10){
        minutes = "0" + minutes
        }
-     var value= day+"/"+month+"/"+year + " " + hours + ":" + minutes;
+     var value= month+"/"+day+"/"+year + " " + hours + ":" + minutes;
      return value.toString();
   }
  
