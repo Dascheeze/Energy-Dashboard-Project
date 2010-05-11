@@ -2,7 +2,29 @@
     	
     </style>
 	
-	<script type="text/javascript">
+	
+<h1>Building: <%= @assoc_meter.building.building_name%></h1>
+<%= form_tag :action=>'get_table' %>
+Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
+<input type="submit" value="Change Dataset Date" /><input type="text" value="<%= @start_time.strftime("%m/%d/%Y") %>">
+
+   <div id="mydiv" style='width:750px; height:360px;'></div>
+   <br/><p>
+   <h3>Highest Amount Registered :</h3> 
+   <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
+   <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
+        </p>
+
+       <p> To modify the displayed graph, you can move the borders on the bottom
+        timeline, and drag the viewed window to show a different section of the
+        graph.
+		</p>
+		<div id="displaySubData" name="displaySubData">
+			<h3>KiloWatts Used within the Selected Range</h3> 
+			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></span> -- <span id="endRange"></span>
+		
+		</div>
+<script type="text/javascript">
 		$(function() {
 			$("#dateform_start_date").datepicker();
 		});
@@ -70,25 +92,3 @@
 	   }
 	   }
      </script>
-<h1>Building: <%= @assoc_meter.building.building_name%></h1>
-<%= form_tag :action=>'get_table' %>
-Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /><input type="text" value="<%= @start_time.strftime("%m/%d/%Y") %>">
-
-   <div id="mydiv" style='width:750px; height:360px;'></div>
-   <br/><p>
-   <h3>Highest Amount Registered :</h3> 
-   <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
-   <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
-        </p>
-
-       <p> To modify the displayed graph, you can move the borders on the bottom
-        timeline, and drag the viewed window to show a different section of the
-        graph.
-		</p>
-		<div id="displaySubData" name="displaySubData">
-			<h3>KiloWatts Used within the Selected Range</h3> 
-			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></span> -- <span id="endRange"></span>
-		
-		</div>
-
