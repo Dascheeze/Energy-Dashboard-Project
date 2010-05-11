@@ -61,7 +61,7 @@
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=startDate.toString();
   document.getElementById('endRange').innerHTML=endDate.toString();
-  document.getElementById('displaySubData').style.visibility="visible";
+  document.getElementById('displaySubData').style.visibility="hidden";
   
    //comment
   //vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
