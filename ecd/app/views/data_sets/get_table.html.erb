@@ -85,6 +85,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('KWsUsed').innerHTML=total.toString();
   // Date Format Example: Saturday, June 9th, 2007, 5:46:21 PM
   alert('something');
+  alert(startDate.format("m/dd/yy"));
+
   var sDate=dateFormat(starteDate, "dddd, mmmm dS, yyyy, h:MM:ss TT");
   alert(sDate + 'change date');
   document.getElementById('startRange').innerHTML=sDate.toString();
