@@ -6,7 +6,7 @@
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /><span id="KWsUsed" style="color:Red;"></span> KWh used
+<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used
 
    <div id="mydiv" style='width:750px; height:360px;'></div>
    <br/><p>
