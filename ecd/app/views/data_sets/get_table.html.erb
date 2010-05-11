@@ -14,14 +14,16 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
    <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
    <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
         </p>
-
+		<br />
        <p> To modify the displayed graph, you can move the borders on the bottom
         timeline, and drag the viewed window to show a different section of the
         graph.
 		</p>
 		<div id="displaySubData" name="displaySubData">
-			<h3>KiloWatts Used within the Selected Range</h3> 
-			There have been <span id="KWsUsed"></span> KWh used within the dates <span id="startRange"></span> -- <span id="endRange"></span>
+			<h3>KiloWatts Used within the Selected Range:</h3> 
+			There have been <span id="KWsUsed" style="color:Red;"></span> KWh used within the dates:
+			<br /> 
+			<span id="startRange"></span>  --  <span id="endRange"></span>
 		
 		</div>
 <script type="text/javascript">
@@ -81,8 +83,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   }
   total=total.toFixed(2);
   document.getElementById('KWsUsed').innerHTML=total.toString();
+  // Date Format Example: Saturday, June 9th, 2007, 5:46:21 PM
+  startDate=startDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
   document.getElementById('startRange').innerHTML=startDate.toString();
+  endDate = endDate.dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
   document.getElementById('endRange').innerHTML=endDate.toString();
+
+
   document.getElementById('displaySubData').style.visibility="visible";
   
    //comment
