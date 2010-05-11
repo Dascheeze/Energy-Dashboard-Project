@@ -21,7 +21,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 		</p>
 		<div id="displaySubData" name="displaySubData">
 			<h3>KiloWatts Used within the Selected Range:</h3> 
-			There have been <span id="KWsUsed" style="color:Red;"></span> KWh used within the dates:
+			There have been <span id="KWsUsed2" style="color:Red;"></span> KWh used within the dates:
 			<br /> 
 			<span id="startRange"></span>  --  <span id="endRange"></span>
 		
@@ -93,6 +93,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   }
   total=total.toFixed(2);
   document.getElementById('KWsUsed').innerHTML=total.toString();
+  document.getElementById('KWsUsed2').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=getDate(startDate);
   document.getElementById('endRange').innerHTML=getDate(endDate);
   document.getElementById('displaySubData').style.visibility="visible";
