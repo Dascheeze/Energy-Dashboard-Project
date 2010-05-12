@@ -97,14 +97,16 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
+  alert(cost);
   cost = cost.toFixed(2);
-  document.getElementById('MoneySpent2').innerHTML=cost.toString();
-  document.getElementById('MoneySpent').innerHTML=cost.toString();
+  
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('KWsUsed2').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=getDate(startDate);
   document.getElementById('endRange').innerHTML=getDate(endDate);
   document.getElementById('displaySubData').style.visibility="visible";
+  document.getElementById('MoneySpent2').innerHTML=cost.toString();
+  document.getElementById('MoneySpent').innerHTML=cost.toString();
 
 	   }
 	   }
