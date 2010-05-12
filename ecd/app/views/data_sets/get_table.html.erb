@@ -94,7 +94,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
     }
   }
   total=total.toFixed(2);
-  var money = <% @power_unit.cost %>;
+  var money = <% @power_unit_id.cost %>;
   alert(money + " money");
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('KWsUsed2').innerHTML=total.toString();
