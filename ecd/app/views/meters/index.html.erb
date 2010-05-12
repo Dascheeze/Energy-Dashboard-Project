@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Building</th>
+	<th>Building Name</th>
     <th>Modbus address</th>
 
   </tr>
@@ -11,7 +12,9 @@
   <tr>
 
    	<td><%=h meter.building_id %></td>
-    <td><%=h meter.modbus_address %></td>
+
+	<td><%=h meter.building_name %></td>
+	<td><%=h meter.modbus_address %></td>
     
     <td><%= link_to 'Show', meter %></td>
     <td><%= link_to 'Edit', edit_meter_path(meter) %></td>
@@ -23,3 +26,4 @@
 <br />
 
 <%= link_to 'New meter', new_meter_path %>
+<%= link_to 'Back', admin_path %>
