@@ -54,6 +54,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         // Draw our table with the data we created locally.
 	   vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        google.visualization.events.addListener(vis, 'rangechange', selectHandler);
+	   selectHandler();
  
  function getDate(date)
   {
