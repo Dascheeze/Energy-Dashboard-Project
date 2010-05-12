@@ -7,7 +7,8 @@ class MetersController < ApplicationController
   # GET /meters.xml
   def index
     @meters = Meter.all
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Meters")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @meters }
@@ -28,7 +29,9 @@ class MetersController < ApplicationController
   # GET /meters/1.xml
   def show
     @meter = Meter.find(params[:id])
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Meters", '/meters')
+    add_crumb(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @meter }
@@ -39,7 +42,9 @@ class MetersController < ApplicationController
   # GET /meters/new.xml
   def new
     @meter = Meter.new
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Meters", '/meters')
+    add_crumb("New")
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @meter }
@@ -48,6 +53,9 @@ class MetersController < ApplicationController
 
   # GET /meters/1/edit
   def edit
+    add_crumb("Admin", '/admin')
+    add_crumb("Meters", '/meters')
+    add_crumb("Edit")
     @meter = Meter.find(params[:id])
   end
 

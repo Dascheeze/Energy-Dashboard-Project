@@ -8,7 +8,8 @@ class DataSetsController < ApplicationController
   # GET /data_sets.xml
   def index
     @data_sets = DataSet.all
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Data Sets")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @data_sets }
@@ -43,7 +44,9 @@ class DataSetsController < ApplicationController
     
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
     
-    
+          add_crumb("Power Info", '/power_info')
+    	  add_crumb(@assoc_meter.building.building_name.to_s, '/power_info/showsets/' + @assoc_meter.building.id.to_s)
+          add_crumb("Graph")
     respond_to do |format|
       format.html
     end
@@ -76,7 +79,7 @@ class DataSetsController < ApplicationController
     
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
     #@data_points = DataPoint.find(:all, :conditions => { :data_set_id => params[:id] })
-	  
+	  add_crumb(@assoc_meter.building_id.building_name.to_s)
 	  respond_to do |format|
 		  format.html
 	  end
@@ -89,7 +92,9 @@ class DataSetsController < ApplicationController
   # GET /data_sets/1.xml
   def show
     @data_set = DataSet.find(params[:id])
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Data Sets", '/data_sets')
+    add_crumb(params[:id.to_s])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @data_set }
@@ -100,7 +105,9 @@ class DataSetsController < ApplicationController
   # GET /data_sets/new.xml
   def new
     @data_set = DataSet.new
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Data Sets", '/data_sets')
+    add_crumb("New")
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @data_set }
@@ -109,6 +116,10 @@ class DataSetsController < ApplicationController
 
   # GET /data_sets/1/edit
   def edit
+
+    add_crumb("Admin", '/admin')
+    add_crumb("Data Sets", '/data_sets')
+    add_crumb("Edit")
     @data_set = DataSet.find(params[:id])
   end
 
@@ -116,7 +127,10 @@ class DataSetsController < ApplicationController
   # POST /data_sets.xml
   def create
     @data_set = DataSet.new(params[:data_set])
-
+ 
+    add_crumb("Admin", '/admin')
+    add_crumb("Data Sets", '/data_sets')
+    add_crumb("Create")
     respond_to do |format|
       if @data_set.save
         flash[:notice] = 'DataSet was successfully created.'

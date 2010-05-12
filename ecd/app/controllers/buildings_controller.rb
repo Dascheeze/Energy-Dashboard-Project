@@ -8,7 +8,8 @@ class BuildingsController < ApplicationController
   # GET /buildings.xml
   def index
     @buildings = Building.all
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Buildings")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @buildings }
@@ -19,7 +20,9 @@ class BuildingsController < ApplicationController
   # GET /buildings/1.xml
   def show
     @building = Building.find(params[:id])
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Buildings", '/buildings')
+    add_crumb(@building.building_name)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @building }
@@ -30,7 +33,9 @@ class BuildingsController < ApplicationController
   # GET /buildings/new.xml
   def new
     @building = Building.new
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Buildings", '/buildings')
+    add_crumb("New")
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @building }
@@ -39,6 +44,9 @@ class BuildingsController < ApplicationController
 
   # GET /buildings/1/edit
   def edit
+    add_crumb("Admin", '/admin')
+    add_crumb("Buildings", '/buildings')
+    add_crumb("Edit")
     @building = Building.find(params[:id])
     @buildings = Building.all
   end
@@ -47,7 +55,9 @@ class BuildingsController < ApplicationController
   # POST /buildings.xml
   def create
     @building = Building.new(params[:building])
-
+    add_crumb("Admin", '/admin')
+    add_crumb("Buildings", '/buildings')
+    add_crumb("Create")
     respond_to do |format|
       if @building.save
         flash[:notice] = 'Building was successfully created.'
