@@ -6,7 +6,7 @@
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="MoneySpent" style="color:Blue;"></span>
+<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="MoneySpent" style="color:#00f;"></span>
 
    <div id="mydiv" style='width:750px; height:360px;'></div>
    <br/><p>
@@ -25,7 +25,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			<br /> 
 			<span id="startRange"></span>  --  <span id="endRange"></span>
 		<h3>The Cost of it all: </h3>
-			At the current price of electricity, the cost incurred this span of time was: $<span id="MoneySpent" style="color:Blue;"></span>
+			At the current price of electricity, the cost incurred this span of time was: $<span id="MoneySpent" style="color:#00f;"></span>
 		</div>
 <script type="text/javascript">
 		$(function() {
