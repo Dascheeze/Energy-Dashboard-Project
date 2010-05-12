@@ -55,7 +55,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	   vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        google.visualization.events.addListener(vis, 'ready', selectHandler);
 	   google.visualization.events.addListener(vis, 'rangechange', selectHandler);
-
+	   selectHandler();
  
  function getDate(date)
   {
@@ -94,8 +94,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
     }
   }
   total=total.toFixed(2);
-  var money = <% @power_unit_id.cost %>;
-  alert(money + " money");
+  var money = <% PowerUnit.cost %>;
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('KWsUsed2').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=getDate(startDate);
