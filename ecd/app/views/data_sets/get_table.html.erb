@@ -136,30 +136,27 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	}
 
   var daydif=endDate-startDate;
-  alert('day secs '+ day);
-  var day =daydif/1000;
-  var day1 = day/60;
-  var day2 = day1/60;
-  var day3 = day2/24;
+  var secs =daydif/1000;
+  var mins = day/60;
+  var hrs = day1/60;
+  var day = day2/24;
   
-  alert(day+' '+day1+' '+day2+' '+day3+' ');
-  var kPerD = total/day3
+
+  var kPerD = total/day;
   alert(kPerD);
-  //var kPerH = (total/day)/1000/60/60;
-  //var kPerM = (total/day)/1000/60;
-  //var kPerS = (total/day)/1000;
-  //alert('D H M S '+ kPerD + ' ' + kPerH + ' ' kPerM + ' ' +kPerS);
-  total=total.toFixed(2);
+  var kPerH = total/hrs;
+  var kPerM = total/mins;
+  var kPerS = total/secs;
+  
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
   var cPerD= kPerD*money;
-  alert(cPerD);
-  //var cPerM= kPerM*money;
-  //var cPerH= kPerH*money;
-  //var cPerS= kPerS*money;
+  var cPerM= kPerM*money;
+  var cPerH= kPerH*money;
+  var cPerS= kPerS*money;
   //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
-  
+  total=total.toFixed(2);
   
   
   document.getElementById('KWsUsed').innerHTML=total.toString();
@@ -171,12 +168,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('totCost2').innerHTML=cost.toString();
   document.getElementById('kPerDW').innerHTML=kPerD.toString();
   document.getElementById('cPerDW').innerHTML=cPerD.toString();
-  //document.getElementById('kPerH').innerHTML=kPerH.toString();
-  //document.getElementById('cPerH').innerHTML=cPerH.toString();
-  //document.getElementById('kPerM').innerHTML=kPerM.toString();
-  //document.getElementById('cPerM').innerHTML=cPerM.toString();
-  //document.getElementById('kPerS').innerHTML=kPerS.toString();
-  //document.getElementById('cPerS').innerHTML=cPerS.toString();
+  document.getElementById('kPerH').innerHTML=kPerH.toString();
+  document.getElementById('cPerH').innerHTML=cPerH.toString();
+  document.getElementById('kPerM').innerHTML=kPerM.toString();
+  document.getElementById('cPerM').innerHTML=cPerM.toString();
+  document.getElementById('kPerS').innerHTML=kPerS.toString();
+  document.getElementById('cPerS').innerHTML=cPerS.toString();
  
 
 	   }
