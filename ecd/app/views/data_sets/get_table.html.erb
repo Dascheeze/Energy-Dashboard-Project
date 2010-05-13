@@ -8,21 +8,12 @@
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" />
 
-<div style="margin-left:30%;">
-   <table style=" border:none;  ">
-	   	<tr>
-	   		<td><h3>Highest Amount Registered:</h3> </td>
-			<td><h3>Lowest Amount Registered:</h3></td>
-		</tr>
-		<tr>
-	  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-	   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-	   </tr>
-    </table>   
-	</div>
-<span style="float:right;"> 
-	<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
-</span>
+
+<div>
+	<span style="float:right;"> 
+		<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+	</span>
+</div>
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/>
@@ -82,6 +73,18 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 				<br /> 
 				<span id="startRange"></span>  --  <span id="endRange"></span>
 			</div>
+		</div>
+		<div style="margin-left:30%;">
+		   <table style=" border:none;  ">
+			   	<tr>
+			   		<td><h3>Highest Amount Registered:</h3> </td>
+					<td><h3>Lowest Amount Registered:</h3></td>
+				</tr>
+				<tr>
+			  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+			   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+			   </tr>
+		    </table>   
 		</div>
 <script type="text/javascript">
 		$(function() {
