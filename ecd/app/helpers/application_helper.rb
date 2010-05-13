@@ -75,7 +75,7 @@ module ApplicationHelper
     return bounds
   end
 
-  def real_diff (list_points, time_interval = 2.hour)
+  def real_diff (list_points, time_interval = 1.hour)
 	  duration_of_pull = 15.minutes
 	  data_array = Array.new
     i=0
@@ -90,7 +90,7 @@ module ApplicationHelper
             next_val = point
             if next_val.created_at >= current.created_at + time_interval then
               if next_val.created_at >= current.created_at + time_interval*2 then
-                avgTime=(next_val.created_at - current.created_at)/ time_interval
+                avgTime=(next_val.created_at - current.created_at)/ 15
                 item = Item.new
                 item.amount = (next_val.amount - current.amount)/avgTime
                 item.date = current.created_at
