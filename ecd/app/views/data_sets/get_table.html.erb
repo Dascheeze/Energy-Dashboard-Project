@@ -64,6 +64,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 				</table>
 			</div>
 			<div>
+				<h3>Aggregate Values</h3>
 				<table>
 				<tr>
 				<td>Total <%= @data_set.power_unit.name %>:</td><td>Total Cost ($<%= @data_set.power_unit.cost %> per <%= @data_set.power_unit.name %>):</td>
