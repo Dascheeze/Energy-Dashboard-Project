@@ -10,7 +10,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/><p>
-   <h3>Highest Amount Registered :</h3> 
+   <h3>Highest Amount Registered:</h3> 
    <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
    <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
         </p>
