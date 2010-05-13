@@ -31,7 +31,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			<h3>Cost Breakdown:</h3>
 			<tr>
 				<td>Per Day:</td>
-				<td>$
+				<td>
 				<span id="kPerD" style="color:#00f;">0</span> 
 				<br/>
 				$<span id="cPerD" style="color:#00f;">0</span> 
@@ -112,7 +112,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
  
  //this function will add up anything between the dates displayed
  function selectHandler() {
- var disCol = data.getDistinctValues(1);
+   alert('blah!!!');
+   var disCol = data.getDistinctValues(1);
    var thisDate = data.getDistinctValues(0);
    var theDates = vis.getVisibleChartRange(); 
    var startDate = theDates.start;
@@ -133,6 +134,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	    total=total+i;
     }	
   }
+ alert('before date subtraction');
   var day=endDate-startDate;
   alert('day '+ day);
   var kPerD = (total/day)/1000/60/60/24;
