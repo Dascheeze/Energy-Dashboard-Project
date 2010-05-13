@@ -1,5 +1,6 @@
 class PowerInfoController < ApplicationController
   def index
+    @page_title = "Power Info"
     @buildings = Building.all
     add_crumb("Power Info")
     respond_to do |format|

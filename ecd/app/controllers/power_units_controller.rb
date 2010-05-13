@@ -6,6 +6,7 @@ class PowerUnitsController < ApplicationController
   # GET /power_units
   # GET /power_units.xml
   def index
+    @page_title = "Power Units"
     @power_units = PowerUnit.all
 
     respond_to do |format|
