@@ -7,20 +7,8 @@
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" />
-<span style="float:right;"> 
-	<span id="KWsUsed" style="color:Red; ">0</span><%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
-</span>
 
-   <div id="mydiv" style='width:879px; height:360px;'></div>
-   <br/>
-   <br/>
-    	<p> 
-		To modify the displayed graph, you can move the borders on the bottom
-        timeline, and drag the viewed window to show a different section of the
-        graph.
-		</p>
-   
-   <div style="margin-left:30%;">
+<div style="margin-left:30%;">
    <table style=" border:none;  ">
 	   	<tr>
 	   		<td><h3>Highest Amount Registered:</h3> </td>
@@ -32,6 +20,20 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	   </tr>
     </table>   
 	</div>
+<span style="float:right;"> 
+	<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+</span>
+
+   <div id="mydiv" style='width:879px; height:360px;'></div>
+   <br/>
+   <br/>
+    	<p> 
+		To modify the displayed graph, you can move the borders on the bottom
+        timeline, and drag the viewed window to show a different section of the
+        graph.
+		</p>
+   
+   
       
 	<div id="displaySubData" name="displaySubData">
 			<h3>The Cost of it all: </h3>
@@ -41,10 +43,10 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 					<h3>Average Costs:</h3>
 					<tr>
 						
-						<td>Per Day:</td>
-						<td>Per Hour:</td>
-						<td>Per Minute:</td>
-						<td>Per Second:</td>
+						<td>Per Day: <span id="days" style="color:Green;">0</span></td>
+						<td>Per Hour: <span id="hours" style="color:Green;">0</span></td>
+						<td>Per Minute: <span id="mins" style="color:Green;">0</span></td>
+						<td>Per Second: <span id="secs" style="color:Green;">0</span></td>
 					</tr>
 					<tr>
 						<td>
@@ -193,6 +195,10 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('cPerM').innerHTML=cPerM.toFixed(2).toString();
   document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+kws;
   document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
+  document.getElementById('days').innerHTML=day.toFixed(2).toString();
+  document.getElementById('hours').innerHTML=hrs.toFixed(2).toString();
+  document.getElementById('mins').innerHTML=mins.toFixed(2).toString();
+  document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
  
 
 	   }
