@@ -12,6 +12,7 @@ class TestsController < ApplicationController
   end
 
   def new_table
+    @page_title = "Tests"
     respond_to do |format|
       format.html
     end
@@ -20,6 +21,7 @@ class TestsController < ApplicationController
   # GET /tests/1
   # GET /tests/1.xml
   def show
+    @page_title = "Tests"
     @test = Test.find(params[:id])
 
     respond_to do |format|
@@ -31,6 +33,7 @@ class TestsController < ApplicationController
   # GET /tests/new
   # GET /tests/new.xml
   def new
+    @page_title = "Tests"
     @test = Test.new
 
     respond_to do |format|
@@ -41,12 +44,14 @@ class TestsController < ApplicationController
 
   # GET /tests/1/edit
   def edit
+    @page_title = "Tests"
     @test = Test.find(params[:id])
   end
 
   # POST /tests
   # POST /tests.xml
   def create
+    @page_title = "Tests"
     @test = Test.new(params[:test])
 
     respond_to do |format|
@@ -64,6 +69,7 @@ class TestsController < ApplicationController
   # PUT /tests/1
   # PUT /tests/1.xml
   def update
+    @page_title = "Tests"
     @test = Test.find(params[:id])
 
     respond_to do |format|
@@ -81,6 +87,7 @@ class TestsController < ApplicationController
   # DELETE /tests/1
   # DELETE /tests/1.xml
   def destroy
+    @page_title = "Tests"
     @test = Test.find(params[:id])
     @test.destroy
 

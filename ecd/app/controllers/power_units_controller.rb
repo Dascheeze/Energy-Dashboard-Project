@@ -18,6 +18,7 @@ class PowerUnitsController < ApplicationController
   # GET /power_units/1
   # GET /power_units/1.xml
   def show
+    @page_title = "Power Units"
     @power_unit = PowerUnit.find(params[:id])
 
     respond_to do |format|
@@ -29,6 +30,7 @@ class PowerUnitsController < ApplicationController
   # GET /power_units/new
   # GET /power_units/new.xml
   def new
+    @page_title = "Power Units"
     @power_unit = PowerUnit.new
 
     respond_to do |format|
@@ -39,12 +41,14 @@ class PowerUnitsController < ApplicationController
 
   # GET /power_units/1/edit
   def edit
+    @page_title = "Power Units"
     @power_unit = PowerUnit.find(params[:id])
   end
 
   # POST /power_units
   # POST /power_units.xml
   def create
+    @page_title = "Power Units"
     @power_unit = PowerUnit.new(params[:power_unit])
 
     respond_to do |format|
@@ -62,6 +66,7 @@ class PowerUnitsController < ApplicationController
   # PUT /power_units/1
   # PUT /power_units/1.xml
   def update
+    @page_title = "Power Units"
     @power_unit = PowerUnit.find(params[:id])
 
     respond_to do |format|
@@ -79,6 +84,7 @@ class PowerUnitsController < ApplicationController
   # DELETE /power_units/1
   # DELETE /power_units/1.xml
   def destroy
+    @page_title = "Power Units"
     @power_unit = PowerUnit.find(params[:id])
     @power_unit.destroy
 

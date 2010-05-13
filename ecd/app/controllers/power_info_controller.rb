@@ -10,6 +10,7 @@ class PowerInfoController < ApplicationController
   end
 
   def showsets
+    @page_title = "Power Info"
     @building = Building.find(params[:id])
     meters = Meter.find(:all, :conditions => { :building_id => params[:id] })
     meters.each do |m|

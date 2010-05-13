@@ -18,6 +18,7 @@ class DataPointsController < ApplicationController
   # GET /data_points/1
   # GET /data_points/1.xml
   def show
+    @page_title = "Data Points"
     @data_point = DataPoint.find(params[:id])
 
     respond_to do |format|
@@ -29,6 +30,7 @@ class DataPointsController < ApplicationController
   # GET /data_points/new
   # GET /data_points/new.xml
   def new
+    @page_title = "Data Points"
     @data_point = DataPoint.new
 
     respond_to do |format|
@@ -39,12 +41,14 @@ class DataPointsController < ApplicationController
 
   # GET /data_points/1/edit
   def edit
+    @page_title = "Data Points"
     @data_point = DataPoint.find(params[:id])
   end
 
   # POST /data_points
   # POST /data_points.xml
   def create
+    @page_title = "Data Points"
     @data_point = DataPoint.new(params[:data_point])
 
     respond_to do |format|
@@ -62,6 +66,7 @@ class DataPointsController < ApplicationController
   # PUT /data_points/1
   # PUT /data_points/1.xml
   def update
+    @page_title = "Data Points"
     @data_point = DataPoint.find(params[:id])
 
     respond_to do |format|
@@ -79,6 +84,7 @@ class DataPointsController < ApplicationController
   # DELETE /data_points/1
   # DELETE /data_points/1.xml
   def destroy
+    @page_title = "Data Points"
     @data_point = DataPoint.find(params[:id])
     @data_point.destroy
 
