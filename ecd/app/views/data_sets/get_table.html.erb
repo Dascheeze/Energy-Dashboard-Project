@@ -145,10 +145,10 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
-  var cPerD= perday*money;
-  var cPerM= permin*money;
-  var cPerH= perhour*money;
-  var cPerS= persec*money;
+  var cPerD= kPerD*money;
+  var cPerM= kPerM*money;
+  var cPerH= kPerH*money;
+  var cPerS= kPerS*money;
   alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   
