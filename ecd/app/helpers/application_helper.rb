@@ -75,7 +75,7 @@ module ApplicationHelper
     return bounds
   end
 
-  def real_diff (list_points, time_interval = 30.minutes)
+  def real_diff (list_points, time_interval = 1.hour)
 	  duration_of_pull = 15.minutes
 	  data_array = Array.new
     i=0
