@@ -6,7 +6,7 @@
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="MoneySpent" style="color:#00f;"></span>
+<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="totCost2" style="color:#00f;"></span>
 
    <div id="mydiv" style='width:750px; height:360px;'></div>
    <br/><p>
@@ -25,7 +25,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			<br /> 
 			<span id="startRange"></span>  --  <span id="endRange"></span>
 		<h3>The Cost of it all: </h3>
-			At the current price of electricity, the cost incurred this span of time was: $<span id="MoneySpent" style="color:#00f;"></span>
+			At the current price of electricity, the cost incurred this span of time was: 
+			$ <span id="totCost" style="color:#00f;">0</span>
 		</div>
 <script type="text/javascript">
 		$(function() {
@@ -97,9 +98,9 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
-  alert(cost);
+
   cost = cost.toFixed(2);
-  alert(cost);
+  
   
   
   document.getElementById('KWsUsed').innerHTML=total.toString();
@@ -107,8 +108,9 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('startRange').innerHTML=getDate(startDate);
   document.getElementById('endRange').innerHTML=getDate(endDate);
   document.getElementById('displaySubData').style.visibility="visible";
-  document.getElementById('MoneySpent2').innerHTML=cost.toString();
-  document.getElementById('MoneySpent').innerHTML=cost.toString();
+  document.getElementById('totCost').innerHTML=cost.toString();
+  document.getElementById('totCost2').innerHTML=cost.toString();
+ 
 
 	   }
 	   }
