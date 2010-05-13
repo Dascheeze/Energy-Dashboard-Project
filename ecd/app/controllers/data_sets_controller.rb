@@ -45,7 +45,7 @@ class DataSetsController < ApplicationController
 	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
     
           add_crumb("Power Info", '/power_info')
-    	  add_crumb(@assoc_meter.building.building_name.to_s, '/power_info/showsets/' + @assoc_meter.building.id.to_s)
+    	  add_crumb(@data_set.meter.building.building_name.to_s, '/power_info/showsets/' + @assoc_meter.building.id.to_s)
           add_crumb("Graph")
     respond_to do |format|
       format.html
