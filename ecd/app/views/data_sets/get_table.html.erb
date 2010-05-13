@@ -6,14 +6,24 @@
 <h1>Building: <%= @data_set.meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /><span style="margin-left:auto;"> <span id="KWsUsed" style="color:Red; ">0</span> KWh used | $<span id="totCost2" style="color:#00f;"></span></span>
+<input type="submit" value="Change Dataset Date" />
+<span style="float:right;"> 
+	<span id="KWsUsed" style="color:Red; ">0</span><%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+</span>
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
-   <br/><p>
-   <h3>Highest Amount Registered:</h3> 
-   <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
-   <h3>Lowest Amount Registered:</h3><%= @item_bounds.min_amount%> KWh, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%><br/>
-        </p>
+   <br/>
+   <table>
+   	<tr>
+   		<td><h3>Highest Amount Registered:</h3> </td>
+		</td><h3>Lowest Amount Registered:</h3></td>
+	</tr>
+	<tr>
+  		<td><<span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/></td>
+   		<td><%= @item_bounds.min_amount%> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+   
+   </tr>
+   </table>   
 		<br />
        <p> To modify the displayed graph, you can move the borders on the bottom
         timeline, and drag the viewed window to show a different section of the
