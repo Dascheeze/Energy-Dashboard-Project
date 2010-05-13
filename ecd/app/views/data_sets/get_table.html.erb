@@ -86,8 +86,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 					<td><h3>Lowest Amount Registered:</h3></td>
 				</tr>
 				<tr>
-			  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-			   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+			  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%m/%d/%Y %H:%M")%></td>
+			   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%m/%d/%Y %H:%M")%></td>
 			   </tr>
 		    </table>   
 		</div>
