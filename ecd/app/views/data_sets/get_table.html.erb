@@ -2,17 +2,17 @@
     	
     </style>
 	
-	
+	<div>
+	<span style="float:right;"> 
+		<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+	</span>
+</div>
 <h1>Building: <%= @data_set.meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" />
    <div id="mydiv" style='width:879px; height:360px;'></div>
-<div>
-	<span style="float:right;"> 
-		<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
-	</span>
-</div>
+
    <br/>
    <br/>
     	<p> 
