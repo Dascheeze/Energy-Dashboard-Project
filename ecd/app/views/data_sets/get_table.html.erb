@@ -29,37 +29,37 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			$<span id="totCost" style="color:#00f;">0</span>
 			<table>
 			<h3>Cost Breakdown:</h3>
-			<tr>
-				<td>Per Day:</td>
-				<td>
+			<td>
+				<tr>Per Day:</tr>
+				<tr>
 				<span id="kPerD" style="color:#00f;">0</span> 
 				<br/>
 				$<span id="cPerD" style="color:#00f;">0</span> 
-				</td>
-			</tr>
-			<tr>
-				<td>Per Hour:</td>
-				<td>
+				</tr>
+			</td>
+			<td>
+				<tr>Per Hour:</tr>
+				<tr>
 				<span id="kPerH" style="color:#00f;">0</span>
 				<br/>
 				$<span id="cPerH" style="color:#00f;">0</span>
-				</td>
-			</tr>
-				<td>Per Minute:</td>
-				<td>
+				</tr>
+			</td>
+				<tr>Per Minute:</tr>
+				<tr>
 					<span id="kPerM" style="color:#00f;">0</span>
 					<br/>
 					$<span id="cPerM" style="color:#00f;">0</span>
-				</td>
-			<tr>
-				<td>Per Second:</td>
-				<td>
+				</tr>
+			<td>
+				<tr>Per Second:</tr>
+				<tr>
 					<span id="kPerS" style="color:#00f;">0</span>
 					<br/>
 					$<span id="cPerS" style="color:#00f;">0</span>
-				</td>
+				</tr>
 				
-			</tr>
+			</td>
 			</table>
 		</div>
 <script type="text/javascript">
@@ -165,13 +165,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
-  document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString();
+  document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerD').innerHTML=cPerD.toFixed(2).toString();
-  document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString();
+  document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerH').innerHTML=cPerH.toFixed(2).toString();
-  document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString();
+  document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerM').innerHTML=cPerM.toFixed(2).toString();
-  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString();
+  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
  
 
