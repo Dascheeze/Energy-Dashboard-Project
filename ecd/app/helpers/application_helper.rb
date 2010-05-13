@@ -89,7 +89,7 @@ module ApplicationHelper
           list_points.each do |point|
             next_val = point
             if next_val.created_at >= current.created_at + time_interval then
-              if next_val.created_at >= current.created_at + time_interval*4 then
+              if next_val.created_at >= current.created_at + time_interval*2 then
                 avgTime=(next_val.created_at - current.created_at)/ time_interval
                 item = Item.new
                 item.amount = (next_val.amount - current.amount)/avgTime
