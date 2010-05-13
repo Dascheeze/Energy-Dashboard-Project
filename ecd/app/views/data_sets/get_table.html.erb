@@ -13,66 +13,64 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/>
+   <br/>
     	<p> 
 		To modify the displayed graph, you can move the borders on the bottom
         timeline, and drag the viewed window to show a different section of the
         graph.
 		</p>
    <table style="border:none; ">
-   	<tr>
-   		<td><h3>Highest Amount Registered:</h3> </td>
-		<td><h3>Lowest Amount Registered:</h3></td>
-	</tr>
-	<tr>
-  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-   </tr>
-      </table>   
+	   	<tr>
+	   		<td><h3>Highest Amount Registered:</h3> </td>
+			<td><h3>Lowest Amount Registered:</h3></td>
+		</tr>
+		<tr>
+	  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+	   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+	   </tr>
+    </table>   
 		<br />
       
-		<div id="displaySubData" name="displaySubData">
-			
+	<div id="displaySubData" name="displaySubData">
+			<h3>The Cost of it all: </h3>
+				At the current price of electricity, the cost incurred over the span of time displayed in the graph was: $<span id="totCost" style="color:#00f;">0</span>
+			<div style="float:right">
+				<table>
+					<h3>Average Costs:</h3>
+					<tr>
+						
+						<td>Per Day:</td>
+						<td>Per Hour:</td>
+						<td>Per Minute:</td>
+						<td>Per Second:</td>
+					</tr>
+					<tr>
+						<td>
+						<span id="kPerD" style="color:Red;">0</span> 
+						<br/>
+						$<span id="cPerD" style="color:#00f;">0</span> 
+						</td>
 		
-		<div style="float:right">
-		<h3>The Cost of it all: </h3>
-			At the current price of electricity, the cost incurred over the span of time displayed in the graph was: 
-			$<span id="totCost" style="color:#00f;">0</span>
-			<table>
-			<h3>Average Costs:</h3>
-			<tr>
-				
-				<td>Per Day:</td>
-				<td>Per Hour:</td>
-				<td>Per Minute:</td>
-				<td>Per Second:</td>
-			</tr>
-			<tr>
-				<td>
-				<span id="kPerD" style="color:Red;">0</span> 
-				<br/>
-				$<span id="cPerD" style="color:#00f;">0</span> 
-				</td>
-
-				<td>
-				<span id="kPerH" style="color:Red;">0</span>
-				<br/>
-				$<span id="cPerH" style="color:#00f;">0</span>
-				</td>
-				
-				<td>
-					<span id="kPerM" style="color:Red;">0</span>
-					<br/>
-					$<span id="cPerM" style="color:#00f;">0</span>
-				</td>
-			
-				<td>
-					<span id="kPerS" style="color:Red;">0</span>
-					<br/>
-					$<span id="cPerS" style="color:#00f;">0</span>
-				</td>
-				
-			</tr>
-			</table>
+						<td>
+						<span id="kPerH" style="color:Red;">0</span>
+						<br/>
+						$<span id="cPerH" style="color:#00f;">0</span>
+						</td>
+						
+						<td>
+							<span id="kPerM" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerM" style="color:#00f;">0</span>
+						</td>
+					
+						<td>
+							<span id="kPerS" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerS" style="color:#00f;">0</span>
+						</td>
+						
+					</tr>
+				</table>
 			</div>
 			<div>
 				<h3>KiloWatts Used within the Selected Range:</h3> 
