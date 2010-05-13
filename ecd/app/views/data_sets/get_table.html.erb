@@ -30,28 +30,31 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			<table>
 			<h3>Cost Breakdown:</h3>
 			<tr>
+				
 				<td>Per Day:</td>
+				<td>Per Hour:</td>
+				<td>Per Minute:</td>
+				<td>Per Second:</td>
+			</tr>
+			<tr>
 				<td>
 				<span id="kPerD" style="color:Red;">0</span> 
 				<br/>
 				$<span id="cPerD" style="color:#00f;">0</span> 
 				</td>
-			
-				<td>Per Hour:</td>
+
 				<td>
 				<span id="kPerH" style="color:Red;">0</span>
 				<br/>
 				$<span id="cPerH" style="color:#00f;">0</span>
 				</td>
-			
-				<td>Per Minute:</td>
+				
 				<td>
 					<span id="kPerM" style="color:Red;">0</span>
 					<br/>
 					$<span id="cPerM" style="color:#00f;">0</span>
 				</td>
 			
-				<td>Per Second:</td>
 				<td>
 					<span id="kPerS" style="color:Red;">0</span>
 					<br/>
@@ -155,7 +158,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   total=total.toFixed(2);
-  var kws =" "+" <%= @data_set.power_unit.name %> ";
+  var kws =" "+" <%= @data_set.power_unit.name %> " +'s';
   alert(kws);
   kws=kws.toString();
   
