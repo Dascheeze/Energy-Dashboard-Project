@@ -6,6 +6,7 @@ class MetersController < ApplicationController
   # GET /meters
   # GET /meters.xml
   def index
+    @page_title = "Meters"
     @meters = Meter.all
     add_crumb("Admin", '/admin')
     add_crumb("Meters")

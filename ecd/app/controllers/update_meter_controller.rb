@@ -4,6 +4,7 @@ class UpdateMeterController < ApplicationController
   before_filter :authenticate
   
   def index
+    @page_title = "Update Meter"
 	  respond_to do |format|
 		  format.html
 	  end

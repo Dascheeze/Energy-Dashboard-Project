@@ -7,6 +7,7 @@ class DataSetsController < ApplicationController
   # GET /data_sets
   # GET /data_sets.xml
   def index
+    @page_title = "Data Sets"
     @data_sets = DataSet.all
     add_crumb("Admin", '/admin')
     add_crumb("Data Sets")

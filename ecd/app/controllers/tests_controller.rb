@@ -2,6 +2,7 @@ class TestsController < ApplicationController
   # GET /tests
   # GET /tests.xml
   def index
+    @page_title = "Tests"
     @tests = Test.all
 
     respond_to do |format|

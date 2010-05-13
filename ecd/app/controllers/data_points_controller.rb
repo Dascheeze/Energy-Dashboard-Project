@@ -6,6 +6,7 @@ class DataPointsController < ApplicationController
   # GET /data_points
   # GET /data_points.xml
   def index
+    @page_title = "Data Points"
     @data_points = DataPoint.all
 
     respond_to do |format|
