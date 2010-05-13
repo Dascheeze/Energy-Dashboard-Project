@@ -36,22 +36,21 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 				<br/>
 				$<span id="cPerD" style="color:#00f;">0</span> 
 				</td>
-			</tr>
-			<tr>
+			
 				<td>Per Hour:</td>
 				<td>
 				<span id="kPerH" style="color:#00f;">0</span>
 				<br/>
 				$<span id="cPerH" style="color:#00f;">0</span>
 				</td>
-			</tr>
+			
 				<td>Per Minute:</td>
 				<td>
 					<span id="kPerM" style="color:#00f;">0</span>
 					<br/>
 					$<span id="cPerM" style="color:#00f;">0</span>
 				</td>
-			<tr>
+			
 				<td>Per Second:</td>
 				<td>
 					<span id="kPerS" style="color:#00f;">0</span>
@@ -165,13 +164,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
-  document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString();
+  document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerD').innerHTML=cPerD.toFixed(2).toString();
-  document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString();
+  document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerH').innerHTML=cPerH.toFixed(2).toString();
-  document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString();
+  document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerM').innerHTML=cPerM.toFixed(2).toString();
-  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString();
+  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+'KWhs';
   document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
  
 
