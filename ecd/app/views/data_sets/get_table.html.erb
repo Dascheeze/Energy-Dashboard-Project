@@ -6,7 +6,7 @@
 <h1>Building: <%= @assoc_meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
-<input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="totCost2" style="color:#00f;"></span>
+<input type="submit" value="Change Dataset Date" /><span style="margin-left:auto;"> <span id="KWsUsed" style="color:Red; ">0</span> KWh used | $<span id="totCost2" style="color:#00f;"></span></span>
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/><p>
@@ -27,6 +27,40 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 		<h3>The Cost of it all: </h3>
 			At the current price of electricity, the cost incurred over the span of time displayed in the graph was: 
 			$<span id="totCost" style="color:#00f;">0</span>
+			<table>
+			<h3>Cost Breakdown:</h3>
+			<tr>
+				<td>Per Day:</td>
+				<td>
+				<span id="kPerD" style="color:#00f;">0</span> 
+				<br/>
+				$<span id="cPerD" style="color:#00f;">0</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>Per Hour:</td>
+				<td>
+				<span id="kPerH" style="color:#00f;">0</span>
+				<br/>
+				$<span id="cPerH" style="color:#00f;">0</span>
+				</td>
+			</tr>
+				<td>Per Minute:</td>
+				<td>
+					<span id="kPerM" style="color:#00f;">0</span>
+					<br/>
+					$<span id="cPerM" style="color:#00f;">0</span>
+				</td>
+			<tr>
+				<td>Per Second:</td>
+				<td>
+					<span id="kPerS" style="color:#00f;">0</span>
+					<br/>
+					$<span id="cPerS" style="color:#00f;">0</span>
+				</td>
+				
+			</tr>
+			</table>
 		</div>
 <script type="text/javascript">
 		$(function() {
@@ -78,7 +112,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
  
  //this function will add up anything between the dates displayed
  function selectHandler() {
- var disCol = data.getDistinctValues(1);
+   alert('blah!!!');
+   var disCol = data.getDistinctValues(1);
    var thisDate = data.getDistinctValues(0);
    var theDates = vis.getVisibleChartRange(); 
    var startDate = theDates.start;
@@ -97,15 +132,24 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	    date= data.getValue(j,0);
 	    if(startDate<=date && endDate>=date){   
 	    total=total+i;
-    }
-	
-		
+    }	
   }
-  
+ alert('before date subtraction');
+  var day=endDate-startDate;
+  alert('day '+ day);
+  var kPerD = (total/day)/1000/60/60/24;
+  var kPerH = (total/day)/1000/60/60;
+  var kPerM = (total/day)/1000/60;
+  var kPerS = (total/day)/1000;
+  alert('D H M S '+ kPerD + ' ' + kPerH + ' ' kPerM + ' ' +kPerS);
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
-
+  var cPerD= kPerD*money;
+  var cPerM= kPerM*money;
+  var cPerH= kPerH*money;
+  var cPerS= kPerS*money;
+  alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   
   
@@ -117,6 +161,14 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
+  document.getElementById('kPerD').innerHTML=kPerD.toString();
+  document.getElementById('cPerD').innerHTML=cPerD.toString();
+  document.getElementById('kPerH').innerHTML=kPerH.toString();
+  document.getElementById('cPerH').innerHTML=cPerH.toString();
+  document.getElementById('kPerM').innerHTML=kPerM.toString();
+  document.getElementById('cPerM').innerHTML=cPerM.toString();
+  document.getElementById('kPerS').innerHTML=kPerS.toString();
+  document.getElementById('cPerS').innerHTML=cPerS.toString();
  
 
 	   }
