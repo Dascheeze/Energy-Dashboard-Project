@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   before_filter :authenticate  
   
   def index
+    @page_title = "Admin"
     add_crumb("Admin")
     respond_to do |format|
       format.html # index.html.erb
