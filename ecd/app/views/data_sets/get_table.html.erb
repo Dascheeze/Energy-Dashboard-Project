@@ -132,24 +132,24 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	    date= data.getValue(j,0);
 	    if(startDate<=date && endDate>=date){   
 	    total=total+i;
-    }	
-  }
+		}
+	}
  alert('before date subtraction');
   var day=endDate-startDate;
   alert('day '+ day);
-  var kPerD = (total/day)/1000/60/60/24;
-  var kPerH = (total/day)/1000/60/60;
-  var kPerM = (total/day)/1000/60;
-  var kPerS = (total/day)/1000;
-  alert('D H M S '+ kPerD + ' ' + kPerH + ' ' kPerM + ' ' +kPerS);
+ // var kPerD = (total/day)/1000/60/60/24;
+  //var kPerH = (total/day)/1000/60/60;
+  //var kPerM = (total/day)/1000/60;
+  //var kPerS = (total/day)/1000;
+  //alert('D H M S '+ kPerD + ' ' + kPerH + ' ' kPerM + ' ' +kPerS);
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
-  var cPerD= kPerD*money;
-  var cPerM= kPerM*money;
-  var cPerH= kPerH*money;
-  var cPerS= kPerS*money;
-  alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
+  //var cPerD= kPerD*money;
+  //var cPerM= kPerM*money;
+  //var cPerH= kPerH*money;
+  //var cPerS= kPerS*money;
+  //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   
   
@@ -161,14 +161,14 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
-  document.getElementById('kPerD').innerHTML=kPerD.toString();
-  document.getElementById('cPerD').innerHTML=cPerD.toString();
-  document.getElementById('kPerH').innerHTML=kPerH.toString();
-  document.getElementById('cPerH').innerHTML=cPerH.toString();
-  document.getElementById('kPerM').innerHTML=kPerM.toString();
-  document.getElementById('cPerM').innerHTML=cPerM.toString();
-  document.getElementById('kPerS').innerHTML=kPerS.toString();
-  document.getElementById('cPerS').innerHTML=cPerS.toString();
+  //document.getElementById('kPerD').innerHTML=kPerD.toString();
+  //document.getElementById('cPerD').innerHTML=cPerD.toString();
+  //document.getElementById('kPerH').innerHTML=kPerH.toString();
+  //document.getElementById('cPerH').innerHTML=cPerH.toString();
+  //document.getElementById('kPerM').innerHTML=kPerM.toString();
+  //document.getElementById('cPerM').innerHTML=cPerM.toString();
+  //document.getElementById('kPerS').innerHTML=kPerS.toString();
+  //document.getElementById('cPerS').innerHTML=cPerS.toString();
  
 
 	   }
