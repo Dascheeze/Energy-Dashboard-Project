@@ -19,10 +19,19 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         timeline, and drag the viewed window to show a different section of the
         graph.
 		</p>
-   <div style="float:right"><h3>Highest Amount Registered:</h3> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></div>
-   <div><h3>Lowest Amount Registered:</h3> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></div>
    
-   
+   <div style="margin-left:30%;">
+   <table style=" border:none;  ">
+	   	<tr>
+	   		<td><h3>Highest Amount Registered:</h3> </td>
+			<td><h3>Lowest Amount Registered:</h3></td>
+		</tr>
+		<tr>
+	  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+	   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+	   </tr>
+    </table>   
+	</div>
       
 	<div id="displaySubData" name="displaySubData">
 			<h3>The Cost of it all: </h3>
