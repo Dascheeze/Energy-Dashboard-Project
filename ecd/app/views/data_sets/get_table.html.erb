@@ -155,7 +155,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   total=total.toFixed(2);
-  var kws =" "+<%= @data_set.power_unit.name %>;
+  var kws =" "+" <%= @data_set.power_unit.name %> ";
   alert(kws);
   kws=kws.toString();
   
