@@ -34,7 +34,7 @@ module ApplicationHelper
 	    temp_amount = point.amount.to_s.to_f
       aggregate_amount = aggregate_amount + temp_amount
       if (i == num_to_aggregate)
-		item = Item.new
+		    item = Item.new
         item.amount = aggregate_amount
         item.date = cur_time
         data_array.push(item)
@@ -75,7 +75,7 @@ module ApplicationHelper
     return bounds
   end
 
-  def real_diff (list_points, time_interval = 1.hour)
+  def real_diff (list_points, time_interval = 30.minutes)
 	  duration_of_pull = 15.minutes
 	  data_array = Array.new
     i=0
@@ -89,6 +89,16 @@ module ApplicationHelper
           list_points.each do |point|
             next_val = point
             if next_val.created_at >= current.created_at + time_interval then
+              if next_val.created_at >= current.created_at + time_interval*2 then
+                avgTime=(next_val.created_at - current.created_at)/ time_interval
+                item = Item.new
+                item.amount = (next_val.amount - current.amount)/avgTime
+                item.date = current.created_at
+                current = next_val
+                data_array.push(item)
+
+              end
+            else
               item = Item.new
               item.amount = next_val.amount - current.amount
               item.date = current.created_at
