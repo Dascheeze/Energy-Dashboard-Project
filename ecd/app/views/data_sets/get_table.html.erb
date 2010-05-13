@@ -134,10 +134,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
     }	
   }
   var day=endDate-startDate;
+  alert('day '+ day);
   var kPerD = (total/day)/1000/60/60/24;
   var kPerH = (total/day)/1000/60/60;
   var kPerM = (total/day)/1000/60;
   var kPerS = (total/day)/1000;
+  alert('D H M S '+ kPerD + ' ' + kPerH + ' ' kPerM + ' ' +kPerS);
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
@@ -145,6 +147,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   var cPerM= permin*money;
   var cPerH= perhour*money;
   var cPerS= persec*money;
+  alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   
   
