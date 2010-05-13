@@ -128,6 +128,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
        var day = date.getDate();
        var month = date.getMonth()+1;
        var yy = date.getYear();
+	   var whichDay = date.getDay();
        var year = (yy < 1000) ? yy + 1900 : yy;
    
        var hours = date.getHours()
@@ -135,7 +136,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
        if (minutes < 10){
        minutes = "0" + minutes
        }
-     var value= month+"/"+day+"/"+year + " " + hours + ":" + minutes;
+     var value= '('+whichDay+') '+month+"/"+day+"/"+year + " " + hours + ":" + minutes;
      return value.toString();
   }
  
