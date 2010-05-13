@@ -32,9 +32,9 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			<tr>
 				<td>Per Day:</td>
 				<td>
-				<span id="kPerDW" style="color:#00f;">0</span> 
+				<span id="kPerD" style="color:#00f;">0</span> 
 				<br/>
-				$<span id="cPerDW" style="color:#00f;">0</span> 
+				$<span id="cPerD" style="color:#00f;">0</span> 
 				</td>
 			</tr>
 			<tr>
@@ -137,13 +137,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 
   var daydif=endDate-startDate;
   var secs =daydif/1000;
-  var mins = day/60;
-  var hrs = day1/60;
-  var day = day2/24;
+  var mins = secs/60;
+  var hrs = mins/60;
+  var day = hrs/24;
   
 
   var kPerD = total/day;
-  alert(kPerD);
   var kPerH = total/hrs;
   var kPerM = total/mins;
   var kPerS = total/secs;
@@ -166,8 +165,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
-  document.getElementById('kPerDW').innerHTML=kPerD.toString();
-  document.getElementById('cPerDW').innerHTML=cPerD.toString();
+  document.getElementById('kPerD').innerHTML=kPerD.toString();
+  document.getElementById('cPerD').innerHTML=cPerD.toString();
   document.getElementById('kPerH').innerHTML=kPerH.toString();
   document.getElementById('cPerH').innerHTML=cPerH.toString();
   document.getElementById('kPerM').innerHTML=kPerM.toString();
