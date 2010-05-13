@@ -20,6 +20,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/1
   # GET /buildings/1.xml
   def show
+    @page_title = "Buildings"
     @building = Building.find(params[:id])
     add_crumb("Admin", '/admin')
     add_crumb("Buildings", '/buildings')
@@ -33,6 +34,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/new
   # GET /buildings/new.xml
   def new
+    @page_title = "Buildings"
     @building = Building.new
     add_crumb("Admin", '/admin')
     add_crumb("Buildings", '/buildings')
@@ -45,6 +47,7 @@ class BuildingsController < ApplicationController
 
   # GET /buildings/1/edit
   def edit
+    @page_title = "Buildings"
     add_crumb("Admin", '/admin')
     add_crumb("Buildings", '/buildings')
     add_crumb("Edit")
@@ -55,6 +58,7 @@ class BuildingsController < ApplicationController
   # POST /buildings
   # POST /buildings.xml
   def create
+    @page_title = "Buildings"
     @building = Building.new(params[:building])
     add_crumb("Admin", '/admin')
     add_crumb("Buildings", '/buildings')
@@ -74,6 +78,7 @@ class BuildingsController < ApplicationController
   # PUT /buildings/1
   # PUT /buildings/1.xml
   def update
+    @page_title = "Buildings"
     @building = Building.find(params[:id])
 
     respond_to do |format|
@@ -91,6 +96,7 @@ class BuildingsController < ApplicationController
   # DELETE /buildings/1
   # DELETE /buildings/1.xml
   def destroy
+    @page_title = "Buildings"
     @building = Building.find(params[:id])
     @building.destroy
 
@@ -101,6 +107,7 @@ class BuildingsController < ApplicationController
   end
 
   def generate_table
+    @page_title = "Buildings"
     # buildings -> meters -> data_sets -> data_points
     return_table = "<table>"
     building = Building.find(params[:id])

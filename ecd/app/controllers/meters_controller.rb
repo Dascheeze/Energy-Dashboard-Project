@@ -17,6 +17,7 @@ class MetersController < ApplicationController
   end
 
   def refresh
+    @page_title = "Meters"
     Meter.all.each do |meter_num|
       parse_xml(meter_num.modbus_address, meter_num.id)
     end
@@ -29,6 +30,7 @@ class MetersController < ApplicationController
   # GET /meters/1
   # GET /meters/1.xml
   def show
+    @page_title = "Meters"
     @meter = Meter.find(params[:id])
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
@@ -42,6 +44,7 @@ class MetersController < ApplicationController
   # GET /meters/new
   # GET /meters/new.xml
   def new
+    @page_title = "Meters"
     @meter = Meter.new
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
@@ -54,6 +57,7 @@ class MetersController < ApplicationController
 
   # GET /meters/1/edit
   def edit
+    @page_title = "Meters"
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("Edit")
@@ -63,6 +67,7 @@ class MetersController < ApplicationController
   # POST /meters
   # POST /meters.xml
   def create
+    @page_title = "Meters"
     @meter = Meter.new(params[:meter])
 
     respond_to do |format|
@@ -80,6 +85,7 @@ class MetersController < ApplicationController
   # PUT /meters/1
   # PUT /meters/1.xml
   def update
+    @page_title = "Meters"
     @meter = Meter.find(params[:id])
 
     respond_to do |format|
@@ -97,6 +103,7 @@ class MetersController < ApplicationController
   # DELETE /meters/1
   # DELETE /meters/1.xml
   def destroy
+    @page_title = "Meters"
     @meter = Meter.find(params[:id])
     @meter.destroy
 
@@ -111,6 +118,7 @@ class MetersController < ApplicationController
   include REXML
 
   def getURL(command)
+    @page_title = "Meters"
     $username = 'admin'
     $password = 'admin'
     # Open an HTTP connection to 
@@ -131,10 +139,12 @@ class MetersController < ApplicationController
   end
   
   def getMeterXML(meterAddress)
+    @page_title = "Meters"
     return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
   
   def addDataPoint(data_set_id, value)
+    @page_title = "Meters"
     newData = DataPoint.new
     newData.data_set_id = data_set_id.to_s.to_i
     newData.amount = value.to_s.to_f
@@ -142,6 +152,7 @@ class MetersController < ApplicationController
   end
   
   def parse_xml(modbus_address, meter_id)
+    @page_title = "Meters"
     xml_dump = getMeterXML(modbus_address)
     xml_doc = Document.new xml_dump
 	i = 0

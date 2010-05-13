@@ -18,6 +18,7 @@ class DataSetsController < ApplicationController
   end
   
   def get_table
+    @page_title = "Data Sets"
     if params[:id]
       @data_set_id = params[:id]
     else
@@ -54,6 +55,7 @@ class DataSetsController < ApplicationController
   end
   
   def get_table_old
+    @page_title = "Data Sets"
     if params[:id]
       @data_set_id = params[:id]
     else
@@ -92,6 +94,7 @@ class DataSetsController < ApplicationController
   # GET /data_sets/1
   # GET /data_sets/1.xml
   def show
+    @page_title = "Data Sets"
     @data_set = DataSet.find(params[:id])
     add_crumb("Admin", '/admin')
     add_crumb("Data Sets", '/data_sets')
@@ -105,6 +108,7 @@ class DataSetsController < ApplicationController
   # GET /data_sets/new
   # GET /data_sets/new.xml
   def new
+    @page_title = "Data Sets"
     @data_set = DataSet.new
     add_crumb("Admin", '/admin')
     add_crumb("Data Sets", '/data_sets')
@@ -117,7 +121,7 @@ class DataSetsController < ApplicationController
 
   # GET /data_sets/1/edit
   def edit
-
+    @page_title = "Data Sets"
     add_crumb("Admin", '/admin')
     add_crumb("Data Sets", '/data_sets')
     add_crumb("Edit")
@@ -127,6 +131,7 @@ class DataSetsController < ApplicationController
   # POST /data_sets
   # POST /data_sets.xml
   def create
+    @page_title = "Data Sets"
     @data_set = DataSet.new(params[:data_set])
  
     add_crumb("Admin", '/admin')
@@ -147,6 +152,7 @@ class DataSetsController < ApplicationController
   # PUT /data_sets/1
   # PUT /data_sets/1.xml
   def update
+    @page_title = "Data Sets"
     @data_set = DataSet.find(params[:id])
 
     respond_to do |format|
@@ -164,6 +170,7 @@ class DataSetsController < ApplicationController
   # DELETE /data_sets/1
   # DELETE /data_sets/1.xml
   def destroy
+    @page_title = "Data Sets"
     @data_set = DataSet.find(params[:id])
     @data_set.destroy
 
