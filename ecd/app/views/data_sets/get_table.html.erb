@@ -38,15 +38,21 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 					</tr>
 					<tr>
 						<td>
-						<span id="kPerD" style="color:Red;">0</span> 
-						<br/>
-						$<span id="cPerD" style="color:#00f;">0</span>/Day
+							<span id="kPerW" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerW" style="color:#00f;">0</span>/Week
+						</td>
+						
+						<td>
+							<span id="kPerD" style="color:Red;">0</span> 
+							<br/>
+							$<span id="cPerD" style="color:#00f;">0</span>/Day
 						</td>
 		
 						<td>
-						<span id="kPerH" style="color:Red;">0</span>
-						<br/>
-						$<span id="cPerH" style="color:#00f;">0</span>/Hour
+							<span id="kPerH" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerH" style="color:#00f;">0</span>/Hour
 						</td>
 						
 						<td>
@@ -55,12 +61,6 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 							$<span id="cPerM" style="color:#00f;">0</span>/Minute
 						</td>
 					
-						<td>
-							<span id="kPerS" style="color:Red;">0</span>
-							<br/>
-							$<span id="cPerS" style="color:#00f;">0</span>/Second
-						</td>
-						
 					</tr>
 				</table>
 			</div>
@@ -180,8 +180,9 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   var mins = secs/60;
   var hrs = mins/60;
   var day = hrs/24;
-  
+  var week = day/2;
 
+  var kPerW = total/week;
   var kPerD = total/day;
   var kPerH = total/hrs;
   var kPerM = total/mins;
@@ -189,6 +190,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
+  var cPerW = kPerW* money;
   var cPerD= kPerD*money;
   var cPerM= kPerM*money;
   var cPerH= kPerH*money;
@@ -206,18 +208,22 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
+  document.getElementById('kPerW').innerHTML=kPerD.toFixed(2).toString()+kws;
+  document.getElementById('cPerW').innerHTML=cPerD.toFixed(2).toString();
   document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString()+kws;
   document.getElementById('cPerD').innerHTML=cPerD.toFixed(2).toString();
   document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString()+kws;
   document.getElementById('cPerH').innerHTML=cPerH.toFixed(2).toString();
   document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString()+kws;
   document.getElementById('cPerM').innerHTML=cPerM.toFixed(2).toString();
-  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+kws;
-  document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
+  //document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+kws;
+  //document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
+  document.getElementById('weeks').innerHTML=week.toFixed(2).toString();
   document.getElementById('days').innerHTML=day.toFixed(2).toString();
   document.getElementById('hours').innerHTML=hrs.toFixed(2).toString();
   document.getElementById('mins').innerHTML=mins.toFixed(2).toString();
-  document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
+  //document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
+  
  
 
 	   }
