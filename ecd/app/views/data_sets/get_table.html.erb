@@ -8,7 +8,7 @@
 Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" /> <span id="KWsUsed" style="color:Red;">0</span> KWh used | $<span id="totCost2" style="color:#00f;"></span>
 
-   <div id="mydiv" style='width:750px; height:360px;'></div>
+   <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/><p>
    <h3>Highest Amount Registered :</h3> 
    <%= @item_bounds.max_amount%> KWh, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%> <br/>
@@ -54,7 +54,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         // Instantiate our table object.
         vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
-	   vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: true, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
+	   vis.draw(data, {thickness: 2, fill: 30, displayAnnotations: false, zoomEndTime: (new Date(<%= @endTime.strftime("%Y, (%m-1), %d-1, %H, %M") %>)), zoomStartTime: (new Date(<%= (@endTime - 1.day).strftime("%Y, (%m-1), %d-1, %H, %M") %>))});
        google.visualization.events.addListener(vis, 'ready', selectHandler);
 	   google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 	   selectHandler();
@@ -84,6 +84,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
    var startDate = theDates.start;
    var endDate = theDates.end;
    var total=0;
+   var sumTot=0;
    var numRow = data.getNumberOfRows();
    var x=0;
    var j =0;
@@ -97,7 +98,10 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 	    if(startDate<=date && endDate>=date){   
 	    total=total+i;
     }
+	
+		
   }
+  
   total=total.toFixed(2);
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
