@@ -90,20 +90,19 @@ module ApplicationHelper
             next_val = point
             if next_val.created_at >= current.created_at + time_interval then
               if next_val.created_at >= current.created_at + time_interval*2 then
-                avgTime=(next_val.created_at - current.created_at)/ 15
+                avgTime=(next_val.created_at - current.created_at)/ duration_of_pull #used 15 becuase that is how often we draw should probably use "time interval"
                 item = Item.new
                 item.amount = (next_val.amount - current.amount)/avgTime
                 item.date = current.created_at
                 current = next_val
                 data_array.push(item)
 
-              end
-            else
-              item = Item.new
-              item.amount = next_val.amount - current.amount
-              item.date = current.created_at
-              current = next_val
-              data_array.push(item)
+              else
+                item = Item.new
+                item.amount = next_val.amount - current.amount
+                item.date = current.created_at
+                current = next_val
+                data_array.push(item)
             end
           end
 
