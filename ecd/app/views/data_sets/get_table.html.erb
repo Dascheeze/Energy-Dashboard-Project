@@ -137,9 +137,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 
   var daydif=endDate-startDate;
   alert('day secs '+ day);
-  var day =(((daydif/1000)/60)/60)/24;
-  alert(day);
-  var kPerD = total/day
+  var day =daydif/1000;
+  var day1 = day/60;
+  var day2 = day1/60;
+  var day3 = day2/24;
+  
+  alert(day+' '+day1+' '+day2+' '+day3+' ');
+  var kPerD = total/day3
   alert(kPerD);
   //var kPerH = (total/day)/1000/60/60;
   //var kPerM = (total/day)/1000/60;
