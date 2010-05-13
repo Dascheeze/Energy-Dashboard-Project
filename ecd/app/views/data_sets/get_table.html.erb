@@ -77,7 +77,8 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			</div>
 		</div>
 		<br/>
-		<div style="margin-left:27%; float:left;">
+		<center>
+		<div style="margin-left:auto; margin-right:auto;">
 		   <table style=" border:none;  ">
 			   	<tr>
 			   		<td><h3>Highest Amount Registered:</h3> </td>
@@ -89,6 +90,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			   </tr>
 		    </table>   
 		</div>
+		</center>
 <script type="text/javascript">
 		$(function() {
 			$("#dateform_start_date").datepicker();
