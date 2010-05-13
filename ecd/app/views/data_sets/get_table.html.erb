@@ -86,11 +86,14 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
    var total=0;
    var numRow = data.getNumberOfRows();
    var x=0;
+   var j =0;
+   var i =0;
+   var date;
 	for (x=0;x<numRow;x++)
   	{
-	   var j =parseInt(x)
-	   var i= data.getValue(j, 1);
-	   var date= data.getValue(j,0);
+	    j =parseInt(x)
+	    i= data.getValue(j, 1);
+	    date= data.getValue(j,0);
 	    if(startDate<=date && endDate>=date){   
 	    total=total+i;
     }
