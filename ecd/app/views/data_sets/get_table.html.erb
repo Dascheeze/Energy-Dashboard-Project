@@ -13,7 +13,12 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 
    <div id="mydiv" style='width:879px; height:360px;'></div>
    <br/>
-   <table style="border:hidden;">
+    	<p> 
+		To modify the displayed graph, you can move the borders on the bottom
+        timeline, and drag the viewed window to show a different section of the
+        graph.
+		</p>
+   <table style="border:none; ">
    	<tr>
    		<td><h3>Highest Amount Registered:</h3> </td>
 		<td><h3>Lowest Amount Registered:</h3></td>
@@ -22,17 +27,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
    		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
    </tr>
-   </table>   
+      </table>   
 		<br />
-       <p> To modify the displayed graph, you can move the borders on the bottom
-        timeline, and drag the viewed window to show a different section of the
-        graph.
-		</p>
+      
 		<div id="displaySubData" name="displaySubData">
-			<h3>KiloWatts Used within the Selected Range:</h3> 
-			There have been <span id="KWsUsed2" style="color:Red;"></span> KWh used within the dates:
-			<br /> 
-			<span id="startRange"></span>  --  <span id="endRange"></span>
+			
+		
+		<div style="float:right">
 		<h3>The Cost of it all: </h3>
 			At the current price of electricity, the cost incurred over the span of time displayed in the graph was: 
 			$<span id="totCost" style="color:#00f;">0</span>
@@ -72,6 +73,13 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 				
 			</tr>
 			</table>
+			</div>
+			<div>
+				<h3>KiloWatts Used within the Selected Range:</h3> 
+				There have been <span id="KWsUsed2" style="color:Red;"></span> KWh used within the dates:
+				<br /> 
+				<span id="startRange"></span>  --  <span id="endRange"></span>
+			</div>
 		</div>
 <script type="text/javascript">
 		$(function() {
