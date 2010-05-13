@@ -28,7 +28,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
 			At the current price of electricity, the cost incurred over the span of time displayed in the graph was: 
 			$<span id="totCost" style="color:#00f;">0</span>
 			<table>
-			<h3>Cost Breakdown:</h3>
+			<h3>Average Costs:</h3>
 			<tr>
 				
 				<td>Per Day:</td>
@@ -158,8 +158,7 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
   //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
   total=total.toFixed(2);
-  var kws =" "+" <%= @data_set.power_unit.name %> " +'s';
-  alert(kws);
+  var kws =" "+" <%= @data_set.power_unit.name %>" +'s';
   kws=kws.toString();
   
   document.getElementById('KWsUsed').innerHTML=total.toString();
