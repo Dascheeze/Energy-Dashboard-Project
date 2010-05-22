@@ -46,6 +46,7 @@ class MetersController < ApplicationController
   def new
     @page_title = "Meters"
     @meter = Meter.new
+    @hubs = parse_device_xmls("HUB_ID")
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("New")
@@ -188,9 +189,10 @@ class MetersController < ApplicationController
     xml_doc = Document.new xml_dump
     dict = {}
     xml_doc.elements.each("device") do |device|
-      dict[device.attribute("address")] = device.attribute("name")
-
+      dict[device.attribute("address").to_s] = device.attribute("name").to_s
+    end
     return dict
+  end
 
   private
     def authenticate
