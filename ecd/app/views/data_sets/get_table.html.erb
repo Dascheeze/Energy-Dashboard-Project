@@ -24,66 +24,74 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
    
       
 	<div id="displaySubData" name="displaySubData">
-			<h3>The Cost of it all: </h3>
-				At the current price of electricity, the cost incurred over the span of time displayed in the graph was: $<span id="totCost" style="color:#00f;">0</span>
+			<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
+			<br/>
 			<div style="float:right">
 				<table>
 					<h3>Average Costs:</h3>
 					<tr>
 						
-						<td>Per Day: <span id="days" style="color:Green;">0</span></td>
-						<td>Per Hour: <span id="hours" style="color:Green;">0</span></td>
-						<td>Per Minute: <span id="mins" style="color:Green;">0</span></td>
-						<td>Per Second: <span id="secs" style="color:Green;">0</span></td>
+						<td><span id="weeks" style="color:Green;">0</span> Weeks</td>
+						<td><span id="days" style="color:Green;">0</span> Days</td>
+						<td><span id="hours" style="color:Green;">0</span> Hours</td>
+						<td><span id="mins" style="color:Green;">0</span> Minutes</td>
+						
 					</tr>
 					<tr>
 						<td>
-						<span id="kPerD" style="color:Red;">0</span> 
-						<br/>
-						$<span id="cPerD" style="color:#00f;">0</span> 
+							<span id="kPerW" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerW" style="color:#00f;">0</span>/Week 
+						</td>
+						
+						<td>
+							<span id="kPerD" style="color:Red;">0</span> 
+							<br/>
+							$<span id="cPerD" style="color:#00f;">0</span>/Day
 						</td>
 		
 						<td>
-						<span id="kPerH" style="color:Red;">0</span>
-						<br/>
-						$<span id="cPerH" style="color:#00f;">0</span>
+							<span id="kPerH" style="color:Red;">0</span>
+							<br/>
+							$<span id="cPerH" style="color:#00f;">0</span>/Hour
 						</td>
 						
 						<td>
 							<span id="kPerM" style="color:Red;">0</span>
 							<br/>
-							$<span id="cPerM" style="color:#00f;">0</span>
+							$<span id="cPerM" style="color:#00f;">0</span>/Minute
 						</td>
 					
-						<td>
-							<span id="kPerS" style="color:Red;">0</span>
-							<br/>
-							$<span id="cPerS" style="color:#00f;">0</span>
-						</td>
-						
 					</tr>
 				</table>
 			</div>
 			<div>
-				<h3>KiloWatts Used within the Selected Range:</h3> 
-				There have been <span id="KWsUsed2" style="color:Red;"></span> KWh used within the dates:
-				<br /> 
-				<span id="startRange"></span>  --  <span id="endRange"></span>
+				<h3>Aggregate Values:</h3>
+				<table>
+				<tr>
+				<td>Total <%= @data_set.power_unit.name %>:</td><td>Total Cost ($<%= @data_set.power_unit.cost %> per <%= @data_set.power_unit.name %>):</td>
+				</tr>
+				<tr>
+				<td><span id="KWsUsed2" style="color:Red;font-size:200%"></span></td><td><center><span style="font-size:200%">$<span id="totCost" style="color:#00f;">0</span></span></center></td>
+				</tr>
+				</table>
 			</div>
 		</div>
 		<br/>
-		<div style="margin-left:27%; float:left;">
+		<center>
+		<div style="margin-left:auto; margin-right:auto;">
 		   <table style=" border:none;  ">
 			   	<tr>
 			   		<td><h3>Highest Amount Registered:</h3> </td>
 					<td><h3>Lowest Amount Registered:</h3></td>
 				</tr>
 				<tr>
-			  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
-			   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%H:%M, %d/%m/%Y")%></td>
+			  		<td> <span style="color:Red;">  <%= @item_bounds.max_amount%> </span> <span style="color:black"><%= @data_set.power_unit.name %>, at <%= @item_bounds.max_time.localtime.strftime("%m/%d/%Y %H:%M")%></span></td>
+			   		<td> <span style="color:Red;"> <%= @item_bounds.min_amount%> </span> <span style="color:black"><%= @data_set.power_unit.name %>, at <%= @item_bounds.min_time.localtime.strftime("%m/%d/%Y %H:%M")%></span></td>
 			   </tr>
 		    </table>   
 		</div>
+		</center>
 <script type="text/javascript">
 		$(function() {
 			$("#dateform_start_date").datepicker();
@@ -128,6 +136,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
        var day = date.getDate();
        var month = date.getMonth()+1;
        var yy = date.getYear();
+	   var whichDay = date.getDay();
        var year = (yy < 1000) ? yy + 1900 : yy;
    
        var hours = date.getHours()
@@ -135,7 +144,17 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
        if (minutes < 10){
        minutes = "0" + minutes
        }
-     var value= month+"/"+day+"/"+year + " " + hours + ":" + minutes;
+	   
+		var weekday=new Array(7);
+		weekday[0]="Sunday";
+		weekday[1]="Monday";
+		weekday[2]="Tuesday";
+		weekday[3]="Wednesday";
+		weekday[4]="Thursday";
+		weekday[5]="Friday";
+		weekday[6]="Saturday";
+     
+	 var value= '('+weekday[whichDay]+') '+month+"/"+day+"/"+year + " " + hours + ":" + minutes;
      return value.toString();
   }
  
@@ -169,8 +188,9 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   var mins = secs/60;
   var hrs = mins/60;
   var day = hrs/24;
-  
+  var week = day/7;
 
+  var kPerW = total/week;
   var kPerD = total/day;
   var kPerH = total/hrs;
   var kPerM = total/mins;
@@ -178,6 +198,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   
   var money = <%= @data_set.power_unit.cost %>;
   var cost = total*money;
+  var cPerW = kPerW* money;
   var cPerD= kPerD*money;
   var cPerM= kPerM*money;
   var cPerH= kPerH*money;
@@ -195,18 +216,22 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
+  document.getElementById('kPerW').innerHTML=kPerW.toFixed(2).toString()+kws;
+  document.getElementById('cPerW').innerHTML=cPerW.toFixed(2).toString();
   document.getElementById('kPerD').innerHTML=kPerD.toFixed(2).toString()+kws;
   document.getElementById('cPerD').innerHTML=cPerD.toFixed(2).toString();
   document.getElementById('kPerH').innerHTML=kPerH.toFixed(2).toString()+kws;
   document.getElementById('cPerH').innerHTML=cPerH.toFixed(2).toString();
   document.getElementById('kPerM').innerHTML=kPerM.toFixed(2).toString()+kws;
   document.getElementById('cPerM').innerHTML=cPerM.toFixed(2).toString();
-  document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+kws;
-  document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
+  //document.getElementById('kPerS').innerHTML=kPerS.toFixed(2).toString()+kws;
+  //document.getElementById('cPerS').innerHTML=cPerS.toFixed(2).toString();
+  document.getElementById('weeks').innerHTML=week.toFixed(2).toString();
   document.getElementById('days').innerHTML=day.toFixed(2).toString();
   document.getElementById('hours').innerHTML=hrs.toFixed(2).toString();
   document.getElementById('mins').innerHTML=mins.toFixed(2).toString();
-  document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
+  //document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
+  
  
 
 	   }

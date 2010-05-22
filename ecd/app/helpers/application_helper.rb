@@ -34,7 +34,7 @@ module ApplicationHelper
 	    temp_amount = point.amount.to_s.to_f
       aggregate_amount = aggregate_amount + temp_amount
       if (i == num_to_aggregate)
-		item = Item.new
+		    item = Item.new
         item.amount = aggregate_amount
         item.date = cur_time
         data_array.push(item)
@@ -82,22 +82,26 @@ module ApplicationHelper
 	  time=0
     tmp_hour = -1
 	  value=0
-
-          first = list_points.first
-          current = first
-          next_val = list_points[1]
-          list_points.each do |point|
-            next_val = point
-            if next_val.created_at >= current.created_at + time_interval then
-              item = Item.new
-              item.amount = next_val.amount - current.amount
-              item.date = current.created_at
-              current = next_val
-              data_array.push(item)
-            end
-          end
-
-          return data_array
+    first = list_points.first
+    current = first
+    next_val = list_points[1]
+    list_points.each do |point|
+      next_val = point
+      if next_val.created_at >= current.created_at + time_interval then
+        if next_val.created_at >= current.created_at + time_interval*2 then
+          avgTime=(next_val.created_at - current.created_at)/ duration_of_pull #used 15 becuase that is how often we draw should probably use "time interval"
+          item = Item.new
+          item.amount = (next_val.amount - current.amount)/avgTime
+        else
+          item = Item.new
+          item.amount = next_val.amount - current.amount
+        end
+        item.date = current.created_at
+        current = next_val
+        data_array.push(item)
+      end
+    end
+    return data_array
   end
 
 end

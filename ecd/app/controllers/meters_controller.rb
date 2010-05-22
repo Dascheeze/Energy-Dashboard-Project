@@ -19,7 +19,7 @@ class MetersController < ApplicationController
   def refresh
     @page_title = "Meters"
     Meter.all.each do |meter_num|
-      parse_xml(meter_num.modbus_address, meter_num.id)
+      parse_xml(meter_num.id)
     end
 	@message = "Successfully updated all meters"
     respond_to do |format|
@@ -46,6 +46,7 @@ class MetersController < ApplicationController
   def new
     @page_title = "Meters"
     @meter = Meter.new
+    @hubs = parse_device_xmls("HUB_ID")
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("New")
@@ -117,12 +118,16 @@ class MetersController < ApplicationController
   require 'rexml/document'
   include REXML
 
-  def getURL(command)
+  def getURL(hub_id, command)
     @page_title = "Meters"
-    $username = 'admin'
-    $password = 'admin'
+    
+    currHub = Hub.find(hub_id.to_s)
+    
+    $username = currHub.login_name
+    $password = currHub.login_pass
+    
     # Open an HTTP connection to 
-    ret = Net::HTTP.start('128.193.122.20')
+    ret = Net::HTTP.start(currHub.ip)
 
     # Depending on the request type, create either
     # an HTTP::Get or HTTP::Post object
@@ -138,9 +143,9 @@ class MetersController < ApplicationController
     return res.body
   end
   
-  def getMeterXML(meterAddress)
+  def getMeterXML(hub_id, meterAddress)
     @page_title = "Meters"
-    return getURL('/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
+    return getURL(hub_id, '/setup/devicexml.cgi?ADDRESS=' + meterAddress.to_s + '&TYPE=DATA')
   end
   
   def addDataPoint(data_set_id, value)
@@ -151,15 +156,18 @@ class MetersController < ApplicationController
     newData.save
   end
   
-  def parse_xml(modbus_address, meter_id)
+  def parse_xml(meter_id)
     @page_title = "Meters"
-    xml_dump = getMeterXML(modbus_address)
+    
+    meter_to_pull = Meter.find(meter_id)
+    
+    xml_dump = getMeterXML(meter_to_pull.hub_id, meter_to_pull.modbus_address)
     xml_doc = Document.new xml_dump
-	i = 0
-	while xml_doc.elements["DAS/devices/device/status"].to_s != "<status>Ok</status>"
+    i = 0
+    while xml_doc.elements["DAS/devices/device/status"].to_s != "<status>Ok</status>"
 	  logger.debug "Bad status recieved, waiting 10 seconds and retrying."
 	  sleep 10
-	  xml_dump = getMeterXML(modbus_address)
+	  xml_dump = getMeterXML(meter_to_pull.hub_id, meter_to_pull.modbus_address)
 	  xml_doc = Document.new xml_dump
 	  if (i > 60)
 		 return
@@ -177,6 +185,22 @@ class MetersController < ApplicationController
     end
 	logger.debug "All datapoints added to database"
   end
+
+  def get_meter_list(hub_id)
+    @page_title = "Meters"
+    return getURL(hub_id, '/setup/devlist.cgi?GATEWAY=127.0.0.1&SETUP=XML')
+  end
+
+  def parse_device_xmls(hub_id)
+    xml_dump = get_meter_list(hub_id)
+    xml_doc = Document.new xml_dump
+    dict = {}
+    xml_doc.elements.each("device") do |device|
+      dict[device.attribute("address").to_s] = device.attribute("name").to_s
+    end
+    return dict
+  end
+
   private
     def authenticate
       authenticate_or_request_with_http_basic do |user_name, password|
