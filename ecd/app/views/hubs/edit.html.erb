@@ -1,0 +1,24 @@
+<h1>Editing hub</h1>
+
+<% form_for(@hub) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </p>
+  <p>
+    <%= f.label :building_id %><br />
+    <%= f.text_field :building_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @hub %> |
+<%= link_to 'Back', hubs_path %>
