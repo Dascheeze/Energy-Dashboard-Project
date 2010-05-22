@@ -1,0 +1,24 @@
+<h1>Listing hubs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ip</th>
+    <th>Building</th>
+  </tr>
+
+<% @hubs.each do |hub| %>
+  <tr>
+    <td><%=h hub.name %></td>
+    <td><%=h hub.ip %></td>
+    <td><%=h hub.building_id %></td>
+    <td><%= link_to 'Show', hub %></td>
+    <td><%= link_to 'Edit', edit_hub_path(hub) %></td>
+    <td><%= link_to 'Destroy', hub, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hub', new_hub_path %>
