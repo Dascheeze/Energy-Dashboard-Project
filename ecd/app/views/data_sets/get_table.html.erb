@@ -9,7 +9,7 @@
 </div>
 <h1>Building: <%= @data_set.meter.building.building_name%></h1>
 <%= form_tag :action=>'get_table' %>
-Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
+Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" />
    <div id="mydiv" style='width:879px; height:360px;'></div>
 
@@ -102,11 +102,18 @@ Date:<%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%
         data.addColumn('datetime', 'Date');
         data.addColumn('number', 'KWh');
 	    // Add more data rows and cells here
-        data.addRows([
+        var data1;
+		data1=[
           <% @item_data.each do |item| %>
             [new Date(<%= item.date.localtime.strftime("%Y, (%m-1), %d, %H, %M") %>), <%= item.amount %> ],
           <% end %>
-        ]);
+        ];
+			data.addRows(data1.length);	
+		for ( var i=0; i<data1.length; i++ )
+		{			
+			for( var j = 0; j < 2; j++ )
+				data.setValue(i,j, data1[i][j]);		
+		}
         // Instantiate our table object.
         vis = new google.visualization.AnnotatedTimeLine(document.getElementById('mydiv'));
         // Draw our table with the data we created locally.
