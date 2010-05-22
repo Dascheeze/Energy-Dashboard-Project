@@ -9,13 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100311220757) do
-
-  create_table "building_types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100522204115) do
 
   create_table "buildings", :force => true do |t|
     t.string   "building_name"
@@ -42,8 +36,9 @@ ActiveRecord::Schema.define(:version => 20100311220757) do
     t.datetime "updated_at"
   end
 
-  create_table "meter_types", :force => true do |t|
-    t.string   "type"
+  create_table "hubs", :force => true do |t|
+    t.string   "name"
+    t.string   "ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,6 +53,12 @@ ActiveRecord::Schema.define(:version => 20100311220757) do
 
   create_table "power_units", :force => true do |t|
     t.string   "name"
+    t.float    "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

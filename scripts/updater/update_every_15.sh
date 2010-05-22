@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+
+
 # This script invokes the power update every 15 minutes
 
 # URL_TO_CURL is the variable which holds the URL that you have to access to start the pull.

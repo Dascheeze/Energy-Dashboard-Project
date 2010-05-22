@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :hubs
+
   map.resources :tests
 
   map.resources :power_units
