@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @hub.name %>
+</p>
+
+<p>
+  <b>Ip:</b>
+  <%=h @hub.ip %>
+</p>
+
+<p>
+  <b>Building:</b>
+  <%=h @hub.building_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_hub_path(@hub) %> |
+<%= link_to 'Back', hubs_path %>
