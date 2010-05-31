@@ -134,6 +134,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
        google.visualization.events.addListener(vis, 'ready', selectHandler);
 	   google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 	   selectHandler();
+	   }
  
  function getDate(date)
   {
@@ -239,6 +240,6 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   
  
 
-	   }
+	   
 	   }
      </script>
