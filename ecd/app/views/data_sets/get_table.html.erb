@@ -4,7 +4,7 @@
 	
 	<div>
 	<span style="float:right;"> 
-		<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+	<% if @data_set.power_unit.cost > 0 %>	<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span> <%end%>
 	</span>
 </div>
 <h1>Building: <%= @data_set.meter.building.building_name%></h1>
