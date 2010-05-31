@@ -48,7 +48,7 @@ class MetersController < ApplicationController
     @meter = Meter.new
     # Ternary to default params[:id] to the first hub
     @hub_id = params[:id] ? params[:id] : Hub.first.id
-    @hubs = parse_device_xmls(@hub_id)
+    @devices = parse_device_xmls(@hub_id)
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("New")
