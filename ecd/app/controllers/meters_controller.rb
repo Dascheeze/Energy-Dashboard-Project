@@ -211,7 +211,7 @@ class MetersController < ApplicationController
     xml_doc = Document.new xml_dump
     dict = Array.new
     xml_doc.elements.each("ModbusStats/devices/device") do |device|
-      if device.attribute("devclass").to_s.to_i == 2
+      if device.attribute("devclass").to_s.to_i == 2 && !Meter.find(:conditions => {:modbus_address=>device.attribute("address").to_s.to_i})
         d = Device.new
         d.address = device.attribute("address").to_s
         d.name = device.attribute("name").to_s
