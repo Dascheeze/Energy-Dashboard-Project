@@ -41,15 +41,15 @@ class DataSetsController < ApplicationController
     @data_set = DataSet.find(@data_set_id)
     
 	  p = points_between_dates(@data_set_id, @start_time - 30.day, @endTime)
-	  @item_data =  @data_set.is_aggregate ? real_diff(p) : p
+	  @item_data =  @data_set.is_aggregate ? real_diff(p) : convert_to_p
     @item_bounds =  get_bounds(@item_data)
     
 	  
     
-	  @assoc_meter = Meter.find(:first, @data_set.meter_id)
+	  @assoc_meter = @data_set.meter
     
           add_crumb("Power Info", '/power_info')
-    	  add_crumb(@data_set.meter.building.building_name.to_s, '/power_info/showsets/' + @assoc_meter.building.id.to_s)
+    	  add_crumb(@assoc_meter.building.building_name.to_s, '/power_info/showsets/' + @assoc_meter.building.id.to_s)
           add_crumb("Graph")
     respond_to do |format|
       format.html

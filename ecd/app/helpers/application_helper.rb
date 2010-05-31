@@ -103,6 +103,22 @@ module ApplicationHelper
     end
     return data_array
   end
+  
+  def convert_to_points (list_points)
+	  duration_of_pull = 15.minutes
+	  data_array = Array.new
+    first = list_points.first
+    current = first
+    next_val = list_points[1]
+    list_points.each do |point|
+      item = Item.new
+      item.amount = current.amount
+      item.date = current.created_at
+      current = next_val
+      data_array.push(item)
+    end
+    return data_array
+  end
 
 end
 
