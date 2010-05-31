@@ -46,7 +46,7 @@ class MetersController < ApplicationController
   def new
     @page_title = "Meters"
     @meter = Meter.new
-    @hubs = parse_device_xmls("HUB_ID")
+    @hubs = parse_device_xmls(params[:id] ? params[:id] : 1)
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("New")
