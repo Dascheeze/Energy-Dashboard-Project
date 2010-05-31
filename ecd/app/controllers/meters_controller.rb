@@ -46,7 +46,7 @@ class MetersController < ApplicationController
   def new
     @page_title = "Meters"
     @meter = Meter.new
-    # Ternary to default params[:id] to the first hub 
+    # Ternary to default params[:id] to the first hub
     @hubs = parse_device_xmls(params[:id] ? params[:id] : Hub.first.id)
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
