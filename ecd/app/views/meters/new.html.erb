@@ -12,8 +12,10 @@
         <p>
     Select meter you wish to add:<br />
     <%= f.collection_select :modbus_address, @devices, :address, :name %>
-	<%= hidden_field_tag "hub_id", @hub_id %>
-	<%= hidden_field_tag "devices", @devices %>
+	<%= #hidden_field_tag "hub_id", @hub_id 
+	%>
+	<%= #hidden_field_tag "devices", @devices 
+	%>
 	
   </p>
   <p>
