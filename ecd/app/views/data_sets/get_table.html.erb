@@ -22,7 +22,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 		</p>
    
    
-      
+      <% if @data_set.power_unit.cost > 0 %>
 	<div id="displaySubData" name="displaySubData">
 			<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
 			<br/>
@@ -92,6 +92,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 		    </table>   
 		</div>
 		</center>
+		<% end%>
 <script type="text/javascript">
 		//$(function() {
 			//$("#dateform_start_date").datepicker();
@@ -117,7 +118,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
           <% end %>
         ];
 		if(data1[data1.getlastIndexOf]==null){
-			data1.pop;
+			data1.pop();
 		}
 		
 			
@@ -134,6 +135,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
        google.visualization.events.addListener(vis, 'ready', selectHandler);
 	   google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 	   selectHandler();
+	   }
  
  function getDate(date)
   {
@@ -239,6 +241,6 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   
  
 
-	   }
+	   
 	   }
      </script>
