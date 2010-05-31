@@ -26,7 +26,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	<div id="displaySubData" name="displaySubData">
 			<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
 			<br/>
-			<% if @data_set.power_unit.cost > 0 %>
+			
 			<div style="float:right">
 				<table>
 					<h3>Average Costs:</h3>
@@ -94,7 +94,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 			
 		</div>
 		</center>
-		<% end%> 
+		
 		</div>
 		
 <script type="text/javascript">
