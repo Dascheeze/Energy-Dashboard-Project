@@ -116,6 +116,10 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
             [new Date(<%= item.date.localtime.strftime("%Y, (%m-1), %d, %H, %M") %>), <%= item.amount %> ],
           <% end %>
         ];
+		if(data1[data1.lastIndexOf]==null){
+			data1.pop;
+		}
+			
 			data.addRows(data1.length);	
 		for ( var i=0; i<data1.length; i++ )
 		{			
