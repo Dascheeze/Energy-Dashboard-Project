@@ -211,10 +211,12 @@ class MetersController < ApplicationController
     xml_doc = Document.new xml_dump
     dict = Array.new
     xml_doc.elements.each("ModbusStats/devices/device") do |device|
-      d = Device.new
-      d.address = device.attribute("address").to_s
-      d.name = device.attribute("name").to_s
-      dict.push d
+      if device.attribute("devclass").to_s.to_i == 2
+        d = Device.new
+        d.address = device.attribute("address").to_s
+        d.name = device.attribute("name").to_s
+        dict.push d
+      end
     end
     return dict
   end
