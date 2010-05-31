@@ -210,7 +210,7 @@ class MetersController < ApplicationController
     xml_dump = get_meter_list(hub_id)
     xml_doc = Document.new xml_dump
     dict = Array.new
-    xml_doc.elements.each("device") do |device|
+    xml_doc.elements.each("devices/device") do |device|
       d = Device.new
       d.address = device.attribute("address").to_s
       d.name = device.attribute("name").to_s
