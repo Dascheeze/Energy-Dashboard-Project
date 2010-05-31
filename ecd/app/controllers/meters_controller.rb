@@ -47,7 +47,8 @@ class MetersController < ApplicationController
     @page_title = "Meters"
     @meter = Meter.new
     # Ternary to default params[:id] to the first hub
-    @hubs = parse_device_xmls(params[:id] ? params[:id] : Hub.first.id)
+    @hub_id = params[:id] ? params[:id] : Hub.first.id
+    @hubs = parse_device_xmls(@hub_id)
     add_crumb("Admin", '/admin')
     add_crumb("Meters", '/meters')
     add_crumb("New")
@@ -71,7 +72,15 @@ class MetersController < ApplicationController
   def create
     @page_title = "Meters"
     @meter = Meter.new(params[:meter])
-
+    @meter.hub_id = params[:hub_id]
+    devices = params[:devices]
+    devices do |device|
+      if device.address == @meter.modbus_address
+        name = device.name
+      end
+    end
+    @meter.name = name
+    
     respond_to do |format|
       if @meter.save
         flash[:notice] = 'Meter was successfully created.'
@@ -192,12 +201,20 @@ class MetersController < ApplicationController
     return getURL(hub_id, '/setup/devlist.cgi?GATEWAY=127.0.0.1&SETUP=XML')
   end
 
+  class Device
+    attr_reader :address, :name
+	  attr_writer :address, :name
+  end
+  
   def parse_device_xmls(hub_id)
     xml_dump = get_meter_list(hub_id)
     xml_doc = Document.new xml_dump
-    dict = {}
+    dict = Array.new
     xml_doc.elements.each("device") do |device|
-      dict[device.attribute("address").to_s] = device.attribute("name").to_s
+      d = Device.new
+      d.address = device.attribute("address").to_s
+      d.name = device.attribute("name").to_s
+      dict.push d
     end
     return dict
   end
