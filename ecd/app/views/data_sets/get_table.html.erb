@@ -24,8 +24,13 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
    
       
 	<div id="displaySubData" name="displaySubData">
+	</div>
+			
+			
 			<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
 			<br/>
+			<%if @data_set.power_unit.cost > 0 %>
+			<div>
 			<div style="float:right">
 				<table>
 					<h3>Average Costs:</h3>
@@ -77,6 +82,8 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 				</table>
 			</div>
 		</div>
+		<%end%>
+		
 		<br/>
 		<center>
 		<div style="margin-left:auto; margin-right:auto;">
@@ -92,6 +99,9 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 		    </table>   
 		</div>
 		</center>
+
+
+
 <script type="text/javascript">
 		//$(function() {
 			//$("#dateform_start_date").datepicker();
