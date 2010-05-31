@@ -11,7 +11,7 @@
 	</p>
         <p>
     Select <%= f.label :hub_id %><br />
-    <%= select "Selected stuff", "ID", :hub_id, @hubs, :id, :name %>
+    <%= f.collection_select "Selected stuff", "ID", :hub_id, @hubs, :id, :name %>
   </p>
   <p>
     <%= f.submit 'Create' %>
