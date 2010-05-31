@@ -10,8 +10,8 @@
 		<%= f.collection_select :building_id, buildingIDs, :id, :building_name %>
 	</p>
         <p>
-    Select <%= f.label @hubs %><br />
-    <%= select "Selected stuff", "ID", @hubs %>
+    Select <%= f.label :hub_id %><br />
+    <%= select "Selected stuff", "ID", :hub_id, @hubs, :id, :name %>
   </p>
   <p>
     <%= f.submit 'Create' %>
