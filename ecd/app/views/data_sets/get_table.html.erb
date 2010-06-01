@@ -21,7 +21,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
         graph.
 		</p>
 			
-	<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
+	<h3>Statistics between selected dates: <span style="color:black">(<span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
 	<br/>
 	
 	<%if @data_set.power_unit.cost > 0 %>
@@ -223,8 +223,8 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	  
 	  document.getElementById('KWsUsed').innerHTML=total.toString();
 	  document.getElementById('KWsUsed2').innerHTML=total.toString();
-	  document.getElementById('startRange').innerHTML=getDate(startDate);
-	  document.getElementById('endRange').innerHTML=getDate(endDate);
+	  document.getElementById('startRange').innerHTML=getDate(startDate.toString());
+	  document.getElementById('endRange').innerHTML=getDate(endDate.toString());
 	  document.getElementById('totCost').innerHTML=cost.toString();
 	  document.getElementById('totCost2').innerHTML=cost.toString();
 	  document.getElementById('kPerW').innerHTML=kPerW.toFixed(2).toString()+kws;
