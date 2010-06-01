@@ -4,10 +4,10 @@
 	
 	<div>
 	<span style="float:right;"> 
-		<span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span>
+		<%if @data_set.power_unit.cost > 0 %> <span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span> <%end%>
 	</span>
 </div>
-<h1>Building: <%= @data_set.meter.building.building_name%></h1>
+<h1>Building: <%= @data_set.meter.building.building_name%> (<%= @data_set.power_unit.name %>)</h1>
 <%= form_tag :action=>'get_table' %>
 Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/%d/%Y") ) %> 
 <input type="submit" value="Change Dataset Date" />
@@ -27,9 +27,10 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	</div>
 			
 			
-			<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
-			<br/>
-			<%if @data_set.power_unit.cost > 0 %>
+	<h3>Statistics between selected dates: (<span style="color:black"><span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
+	<br/>
+	
+	<%if @data_set.power_unit.cost > 0 %>
 			<div>
 			<div style="float:right">
 				<table>
@@ -110,10 +111,10 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
       
       // Set callback to run when API is loaded
       google.setOnLoadCallback(drawVisualization); 
-	  document.getElementById('displaySubData').style.visibility="hidden";
+	  	
   
       // Called when the Visualization API is loaded.
-      function drawVisualization() {
+  function drawVisualization() {
         
         // Create and populate a data table.
         data = new google.visualization.DataTable();
@@ -144,7 +145,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
        google.visualization.events.addListener(vis, 'ready', selectHandler);
 	   google.visualization.events.addListener(vis, 'rangechange', selectHandler);
 	   selectHandler();
-	   }
+	}
  
  function getDate(date)
   {
@@ -155,10 +156,10 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	   var whichDay = date.getDay();
        var year = (yy < 1000) ? yy + 1900 : yy;
    
-       var hours = date.getHours()
-       var minutes = date.getMinutes()
+       var hours = date.getHours();
+       var minutes = date.getMinutes();
        if (minutes < 10){
-       minutes = "0" + minutes
+       minutes = "0" + minutes;
        }
 	   
 		var weekday=new Array(7);
@@ -191,8 +192,8 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
    var date;
 	for (x=0;x<numRow;x++)
   	{
-	    j =parseInt(x)
-	    i= data.getValue(j, 1);
+	    j = parseInt(x);
+	    i = data.getValue(j, 1);
 	    date= data.getValue(j,0);
 	    if(startDate<=date && endDate>=date){   
 	    total=total+i;
@@ -221,15 +222,14 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   var cPerS= kPerS*money;
   //alert('D H M S '+ cPerD + ' ' + cPerH + ' ' cPerM + ' ' +cPerS);
   cost = cost.toFixed(2);
-  total=total.toFixed(2);
+  total = total.toFixed(2);
   var kws =" "+" <%= @data_set.power_unit.name %>" +'s';
-  kws=kws.toString();
+  kws = kws.toString();
   
   document.getElementById('KWsUsed').innerHTML=total.toString();
   document.getElementById('KWsUsed2').innerHTML=total.toString();
   document.getElementById('startRange').innerHTML=getDate(startDate);
   document.getElementById('endRange').innerHTML=getDate(endDate);
-  document.getElementById('displaySubData').style.visibility="visible";
   document.getElementById('totCost').innerHTML=cost.toString();
   document.getElementById('totCost2').innerHTML=cost.toString();
   document.getElementById('kPerW').innerHTML=kPerW.toFixed(2).toString()+kws;
@@ -247,9 +247,5 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
   document.getElementById('hours').innerHTML=hrs.toFixed(2).toString();
   document.getElementById('mins').innerHTML=mins.toFixed(2).toString();
   //document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
-  
- 
-
-	   
-	   }
+ }
      </script>
