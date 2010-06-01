@@ -4,7 +4,7 @@
 	
 	<div>
 	<span style="float:right;"> 
-		<%if @data_set.power_unit.cost > 0 %> <span id="KWsUsed" style="color:Red; ">0</span> <%= @data_set.power_unit.name %> used | $<span id="totCost2" style="color:#00f;"></span> <%end%>
+		<%= @data_set.power_unit.name %> <%if @data_set.power_unit.cost > 0 %> <span id="KWsUsed" style="color:Red; ">0</span>  used | $<span id="totCost2" style="color:#00f;"></span> <%end%>
 	</span>
 </div>
 <h1>Building: <%= @data_set.meter.building.building_name%> (<%= @data_set.power_unit.name %>)</h1>
@@ -21,7 +21,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
         graph.
 		</p>
 			
-	<h3>Statistics between selected dates: <span style="color:black">(<span id="startRange"></span>  --  <span id="endRange"></span></span>)</h3>
+	<h3>Statistics between selected dates: <span style="color:black">(<span id="startRange"></span>  --  <span id="endRange"></span>)</span></h3>
 	<br/>
 	
 	<%if @data_set.power_unit.cost > 0 %>
@@ -173,8 +173,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
  //this function will add up anything between the dates displayed
  	function selectHandler() {
 
-	   var disCol = data.getDistinctValues(1);
-	   var thisDate = data.getDistinctValues(0);
+	  
 	   var theDates = vis.getVisibleChartRange(); 
 	   var startDate = theDates.start;
 	   var endDate = theDates.end;
@@ -189,9 +188,9 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	  	{
 		    j = parseInt(x);
 		    i = data.getValue(j, 1);
-		    date= data.getValue(j,0);
+		    date = data.getValue(j,0);
 		    if(startDate<=date && endDate>=date){   
-		    total=total+i;
+		    	total = total+i;
 			}
 		}
 	
@@ -221,10 +220,12 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	  var kws =" "+" <%= @data_set.power_unit.name %>" +'s';
 	  kws = kws.toString();
 	  
+	  
+	  document.getElementById('startRange').innerHTML=getDate(startDate);
+	  document.getElementById('endRange').innerHTML=getDate(endDate);
+	  <%if @data_set.power_unit.cost > 0 %> //if this is not true then all the html will be gone so we cannnot make calls to html that does not exist
 	  document.getElementById('KWsUsed').innerHTML=total.toString();
 	  document.getElementById('KWsUsed2').innerHTML=total.toString();
-	  document.getElementById('startRange').innerHTML=getDate(startDate.toString());
-	  document.getElementById('endRange').innerHTML=getDate(endDate.toString());
 	  document.getElementById('totCost').innerHTML=cost.toString();
 	  document.getElementById('totCost2').innerHTML=cost.toString();
 	  document.getElementById('kPerW').innerHTML=kPerW.toFixed(2).toString()+kws;
@@ -242,6 +243,7 @@ Date: <%= text_field("dateform", "start_date", :value=>@start_time.strftime("%m/
 	  document.getElementById('hours').innerHTML=hrs.toFixed(2).toString();
 	  document.getElementById('mins').innerHTML=mins.toFixed(2).toString();
 	  //document.getElementById('secs').innerHTML=secs.toFixed(2).toString();
+	  <%end%>
 	 }
  
  }
