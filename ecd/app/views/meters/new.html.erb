@@ -1,24 +1,28 @@
 <h1>New meter</h1>
 
-<% form_for(@meter) do |f| %>
-  <%= f.error_messages %>
+<% if @devices %>
+	<% form_for(@meter) do |f| %>
+	  <%= f.error_messages %>
 
- 	<p>
-		<!-- Makes a dropdown and puts the building type in each select value -->
-		<% buildingIDs = Building.find(:all, :order => :id) %>
-		Select <%= f.label :building_id %><br /> 
-		<%= f.collection_select :building_id, buildingIDs, :id, :building_name %>
-	</p>
-        <p>
-    Select meter you wish to add:<br />
-    <%= f.collection_select :modbus_address, @devices, :address, :name %>
-	<%= hidden_field_tag "hub_id", @hub_id %>
-	<%= hidden_field_tag "devices", @devices %>
-	
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+ 		<p>
+			<!-- Makes a dropdown and puts the building type in each select value -->
+			<% buildingIDs = Building.find(:all, :order => :id) %>
+			Select <%= f.label :building_id %><br /> 
+			<%= f.collection_select :building_id, buildingIDs, :id, :building_name %>
+		</p>
+			<p>
+	  
+		Select meter you wish to add:<br />
+		<%= f.collection_select :modbus_address, @devices, :address, :name %>
+		<%= hidden_field_tag "hub_id", @hub_id %>
+		<%= hidden_field_tag "devices", @devices %>
+		
+	  </p>
+	  <p>
+		<%= f.submit 'Create' %>
+	  </p>
+	<% end %>
+<% else %>
+	All of the meters associated with this hub have already been added to the system.
 <% end %>
-
 <%= link_to 'Back', meters_path %>
