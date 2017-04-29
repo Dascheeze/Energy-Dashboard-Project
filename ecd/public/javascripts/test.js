@@ -48,7 +48,7 @@ example.MyTable.prototype.draw = function(data, options) {
 }
 
 // Utility function to escape HTML special characters
-example.MyTable.prototype.escapeHtml = function(text) {
+example.MyTable.prototype.escapeHtml = text => {
   if (text == null)
     return '';
   return text.replace(/&/g, '&').replace(/</g, '<')

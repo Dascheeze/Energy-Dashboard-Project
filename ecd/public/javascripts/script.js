@@ -1,4 +1,4 @@
-$(document).ready( function() {
+$(document).ready( () => {
 	
 	//set search defaults on page load
 	set_search_default()
