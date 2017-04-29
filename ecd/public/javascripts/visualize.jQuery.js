@@ -8,7 +8,7 @@
  * 	
  * --------------------------------------------------------------------
  */
-(function($) { 
+(($ => { 
 $.fn.visualize = function(options, container){
 	return $(this).each(function(){
 		//configuration
@@ -42,7 +42,7 @@ $.fn.visualize = function(options, container){
 			var colors = o.colors;
 			var textColors = o.textColors;
 			var tableData = {
-				dataGroups: function(){
+				dataGroups() {
 					var dataGroups = [];
 					if(o.parseDirection == 'x'){
 						self.find('tr:gt(0)').each(function(i){
@@ -69,14 +69,14 @@ $.fn.visualize = function(options, container){
 					}
 					return dataGroups;
 				},
-				allData: function(){
+				allData() {
 					var allData = [];
 					$(this.dataGroups()).each(function(){
 						allData.push(this.points);
 					});
 					return allData;
 				},
-				dataSum: function(){
+				dataSum() {
 					var dataSum = 0;
 					var allData = this.allData().join(',').split(',');
 					$(allData).each(function(){
@@ -84,7 +84,7 @@ $.fn.visualize = function(options, container){
 					});
 					return dataSum
 				},	
-				topValue: function(){
+				topValue() {
 						var topValue = 0;
 						var allData = this.allData().join(',').split(',');
 						$(allData).each(function(){
@@ -92,7 +92,7 @@ $.fn.visualize = function(options, container){
 						});
 						return topValue;
 				},
-				bottomValue: function(){
+				bottomValue() {
 						var bottomValue = 0;
 						var allData = this.allData().join(',').split(',');
 						$(allData).each(function(){
@@ -100,19 +100,19 @@ $.fn.visualize = function(options, container){
 						});
 						return bottomValue;
 				},
-				memberTotals: function(){
+				memberTotals() {
 					var memberTotals = [];
 					var dataGroups = this.dataGroups();
-					$(dataGroups).each(function(l){
+					$(dataGroups).each(l => {
 						var count = 0;
-						$(dataGroups[l].points).each(function(m){
+						$(dataGroups[l].points).each(m => {
 							count +=dataGroups[l].points[m];
 						});
 						memberTotals.push(count);
 					});
 					return memberTotals;
 				},
-				yTotals: function(){
+				yTotals() {
 					var yTotals = [];
 					var dataGroups = this.dataGroups();
 					var loopLength = this.xLabels().length;
@@ -131,7 +131,7 @@ $.fn.visualize = function(options, container){
 					}
 					return yTotals;
 				},
-				topYtotal: function(){
+				topYtotal() {
 					var topYtotal = 0;
 						var yTotals = this.yTotals().join(',').split(',');
 						$(yTotals).each(function(){
@@ -139,10 +139,10 @@ $.fn.visualize = function(options, container){
 						});
 						return topYtotal;
 				},
-				totalYRange: function(){
+				totalYRange() {
 					return this.topValue() - this.bottomValue();
 				},
-				xLabels: function(){
+				xLabels() {
 					var xLabels = [];
 					if(o.parseDirection == 'x'){
 						self.find('tr:eq(0) th').each(function(){
@@ -156,7 +156,7 @@ $.fn.visualize = function(options, container){
 					}
 					return xLabels;
 				},
-				yLabels: function(){
+				yLabels() {
 					var yLabels = [];
 					yLabels.push(bottomValue); 
 					var numLabels = Math.round(o.height / o.yLabelInterval);
@@ -175,7 +175,7 @@ $.fn.visualize = function(options, container){
 		
 		//function to create a chart
 		var createChart = {
-			pie: function(){	
+			pie() {	
 				
 				canvasContain.addClass('visualize-pie');
 				
@@ -185,7 +185,7 @@ $.fn.visualize = function(options, container){
 				var centery = Math.round(canvas.height()/2);
 				var radius = centery - o.pieMargin;				
 				var counter = 0.0;
-				var toRad = function(integer){ return (Math.PI/180)*integer; };
+				var toRad = integer => (Math.PI/180)*integer;
 				var labels = $('<ul class="visualize-labels"></ul>')
 					.insertAfter(canvas);
 
@@ -226,7 +226,7 @@ $.fn.visualize = function(options, container){
 				});
 			},
 			
-			line: function(area){
+			line(area) {
 			
 				if(area){ canvasContain.addClass('visualize-area'); }
 				else{ canvasContain.addClass('visualize-line'); }
@@ -302,11 +302,11 @@ $.fn.visualize = function(options, container){
 				});
 			},
 			
-			area: function(){
+			area() {
 				createChart.line(true);
 			},
 			
-			bar: function(){
+			bar() {
 				
 				canvasContain.addClass('visualize-bar');
 			
@@ -444,6 +444,6 @@ $.fn.visualize = function(options, container){
 		}
 	}).next(); //returns canvas(es)
 };
-})(jQuery);
+}))(jQuery);
 
 
